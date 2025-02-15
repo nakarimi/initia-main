@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function initia_preprocess_field(&$variables)
+{
+  // Check for the specific field machine name.
+  if ($variables['element']['#field_name'] == 'field_chiffres_cles') {
+    // Loop through each item (assuming multiple values might be present).
+    foreach ($variables['items'] as $delta => $item) {
+      // Get the rendered HTML markup.
+      $html = isset($item['#markup']) ? $item['#markup'] : '';
+
+      // Replace <br> and <br /> tags with newline characters.
+      $with_newlines = str_replace(['<br>', '<br />'], "\n", $html);
+
+      // Strip any remaining HTML tags.
+      $text = strip_tags($with_newlines);
+
+      // Split the text into an array by newlines. Use preg_split to handle multiple newlines.
+      $values = preg_split('/\r\n|\r|\n/', $text, -1, PREG_SPLIT_NO_EMPTY);
+
+      // Trim each value.
+      $values = array_map('trim', $values);
+
+      // Now, you have an array of values.
+      // For example, if you want to set a custom variable for your template, do:
+      $variables['items'][$delta]['#reformatted_values'] = $values;
+
+      // Alternatively, if you want to change the output markup,
+      // you could reassemble the array into a custom markup string:
+      // $variables['items'][$delta]['#markup'] = '<pre>' . print_r($values, TRUE) . '</pre>';
+    }
+  }
+}
