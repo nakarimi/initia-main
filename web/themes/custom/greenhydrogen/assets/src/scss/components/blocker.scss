@@ -1,0 +1,126 @@
+.c-blocker {
+  background-color : $bright-green;
+  color            : $dark-green;
+  height           : 100vh;
+
+  &__container {
+    @include grid;
+    @include o-container;
+    position : relative;
+  }
+
+  &__inner {
+    align-items     : center;
+    display         : flex;
+    flex-direction  : column;
+    grid-column     : 3 / 11;
+    height          : 100vh;
+    justify-content : center;
+    position        : relative;
+    text-align      : center;
+
+    @include media('<desktop') {
+      box-sizing  : border-box;
+      grid-column : 1 / 13;
+      padding-top : var(--space-4xl);
+    }
+
+    @include media("<tablet") {
+      @include full-width-grid;
+      justify-content : flex-start;
+      padding-top     : 128px;
+    }
+  }
+
+  &__lock-icon-wrapper {
+    align-items      : center;
+    background-color : $dark-green;
+    border-radius    : 24px;
+    display          : flex;
+    height           : 24px;
+    justify-content  : center;
+    width            : 24px;
+  }
+
+  &__lock-icon {
+    color : $bright-green;
+  }
+
+  &__title {
+    @include ts-heading-3;
+    margin-top : var(--space-m);
+  }
+
+  &__login-button {
+    @include o-button($dark-green, $bright-green);
+    margin-top : var(--space-l);
+
+    @include media("<tablet") {
+      margin-top : var(--space-xl);
+    }
+  }
+
+  &__description {
+    @include ts-caption;
+    margin-top : var(--space-2xl);
+
+    @include media("<tablet") {
+      margin-top : var(--space-xl);
+    }
+
+    a {
+      background-image    : linear-gradient($dark-green, $dark-green), linear-gradient(transparent, transparent);
+      background-position : 0 calc(100% - 1px);
+      background-repeat   : no-repeat;
+      background-size     : 100% 1px, 0 2px;
+      padding-bottom      : 3px;
+      transition          : background-size 0.2s;
+
+      &:hover, &:focus {
+        background-image    : linear-gradient(transparent, transparent), linear-gradient(to left, $black, $black);
+        background-position : 0 calc(100% - 1px);
+        background-size     : 0 1px, 100% 2px;
+      }
+    }
+  }
+
+  &__close {
+    font-size : 0;
+    padding   : 8px;
+    position  : absolute;
+    right     : 32px;
+    top       : var(--space-xl);
+    z-index   : 2;
+
+    @include media("<tablet") {
+      right : 16px;
+      top   : var(--space-l);
+    }
+  }
+
+  &__go-back {
+    @include ts-button;
+    background-image    : linear-gradient($dark-green, $dark-green), linear-gradient(transparent, transparent);
+    background-position : 0 calc(100% - 1px);
+    background-repeat   : no-repeat;
+    background-size     : 100% 1px, 0 2px;
+    bottom              : var(--space-2xl);
+    left                : 50%;
+    padding-bottom      : 5px;
+    position            : absolute;
+    transform           : translateX(-50%);
+    transition          : background-size 0.2s;
+
+    &:hover, &:focus {
+      background-image    : linear-gradient(transparent, transparent), linear-gradient(to left, $black, $black);
+      background-position : 0 calc(100% - 1px);
+      background-size     : 0 1px, 100% 2px;
+    }
+
+    @include media("<tablet") {
+      margin-top : var(--space-2xl);
+      position   : static;
+      transform  : translateX(0);
+    }
+  }
+}

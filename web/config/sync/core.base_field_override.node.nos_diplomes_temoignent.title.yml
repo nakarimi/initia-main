@@ -1,0 +1,18 @@
+uuid: 07fb21d3-5e1d-44a6-b5a7-8deebadc0c71
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.nos_diplomes_temoignent
+id: node.nos_diplomes_temoignent.title
+field_name: title
+entity_type: node
+bundle: nos_diplomes_temoignent
+label: Titre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

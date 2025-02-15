@@ -1,0 +1,6 @@
+name: Initia Theme
+type: theme
+base theme: seven
+description: 'A custom theme.'
+package: Custom
+core_version_requirement: ^8 || ^9 || ^10

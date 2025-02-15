@@ -1,0 +1,69 @@
+<header class="c-header js-header" id="js-header">
+  <div class="c-header__container o-container">
+    <div class="c-header__inner">
+      {# SBTODO add and style logo #}
+      <div class="c-header__condensed">
+        <a href="/" class="c-header__logo" title="{{ 'Return to the homepage'|t }}">
+          {% include '@greenhydrogen/svg/svg.html.twig' with {'svg': 'logo','extra_class':'c-header__logo-icon-sticky'} %}
+          {% include '@greenhydrogen/svg/svg.html.twig' with {'svg': 'logo-with-shapes','extra_class':'c-header__logo-icon-shapes'} %}
+        </a>
+
+        <button class="c-header__burger js-header-burger" aria-label="Toggle mobile menu">
+          {% include '@greenhydrogen/svg/svg.html.twig' with {'svg': 'burger-icon', 'extra_class': 'c-header__burger-icon c-header__burger-icon--menu'} %}
+        </button>
+      </div>
+
+      <div class="c-header__content js-main-menu">
+        <div class="c-header__content-top">
+          {# Sign in button #}
+          {% if (logged_in) %}
+            <a class="c-header__button" href="{{ path('user.logout') }}">
+              {{ 'Logout'|trans }}
+            </a>
+          {% else %}
+            <a class="c-header__button" href="{{ path('greenhydrogen_backend.login') ~ '?destination=' ~ path('<current>') }}">
+              {{ 'Sign in'|trans }}
+            </a>
+          {% endif %}
+
+          <button class="c-header__burger js-header-burger" aria-label="Toggle mobile menu">
+            {% include '@greenhydrogen/svg/svg.html.twig' with {'svg': 'close-icon','extra_class': 'c-header__burger-icon c-header__burger-icon--close'} %}
+          </button>
+        </div>
+
+        <div class="c-header__content-inner">
+          <div class="c-header__top">
+            <div class="c-header__supplementary-menu">
+              {{ elements.supplementarymenu }}
+            </div>
+
+            <div class="c-header__buttons">
+              {# SBTODO: accessibility #}
+              {# Sign in button #}
+              {% if (logged_in) %}
+                <a class="c-header__button" href="{{ path('user.logout') }}">
+                  {{ 'Logout'|trans }}
+                </a>
+              {% else %}
+                <a class="c-header__button" href="{{ path('greenhydrogen_backend.login') ~ '?destination=' ~ path('<current>') }}">
+                  {{ 'Sign in'|trans }}
+                </a>
+              {% endif %}
+
+              <button class="c-header__button c-header__button--search js-search-open" aria-label="Search">
+                {% include '@greenhydrogen/svg/svg.html.twig' with {'svg': 'search-icon','extra_class': 'c-header__burger-icon c-header__search-icon'} %}
+              </button>
+            </div>
+            {# Search popup #}
+            {% include '@greenhydrogen/region-partials/region--header-search.html.twig' %}
+          </div>
+
+          {# SBTODO style main menu #}
+          <div class="c-header__main-menu" id="js-main-menu">
+            {{ elements.greenhydrogen_main_menu }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,37 @@
+.c-ticker{
+  background-color          : $bright-green;
+  box-sizing: content-box;
+  overflow: hidden;
+  padding-bottom: 12px;
+  padding-left: 100%;
+  padding-top: 12px;
+  width: 100%;
+
+  &__wrapper {
+    //animation-duration        : 30s;
+    animation-iteration-count : infinite;
+    animation-name            : ticker;
+    animation-timing-function: linear;
+    box-sizing                : content-box;
+    padding-right             : 100%;
+    white-space               : nowrap;
+  }
+
+  &__data-item {
+    @include ts-heading-4;
+    color: $dark-green;
+    display: inline-block;
+    margin-right: $baseline-spacing * 8;
+
+  }
+
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(var(--transform));
+    }
+  }
+}

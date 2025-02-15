@@ -1,0 +1,103 @@
+/*
+    Theme Name: Default Theme by Soapbox
+    Theme URI: http://www.soapbox.co.uk
+    Description: Default Theme by Soapbox
+    Author: Soapbox
+    Version: 1.0
+*/
+/*
+    ===============================
+    1. SETTINGS
+    ===============================
+*/
+@import "settings/colours";
+@import "settings/fonts";
+@import "settings/spacing";
+
+// CSS Grid based grid system (1/2)
+@import "settings/grid-settings";
+
+// Float based grid system (1/2)
+// @import "settings/grid-settings--bourbon-neat";
+
+/*
+    ===============================
+    2. TOOLS
+    ===============================
+*/
+// CSS Grid based grid system (2/2)
+@import "tools/include-media/include-media";
+
+// Float based grid system (2/2)
+// @import "tools/neat/neat";
+
+@import "tools/grid-mixins";
+@import "tools/mixins";
+@import "tools/text-styles";
+
+/*
+    ===============================
+    3. RESET
+    ===============================
+*/
+@import "reset/reset";
+/*
+    ===============================
+    4. BASE
+    ===============================
+*/
+@import "base/base";
+/*
+    ===============================
+    5. OBJECTS
+    ===============================
+*/
+@import "objects/button";
+@import "objects/content-from-editor";
+@import "objects/container";
+@import "objects/heading";
+@import "objects/link";
+@import "objects/section";
+@import "objects/svg";
+/*
+    ===============================
+    6. COMPONENTS
+    ===============================
+*/
+@import "components/banner";
+@import "components/blocker";
+@import "components/boxed-content";
+@import "components/breadcrumbs";
+@import "components/call-to-action";
+@import "components/card";
+@import "components/embed";
+@import "components/featured-content";
+@import "components/filter";
+@import "components/footer";
+@import "components/form";
+@import "components/full-width-image";
+@import "components/header";
+@import "components/header-search";
+@import "components/listing";
+@import "components/local-tasks";
+@import "components/login-page";
+@import "components/main-menu";
+@import "components/page-header";
+@import "components/page-links";
+@import "components/pager";
+@import "components/people-block";
+@import "components/person-card";
+@import "components/share";
+@import "components/single-header";
+@import "components/subpage-navigation";
+@import "components/text-block";
+@import "components/ticker";
+/*
+    ===============================
+    7. TRUMPS
+    ===============================
+*/
+@import "overrides/plugins";
+@import "overrides/plugins/eu-cookie-compliance";
+@import "overrides/print";
+@import "overrides/utilities";

@@ -1,0 +1,53 @@
+uuid: a582eaf9-28e2-4cde-ab5c-bb41896b2f10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nos_experts.field_description_nos_experts
+    - field.field.paragraph.nos_experts.field_image_nos_experts
+    - field.field.paragraph.nos_experts.field_sous_titre_nos_experts
+    - field.field.paragraph.nos_experts.field_titre_nos_experts
+    - paragraphs.paragraphs_type.nos_experts
+  module:
+    - image
+    - text
+id: paragraph.nos_experts.default
+targetEntityType: paragraph
+bundle: nos_experts
+mode: default
+content:
+  field_description_nos_experts:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image_nos_experts:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_sous_titre_nos_experts:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_titre_nos_experts:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

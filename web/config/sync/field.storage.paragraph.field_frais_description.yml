@@ -1,0 +1,19 @@
+uuid: 960bb1a4-7972-425d-93cb-125b5280284c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_frais_description
+field_name: field_frais_description
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

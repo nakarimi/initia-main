@@ -1,0 +1,20 @@
+.c-embed {
+  position : relative;
+
+  &__container {
+    @include grid;
+  }
+
+  &__inner {
+    grid-column : 1 / 13;
+
+    @include media('<tablet') {
+      @include full-width-grid;
+    }
+  }
+
+  iframe {
+    margin-left  : auto;
+    margin-right : auto;
+  }
+}

@@ -1,0 +1,19 @@
+uuid: e2634a3e-0919-4e30-9d0d-4863433c5faa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_financer_ma_formation
+field_name: field_financer_ma_formation
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

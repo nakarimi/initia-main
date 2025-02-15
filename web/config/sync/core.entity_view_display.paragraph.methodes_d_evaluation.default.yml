@@ -1,0 +1,31 @@
+uuid: 001de7c9-2908-4f66-87b5-02e7ec059dff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.methodes_d_evaluation.field_liste_methodes
+    - field.field.paragraph.methodes_d_evaluation.field_titre_methodes_d_evaluatio
+    - paragraphs.paragraphs_type.methodes_d_evaluation
+  module:
+    - text
+id: paragraph.methodes_d_evaluation.default
+targetEntityType: paragraph
+bundle: methodes_d_evaluation
+mode: default
+content:
+  field_liste_methodes:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_titre_methodes_d_evaluatio:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

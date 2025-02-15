@@ -1,0 +1,100 @@
+body.path-login {
+  background-color : $bright-green;
+}
+
+.c-login-page {
+  @include o-container;
+  color : $dark-green;
+
+  &__inner {
+    align-items     : center;
+    display         : flex;
+    height          : 100vh;
+    justify-content : center;
+    position        : relative;
+
+    @include media('<desktop') {
+      align-items : flex-start;
+      box-sizing  : border-box;
+      padding-top : var(--space-4xl);
+    }
+  }
+
+  &__title {
+    @include sans;
+    font-size     : 28px;
+    font-weight   : 300;
+    margin-bottom : var(--space-2xl);
+  }
+
+  &__close {
+    @include o-button($dark-green, $bright-green, true);
+    background-image    : url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><g fill="none" fill-rule="evenodd"><g fill="#{str-replace(#{$dark-green}, '#', '%23')}"><path d="M25.666 14.286l6.834 6.833 6.834-6.833c.351-.352.905-.379 1.288-.081l.092.08c.381.382.381 1 0 1.381L33.881 22.5l6.833 6.834c.381.38.381.999 0 1.38-.381.381-1 .381-1.38 0L32.5 23.881l-6.834 6.833c-.351.352-.905.379-1.288.081l-.092-.08c-.381-.382-.381-1 0-1.381l6.833-6.834-6.833-6.834c-.381-.38-.381-.999 0-1.38.381-.381 1-.381 1.38 0z" transform="translate(-24.000000, -14.000000)"/></g></g></svg> ');
+    background-position : center center;
+    background-repeat   : no-repeat;
+    background-size     : 17px 17px;
+    border-color        : $bright-green;
+    position            : absolute;
+    right               : 0;
+    top                 : var(--space-xl);
+
+    &:hover, &:focus {
+      background-image : url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><g fill="none" fill-rule="evenodd"><g fill="#{str-replace(#{$bright-green}, '#', '%23')}"><path d="M25.666 14.286l6.834 6.833 6.834-6.833c.351-.352.905-.379 1.288-.081l.092.08c.381.382.381 1 0 1.381L33.881 22.5l6.833 6.834c.381.38.381.999 0 1.38-.381.381-1 .381-1.38 0L32.5 23.881l-6.834 6.833c-.351.352-.905.379-1.288.081l-.092-.08c-.381-.382-.381-1 0-1.381l6.833-6.834-6.833-6.834c-.381-.38-.381-.999 0-1.38.381-.381 1-.381 1.38 0z" transform="translate(-24.000000, -14.000000)"/></g></g></svg> ');
+    }
+  }
+
+  &__go-back {
+    @include link($dark-green, 2px);
+    font-weight : 500;
+  }
+
+  // The form
+  .c-form--locked-content-viewer-login-form {
+    width : 100%;
+  }
+
+  /* Password field
+  ================================================== */
+  .c-form-element {
+    &__wrapper {
+      margin-bottom : var(--space-2xl);
+      margin-top    : 0;
+    }
+
+    &--type-password {
+      background-color : transparent;
+      font-size        : 20px;
+      height           : 56px;
+      line-height      : 56px;
+      max-width        : 745px;
+      outline          : 0;
+      width            : 100%;
+    }
+
+    &__label {
+      @include sans;
+      font-size     : 12px;
+      font-weight   : 500;
+      line-height   : 20px;
+      margin-bottom : var(--space-m);
+    }
+  }
+
+  .c-form-element--type-password + .description {
+    @include sans;
+    font-size   : 16px;
+    font-weight : 300;
+    line-height : 24px;
+
+    a {
+      @include link($dark-green);
+    }
+  }
+
+  /* Submit button
+  ================================================== */
+  .c-form-element--type-submit {
+    // SBTODO: Designer needs to give us a button style
+    @include o-button($dark-green, $bright-green);
+  }
+}

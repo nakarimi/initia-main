@@ -1,0 +1,25 @@
+uuid: 99dd65e5-70ea-418e-aa70-0f56b31ff3b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.compenser_votre_handicap.field_compenser_handicap_liste
+    - paragraphs.paragraphs_type.compenser_votre_handicap
+  module:
+    - text
+id: paragraph.compenser_votre_handicap.default
+targetEntityType: paragraph
+bundle: compenser_votre_handicap
+mode: default
+content:
+  field_compenser_handicap_liste:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

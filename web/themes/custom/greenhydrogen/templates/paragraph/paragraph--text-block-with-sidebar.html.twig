@@ -1,0 +1,27 @@
+{% set classes = [
+  'o-section',
+  'o-section--text-block',
+  'c-text-block',
+] %}
+
+{% set rendered = content.field_wysiwyg|render %}
+
+{% if rendered|striptags|trim is not empty %}
+  <section{{ attributes.addClass(classes) }}>
+    <div class="c-text-block__container o-container">
+      <div class="c-text-block__content o-content-from-editor">
+        {{ rendered }}
+      </div>
+
+      <aside class="c-text-block__sidebar">
+        <h4 class="c-text-block__sidebar-title">
+          {{ content.field_title }}
+        </h4>
+
+        <div class="c-text-block__sidebar-items">
+          {{ content.field_content_items }}
+        </div>
+      </aside>
+    </div>
+  </section>
+{% endif %}

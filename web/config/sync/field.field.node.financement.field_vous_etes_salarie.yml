@@ -1,0 +1,24 @@
+uuid: bcf56788-eeed-4129-af49-9c1d5deee22a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vous_etes_salarie
+    - filter.format.restricted_html
+    - node.type.financement
+  module:
+    - text
+id: node.financement.field_vous_etes_salarie
+field_name: field_vous_etes_salarie
+entity_type: node
+bundle: financement
+label: 'Vous êtes salarié'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

@@ -1,0 +1,110 @@
+.c-single-header {
+  background-color : $mid-grey;
+  color            : $dark-green;
+  padding-bottom   : var(--space-2xl);
+  padding-top      : calc(157px + 32px); // Header + spacing
+
+  @include media('<tablet') {
+    padding-top : calc(80px + 48px);
+  }
+
+  &__inner {
+    @include grid;
+    grid-row-gap : 0;
+  }
+
+  &__content {
+    grid-column : 3/11;
+
+    @include media('<desktop') {
+      grid-column : 1/13;
+    }
+
+    @include media('<tablet') {
+      grid-column : 1/5;
+    }
+  }
+
+  &__post-type {
+    @include ts-label;
+    border        : 1px solid $dark-green;
+    border-radius : 10px;
+    color         : $dark-green;
+    display       : inline-block;
+    padding       : 0 var(--space-xs);
+    margin-bottom : var(--space-m);
+  }
+
+  &__title {
+    @include ts-heading-2;
+  }
+
+  &__description {
+    @include ts-description;
+    margin-top : var(--space-m);
+  }
+
+  &__image-container {
+    picture {
+      display        : block;
+      padding-bottom : calc(9 / 16 * 100%);
+      position       : relative;
+      width          : 100%;
+    }
+
+    img {
+      @include object-fit(cover);
+      display  : block;
+      height   : 100%;
+      left     : 0;
+      position : absolute;
+      top      : 0;
+      width    : 100%;
+    }
+  }
+
+  &__meta-container {
+    margin-top : var(--space-m);
+  }
+
+  &__meta {
+    @include ts-label;
+
+    a {
+      @include link-gradient($height : 2px);
+    }
+  }
+
+  &__image-container {
+    grid-column : 1/13;
+    margin-top  : var(--space-2xl);
+
+    @include media('<tablet') {
+      grid-column : 1/5;
+    }
+  }
+
+  &__image-caption {
+    @include ts-caption;
+    grid-column : 3/11;
+    margin-top  : var(--space-m);
+
+    @include media('<tablet') {
+      grid-column : 1/5;
+    }
+
+    a {
+      @include link-gradient(2px);
+    }
+  }
+
+  &__links-container {
+    margin-top : var(--space-m);
+
+    a {
+      @include ts-button;
+      @include link-gradient;
+      display : inline-block;
+    }
+  }
+}

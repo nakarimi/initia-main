@@ -1,0 +1,67 @@
+uuid: c6fcd4f4-468e-403f-8c44-97c3cf4e602a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_liste_des_droit_individuel
+    - node.type.formations_pour_elus
+    - paragraphs.paragraphs_type.droit_individuel_liste
+  module:
+    - entity_reference_revisions
+id: node.formations_pour_elus.field_liste_des_droit_individuel
+field_name: field_liste_des_droit_individuel
+entity_type: node
+bundle: formations_pour_elus
+label: 'Liste des droit individuel '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      droit_individuel_liste: droit_individuel_liste
+    negate: 0
+    target_bundles_drag_drop:
+      beneficiaires:
+        weight: 14
+        enabled: false
+      certifications:
+        weight: 15
+        enabled: false
+      description:
+        weight: 16
+        enabled: false
+      droit_individuel_liste:
+        weight: 17
+        enabled: true
+      methodes_d_evaluation:
+        weight: 18
+        enabled: false
+      nos_experts:
+        weight: 19
+        enabled: false
+      objectifs:
+        weight: 20
+        enabled: false
+      prochaines_sessions_dates:
+        weight: 21
+        enabled: false
+      programme_de_formation:
+        weight: 22
+        enabled: false
+      ressources_techniques:
+        weight: 23
+        enabled: false
+      temoignage:
+        weight: 24
+        enabled: false
+      textes_reglementaires:
+        weight: 25
+        enabled: false
+      vos_objectifs_pros:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

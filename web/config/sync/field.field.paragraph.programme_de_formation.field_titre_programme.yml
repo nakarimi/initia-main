@@ -1,0 +1,19 @@
+uuid: 40b0025b-7890-44fe-b94a-3239d9c7f7d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titre_programme
+    - paragraphs.paragraphs_type.programme_de_formation
+id: paragraph.programme_de_formation.field_titre_programme
+field_name: field_titre_programme
+entity_type: paragraph
+bundle: programme_de_formation
+label: 'Titre programme'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

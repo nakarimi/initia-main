@@ -1,0 +1,50 @@
+{% set classes = [
+  'c-call-to-action',
+  'o-section',
+  'o-section--has-background',
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+
+{% if content.field_image|render|striptags %}
+  {% set classes = classes|merge(['c-call-to-action--has-image']) %}
+{% endif %}
+
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }}>
+    {% if content.field_image|render|striptags %}
+      {{ content.field_image }}
+
+      {% if content.field_overlay_opacity.0['#markup'] > "0" %}
+        <div class="c-call-to-action__overlay" style="opacity:{{ content.field_overlay_opacity.0['#markup'] }}%"></div>
+      {% endif %}
+    {% endif %}
+
+    <div class="c-call-to-action__container o-container">
+      <div class="c-call-to-action__inner">
+        <div class="c-call-to-action__content-wrapper">
+          {% if content.field_title|render|striptags is not empty %}
+            <h3 class="c-call-to-action__title">
+              {{ content.field_title }}
+            </h3>
+          {% endif %}
+
+          {% if content.field_description|render|striptags is not empty %}
+            <p class="c-call-to-action__description">
+              {{ content.field_description }}
+            </p>
+          {% endif %}
+
+          {% if content.field_links|render|striptags is not empty %}
+            <div class="c-call-to-action__links">
+              {{ content.field_links }}
+              {# {{ kint(content.field_links) }} #}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock paragraph %}

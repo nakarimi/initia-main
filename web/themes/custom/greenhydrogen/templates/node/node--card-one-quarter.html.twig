@@ -1,0 +1,20 @@
+{% set item_label = content.field_type|render|striptags|trim %}
+{% if item_label is empty %}
+  {% set item_label = node.type.entity.label %}
+{% endif %}
+{% if node.bundle == 'page' or node.bundle == 'rich_content_page' %}
+  {% set description = content.field_standfirst %}
+{% else %}
+  {% set description = content.field_card_description %}
+{% endif %}
+{% include '@greenhydrogen/node-partials/card.html.twig' with {
+  'size': 'one-quarter',
+  'image': content.field_image,
+  'pre_title': content.field_card_pre_title,
+  'title': label,
+  'description': description|render|striptags|trim,
+  'access': content.field_access|render|striptags|trim,
+  'url': url,
+  'type_label': item_label,
+  'date_output': content.field_published_date
+} %}

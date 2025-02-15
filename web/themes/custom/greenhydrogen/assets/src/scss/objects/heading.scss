@@ -1,0 +1,12 @@
+.o-heading {
+  @include ts-section-heading;
+  border-top    : 1px solid $mid-grey;
+  color         : $dark-green;
+  padding-top   : var(--space-m);
+  margin-bottom : var(--space-2xl);
+
+  @include media('<tablet') {
+    margin-bottom : var(--space-xl);
+  }
+}
+

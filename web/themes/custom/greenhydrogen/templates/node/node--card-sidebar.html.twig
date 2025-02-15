@@ -1,0 +1,15 @@
+{% set item_label = content.field_type|render|striptags|trim %}
+{% if item_label is empty %}
+  {% set item_label = node.type.entity.label %}
+{% endif %}
+
+{% include '@greenhydrogen/node-partials/card.html.twig' with {
+  'size': 'sidebar',
+  'image': content.field_image,
+  'pre_title': content.field_card_pre_title,
+  'title': label,
+  'access': content.field_access|render|striptags|trim,
+  'url': url,
+  'type_label': item_label,
+  'date_output': content.field_published_date
+} %}

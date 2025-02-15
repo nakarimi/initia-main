@@ -1,0 +1,16 @@
+{% if sub_pages is not empty %}
+  <nav class="c-subpage-navigation" aria-label="Sub page navigation">
+    <div class="o-container">
+      <ul class="c-subpage-navigation__list">
+        {% for sub_page in sub_pages %}
+          <li class="c-subpage-navigation__list-item">
+            <a class="c-subpage-navigation__list-item-link {{ sub_page.id == node.id ? 'is-current' : '' }}" href="{{ sub_page.url }}">
+              {{ sub_page.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+{% endif %}
+

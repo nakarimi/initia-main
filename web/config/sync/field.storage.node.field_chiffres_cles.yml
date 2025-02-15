@@ -1,0 +1,19 @@
+uuid: e2d0a356-efcb-484d-879c-8a5b0728909d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_chiffres_cles
+field_name: field_chiffres_cles
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

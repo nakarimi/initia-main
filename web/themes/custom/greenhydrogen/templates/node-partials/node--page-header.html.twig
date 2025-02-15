@@ -1,0 +1,30 @@
+{% if standfirst is empty %}
+  {% set standfirst = content.field_standfirst %}
+{% endif %}
+{% set image = content.field_banner_image %}
+{% if content.field_banner_image[0] is empty %}
+  {% set extra_classes = 'c-page-header--no-image' %}
+{% endif %}
+<header class="c-page-header {{ extra_classes }}">
+  {% if content.field_banner_image[0] is not empty %}
+    <div class="c-page-header__image-container">
+      {{ content.field_banner_image|render }}
+    </div>
+  {% endif %}
+  <div class="c-page-header__content-container o-container">
+    <div class="c-page-header__inner">
+      <div class="c-page-header__content">
+        <h1 class="c-page-header__title">{{ label }}</h1>
+
+        {% if standfirst is not empty %}
+          <div class="c-page-header__standfirst">
+            {{ standfirst|raw }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</header>
+{# Sub pages #}
+{% include 'node--sub-navigation.html.twig' %}
+

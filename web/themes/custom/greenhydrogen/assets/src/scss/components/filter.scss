@@ -1,0 +1,30 @@
+.c-filter {
+  $c       : &;
+  position : relative;
+
+  &__label {
+    &--field-keywords {
+      @include accessible-hide;
+    }
+  }
+
+  &__wrapper {
+    margin : 0;
+  }
+
+  &__search-submit-button {
+    @include o-button($color : $dark-green, $background-color : $light-grey, $icon : true);
+    position : absolute;
+    border   : none;
+    right    : 0;
+    top      : var(--space-xs);
+  }
+
+  &--field-keywords {
+    @include ts-search-term;
+    @include placeholder($dark-green);
+    background-color : transparent;
+    color            : $dark-green;
+    width            : calc(100% - 32px);
+  }
+}

@@ -1,0 +1,20 @@
+{% set classes = [
+  'c-embed',
+  'o-section',
+  'o-section--embed',
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+{% block paragraph %}
+  <section{{ attributes.addClass(classes) }}>
+    <div class="c-embed__container o-container">
+      <div class="c-embed__inner">
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+      </div>
+    </div>
+  </section>
+{% endblock paragraph %}

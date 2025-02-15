@@ -1,0 +1,30 @@
+.c-boxed-content {
+
+  &__container {
+    @include grid;
+  }
+
+  &__inner {
+    border      : 2px solid $mid-green;
+    grid-column : 1 / 9;
+    padding     : var(--space-m);
+
+    @include media('<tablet') {
+      @include full-width-grid;
+    }
+  }
+
+  /* Modifiers
+  ================================================== */
+  .c-node--type-content-item &__inner {
+    grid-column : 3 / 11;
+
+    @include media('<desktop') {
+      grid-column : 1 / 13;
+    }
+
+    @include media('<tablet') {
+      @include full-width-grid;
+    }
+  }
+}

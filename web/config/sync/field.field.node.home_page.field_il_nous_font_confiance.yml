@@ -1,0 +1,19 @@
+uuid: 9d6a61a8-76ab-490f-ac62-44f96d7795b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_il_nous_font_confiance
+    - node.type.home_page
+id: node.home_page.field_il_nous_font_confiance
+field_name: field_il_nous_font_confiance
+entity_type: node
+bundle: home_page
+label: 'Il nous font confiance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
