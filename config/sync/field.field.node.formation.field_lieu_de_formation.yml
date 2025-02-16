@@ -1,0 +1,49 @@
+uuid: 3b004387-df94-48d4-95c0-5419d6c883f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lieu_de_formation
+    - node.type.formation
+  module:
+    - address
+id: node.formation.field_lieu_de_formation
+field_name: field_lieu_de_formation
+entity_type: node
+bundle: formation
+label: 'Lieu de formation'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    langcode: null
+    country_code: FR
+    administrative_area: null
+    locality: ''
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: ''
+    address_line3: ''
+    organization: ''
+    given_name: null
+    additional_name: null
+    family_name: null
+default_value_callback: ''
+settings:
+  available_countries:
+    FR: FR
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    sortingCode:
+      override: hidden
+  fields: {  }
+field_type: address

@@ -1,0 +1,15 @@
+uuid: c14a3246-3db6-4c18-9441-57c070f35797
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: prochaines_sessions_dates
+label: 'Prochaines sessions dates'
+icon_uuid: null
+icon_default: null
+description: 'Prochaines sessions dates'
+behavior_plugins: {  }

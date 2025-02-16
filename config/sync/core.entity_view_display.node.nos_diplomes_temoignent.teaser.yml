@@ -1,0 +1,24 @@
+uuid: cc13943c-ee3f-4c35-9c89-e28ffe2f0c23
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.nos_diplomes_temoignent.field_description_nos_diplomes
+    - field.field.node.nos_diplomes_temoignent.field_le_temoignage
+    - node.type.nos_diplomes_temoignent
+  module:
+    - user
+id: node.nos_diplomes_temoignent.teaser
+targetEntityType: node
+bundle: nos_diplomes_temoignent
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description_nos_diplomes: true
+  field_le_temoignage: true

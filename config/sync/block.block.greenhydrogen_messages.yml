@@ -1,0 +1,22 @@
+uuid: 9453b97b-80bb-46fa-803c-52130cea790a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - greenhydrogen
+_core:
+  default_config_hash: YqKTtloWJ8FjLtfVNfrHaK6kVgxT67lC1cJ3j6i6WLo
+id: greenhydrogen_messages
+theme: greenhydrogen
+region: pre-header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

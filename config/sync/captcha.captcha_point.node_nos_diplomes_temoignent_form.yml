@@ -1,0 +1,7 @@
+uuid: 11bf8e4b-c9f0-44ab-9948-28d57aebe66d
+langcode: en
+status: false
+dependencies: {  }
+formId: node_nos_diplomes_temoignent_form
+captchaType: default
+label: node_nos_diplomes_temoignent_form

@@ -1,0 +1,73 @@
+uuid: 3cef5bb2-20aa-4e45-aa7a-b09365b74f5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_liste_nouveautes_et_condit
+    - node.type.formations_pour_elus
+    - paragraphs.paragraphs_type.nouveautes_et_conditions
+  module:
+    - entity_reference_revisions
+id: node.formations_pour_elus.field_liste_nouveautes_et_condit
+field_name: field_liste_nouveautes_et_condit
+entity_type: node
+bundle: formations_pour_elus
+label: 'Liste nouveautés et conditions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      nouveautes_et_conditions: nouveautes_et_conditions
+    negate: 0
+    target_bundles_drag_drop:
+      beneficiaires:
+        weight: 16
+        enabled: false
+      certifications:
+        weight: 17
+        enabled: false
+      description:
+        weight: 18
+        enabled: false
+      droit_individuel_liste:
+        weight: 19
+        enabled: false
+      methodes_d_evaluation:
+        weight: 20
+        enabled: false
+      nos_experts:
+        weight: 21
+        enabled: false
+      nouveautes_et_conditions:
+        weight: 22
+        enabled: true
+      objectifs:
+        weight: 23
+        enabled: false
+      prochaines_sessions_dates:
+        weight: 24
+        enabled: false
+      programme_de_formation:
+        weight: 25
+        enabled: false
+      remboursement_des_frais:
+        weight: 26
+        enabled: false
+      ressources_techniques:
+        weight: 27
+        enabled: false
+      temoignage:
+        weight: 28
+        enabled: false
+      textes_reglementaires:
+        weight: 29
+        enabled: false
+      vos_objectifs_pros:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

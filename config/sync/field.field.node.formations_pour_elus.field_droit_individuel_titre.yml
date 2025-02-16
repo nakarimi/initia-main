@@ -1,0 +1,19 @@
+uuid: 7e27f844-bbfa-4dad-aa83-54e5f4d4d6fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_droit_individuel_titre
+    - node.type.formations_pour_elus
+id: node.formations_pour_elus.field_droit_individuel_titre
+field_name: field_droit_individuel_titre
+entity_type: node
+bundle: formations_pour_elus
+label: 'Droit individuel titre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

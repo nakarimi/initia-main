@@ -1,0 +1,21 @@
+uuid: 2c37c9cc-787d-4398-a3ce-344f1c83f695
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_nouveautes_et_conditions
+field_name: field_nouveautes_et_conditions
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

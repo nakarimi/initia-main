@@ -1,0 +1,24 @@
+uuid: 3d05f967-81a4-4cd3-a4c4-f77485138480
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_processus_description
+    - filter.format.restricted_html
+    - node.type.formations_pour_elus
+  module:
+    - text
+id: node.formations_pour_elus.field_processus_description
+field_name: field_processus_description
+entity_type: node
+bundle: formations_pour_elus
+label: 'Processus description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

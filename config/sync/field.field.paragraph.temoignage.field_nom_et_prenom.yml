@@ -1,0 +1,19 @@
+uuid: 6e8480f9-5164-49ec-813e-8e64fdf2794a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nom_et_prenom
+    - paragraphs.paragraphs_type.temoignage
+id: paragraph.temoignage.field_nom_et_prenom
+field_name: field_nom_et_prenom
+entity_type: paragraph
+bundle: temoignage
+label: 'Nom et Prénom'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

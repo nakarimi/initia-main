@@ -1,0 +1,118 @@
+uuid: 87294664-996e-4076-b941-cc768bafe587
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.financement.field_commencez_votre_parcours_f
+    - field.field.node.financement.field_financement_description
+    - field.field.node.financement.field_financement_header_image
+    - field.field.node.financement.field_financement_logo
+    - field.field.node.financement.field_financement_par_l_opco
+    - field.field.node.financement.field_financer_cpf
+    - field.field.node.financement.field_financer_ma_formation
+    - field.field.node.financement.field_pour_les_demandeurs
+    - field.field.node.financement.field_pour_les_groupes
+    - field.field.node.financement.field_pour_se_faire_financer
+    - field.field.node.financement.field_vous_etes_salarie
+    - node.type.financement
+  module:
+    - image
+    - text
+    - user
+id: node.financement.default
+targetEntityType: node
+bundle: financement
+mode: default
+content:
+  field_commencez_votre_parcours_f:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_financement_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_financement_header_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_financement_logo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_financement_par_l_opco:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_financer_cpf:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_financer_ma_formation:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_pour_les_demandeurs:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_pour_les_groupes:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_pour_se_faire_financer:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_vous_etes_salarie:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

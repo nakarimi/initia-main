@@ -1,0 +1,19 @@
+uuid: dc2f4189-7a69-4ed3-ac6c-b5918ad4f07d
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - node
+id: node.field_lieu_de_formation
+field_name: field_lieu_de_formation
+entity_type: node
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

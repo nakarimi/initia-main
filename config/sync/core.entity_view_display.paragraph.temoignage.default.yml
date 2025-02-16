@@ -1,0 +1,53 @@
+uuid: 21c6f2b6-c78b-4205-97aa-cd117d9753b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.temoignage.field_le_temoignage
+    - field.field.paragraph.temoignage.field_nom_et_prenom
+    - field.field.paragraph.temoignage.field_photo_du_temoin
+    - field.field.paragraph.temoignage.field_titre_de_la_formation
+    - paragraphs.paragraphs_type.temoignage
+  module:
+    - image
+    - text
+id: paragraph.temoignage.default
+targetEntityType: paragraph
+bundle: temoignage
+mode: default
+content:
+  field_le_temoignage:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_nom_et_prenom:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_photo_du_temoin:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_titre_de_la_formation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

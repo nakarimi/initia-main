@@ -1,0 +1,19 @@
+uuid: fda1084c-ab7c-40e7-a01c-db3eaf423cd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_notre_catalogue
+field_name: field_notre_catalogue
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

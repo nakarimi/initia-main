@@ -1,0 +1,7 @@
+uuid: 6fcab01b-9daa-4c8d-b5ba-840fbf83968b
+langcode: en
+status: false
+dependencies: {  }
+formId: node_formation_presentielles_form
+captchaType: default
+label: node_formation_presentielles_form

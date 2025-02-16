@@ -1,0 +1,19 @@
+uuid: 149d16ab-2589-43ee-aa93-7218601b715c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sous_titre_formations_pres
+    - node.type.formation_presentielles
+id: node.formation_presentielles.field_sous_titre_formations_pres
+field_name: field_sous_titre_formations_pres
+entity_type: node
+bundle: formation_presentielles
+label: 'Sous-titre formations présentielles'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

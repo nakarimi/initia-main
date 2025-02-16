@@ -1,0 +1,19 @@
+uuid: 192e3cfa-3b2a-4717-ad5b-d686ddacb616
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_commence_description
+field_name: field_commence_description
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,39 @@
+uuid: f44e512b-f8d1-4ece-9d76-408ef4b750fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.nos_diplomes_temoignent.field_description_nos_diplomes
+    - field.field.node.nos_diplomes_temoignent.field_le_temoignage
+    - node.type.nos_diplomes_temoignent
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.nos_diplomes_temoignent.default
+targetEntityType: node
+bundle: nos_diplomes_temoignent
+mode: default
+content:
+  field_description_nos_diplomes:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_le_temoignage:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

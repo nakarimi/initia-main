@@ -1,0 +1,34 @@
+uuid: d44fec43-ef93-4e47-af63-0b07b3794ee6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nouveautes_et_conditions.field_nouveautes_description
+    - field.field.paragraph.nouveautes_et_conditions.field_nouveautes_titre
+    - paragraphs.paragraphs_type.nouveautes_et_conditions
+  module:
+    - text
+id: paragraph.nouveautes_et_conditions.default
+targetEntityType: paragraph
+bundle: nouveautes_et_conditions
+mode: default
+content:
+  field_nouveautes_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_nouveautes_titre:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

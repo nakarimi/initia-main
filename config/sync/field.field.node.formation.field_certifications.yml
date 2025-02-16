@@ -1,0 +1,55 @@
+uuid: 9be3a574-e5a5-4e56-88b5-72065bffb250
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certifications
+    - node.type.formation
+    - paragraphs.paragraphs_type.certifications
+  module:
+    - entity_reference_revisions
+id: node.formation.field_certifications
+field_name: field_certifications
+entity_type: node
+bundle: formation
+label: Certifications
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      certifications: certifications
+    negate: 0
+    target_bundles_drag_drop:
+      beneficiaires:
+        weight: 10
+        enabled: false
+      certifications:
+        weight: 11
+        enabled: true
+      description:
+        weight: 12
+        enabled: false
+      methodes_d_evaluation:
+        weight: 13
+        enabled: false
+      nos_experts:
+        weight: 14
+        enabled: false
+      objectifs:
+        weight: 15
+        enabled: false
+      programme_de_formation:
+        weight: 16
+        enabled: false
+      ressources_techniques:
+        weight: 17
+        enabled: false
+      vos_objectifs_pros:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

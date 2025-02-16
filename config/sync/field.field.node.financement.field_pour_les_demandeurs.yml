@@ -1,0 +1,24 @@
+uuid: d41126f4-d883-492a-aad1-3015897365de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pour_les_demandeurs
+    - filter.format.restricted_html
+    - node.type.financement
+  module:
+    - text
+id: node.financement.field_pour_les_demandeurs
+field_name: field_pour_les_demandeurs
+entity_type: node
+bundle: financement
+label: 'Pour les demandeurs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

@@ -1,0 +1,18 @@
+uuid: 3ec0072e-96e8-48cd-b99d-b1c3b2d6cd9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.reclamation
+id: node.reclamation.title
+field_name: title
+entity_type: node
+bundle: reclamation
+label: Titre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,67 @@
+uuid: 2f0fd736-12c3-4987-a6d9-271c441cbc81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_processus_liste
+    - node.type.formations_pour_elus
+    - paragraphs.paragraphs_type.vos_objectifs_pros
+  module:
+    - entity_reference_revisions
+id: node.formations_pour_elus.field_processus_liste
+field_name: field_processus_liste
+entity_type: node
+bundle: formations_pour_elus
+label: 'Processus liste'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      vos_objectifs_pros: vos_objectifs_pros
+    negate: 0
+    target_bundles_drag_drop:
+      beneficiaires:
+        weight: 14
+        enabled: false
+      certifications:
+        weight: 15
+        enabled: false
+      description:
+        weight: 16
+        enabled: false
+      droit_individuel_liste:
+        weight: 17
+        enabled: false
+      methodes_d_evaluation:
+        weight: 18
+        enabled: false
+      nos_experts:
+        weight: 19
+        enabled: false
+      objectifs:
+        weight: 20
+        enabled: false
+      prochaines_sessions_dates:
+        weight: 21
+        enabled: false
+      programme_de_formation:
+        weight: 22
+        enabled: false
+      ressources_techniques:
+        weight: 23
+        enabled: false
+      temoignage:
+        weight: 24
+        enabled: false
+      textes_reglementaires:
+        weight: 25
+        enabled: false
+      vos_objectifs_pros:
+        weight: 26
+        enabled: true
+field_type: entity_reference_revisions

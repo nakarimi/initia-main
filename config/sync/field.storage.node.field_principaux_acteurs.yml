@@ -1,0 +1,19 @@
+uuid: 2116e043-6e41-49f7-8374-8743b8ae5d76
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_principaux_acteurs
+field_name: field_principaux_acteurs
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

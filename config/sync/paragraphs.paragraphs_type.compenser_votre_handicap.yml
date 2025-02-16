@@ -1,0 +1,15 @@
+uuid: 89dabffc-b3eb-40f8-b001-120dcff01bad
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: compenser_votre_handicap
+label: 'Compenser votre Handicap'
+icon_uuid: null
+icon_default: null
+description: 'Compenser votre Handicap'
+behavior_plugins: {  }

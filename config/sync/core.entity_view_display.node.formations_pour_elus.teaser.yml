@@ -1,0 +1,56 @@
+uuid: a0feae5e-789a-4308-a6a8-e563dbc56686
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.formations_pour_elus.field_description_formation_elus
+    - field.field.node.formations_pour_elus.field_droit_individuel_descripti
+    - field.field.node.formations_pour_elus.field_droit_individuel_sous_titr
+    - field.field.node.formations_pour_elus.field_droit_individuel_titre
+    - field.field.node.formations_pour_elus.field_formation_elus_image
+    - field.field.node.formations_pour_elus.field_formations_aux_elus
+    - field.field.node.formations_pour_elus.field_liste_des_droit_individuel
+    - field.field.node.formations_pour_elus.field_liste_nouveautes_et_condit
+    - field.field.node.formations_pour_elus.field_notre_catalogue
+    - field.field.node.formations_pour_elus.field_nouveautes_et_conditions
+    - field.field.node.formations_pour_elus.field_nouveautes_sous_titre
+    - field.field.node.formations_pour_elus.field_processus_description
+    - field.field.node.formations_pour_elus.field_processus_liste
+    - field.field.node.formations_pour_elus.field_processus_sous_titre
+    - field.field.node.formations_pour_elus.field_processus_titre
+    - field.field.node.formations_pour_elus.field_telecharger_le_guide
+    - field.field.node.formations_pour_elus.field_textes_reglementaires
+    - field.field.node.formations_pour_elus.field_titre_formation_elus
+    - node.type.formations_pour_elus
+  module:
+    - user
+id: node.formations_pour_elus.teaser
+targetEntityType: node
+bundle: formations_pour_elus
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description_formation_elus: true
+  field_droit_individuel_descripti: true
+  field_droit_individuel_sous_titr: true
+  field_droit_individuel_titre: true
+  field_formation_elus_image: true
+  field_formations_aux_elus: true
+  field_liste_des_droit_individuel: true
+  field_liste_nouveautes_et_condit: true
+  field_notre_catalogue: true
+  field_nouveautes_et_conditions: true
+  field_nouveautes_sous_titre: true
+  field_processus_description: true
+  field_processus_liste: true
+  field_processus_sous_titre: true
+  field_processus_titre: true
+  field_telecharger_le_guide: true
+  field_textes_reglementaires: true
+  field_titre_formation_elus: true

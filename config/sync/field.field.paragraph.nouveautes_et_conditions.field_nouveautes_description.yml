@@ -1,0 +1,24 @@
+uuid: a70a09f3-cf55-4fae-9480-abca7af654a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nouveautes_description
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.nouveautes_et_conditions
+  module:
+    - text
+id: paragraph.nouveautes_et_conditions.field_nouveautes_description
+field_name: field_nouveautes_description
+entity_type: paragraph
+bundle: nouveautes_et_conditions
+label: 'Nouveautés description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

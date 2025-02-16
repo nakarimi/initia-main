@@ -1,0 +1,20 @@
+uuid: a888d362-ba56-45b1-bbeb-2b1dce77f95f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - greenhydrogen
+_core:
+  default_config_hash: Z3nlZUh2mSJP3apMrJWt-duS-aLyP79rcfu_0wpPmDs
+id: greenhydrogen_page_title
+theme: greenhydrogen
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 57fefb80-dcc7-44e7-ab6d-4bec66bda9c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_compenser_en_savoir_plus
+    - node.type.home_page
+  module:
+    - link
+id: node.home_page.field_compenser_en_savoir_plus
+field_name: field_compenser_en_savoir_plus
+entity_type: node
+bundle: home_page
+label: 'Compenser en savoir plus'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,42 @@
+uuid: 50ab1ef5-e17b-4d7a-a49c-f8fa8223bf56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.commencez_votre_parcours.field_commence_description
+    - field.field.node.commencez_votre_parcours.field_decouvrir_les_cours
+    - node.type.commencez_votre_parcours
+  module:
+    - link
+    - text
+    - user
+id: node.commencez_votre_parcours.default
+targetEntityType: node
+bundle: commencez_votre_parcours
+mode: default
+content:
+  field_commence_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_decouvrir_les_cours:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

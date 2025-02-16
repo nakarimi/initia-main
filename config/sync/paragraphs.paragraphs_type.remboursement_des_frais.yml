@@ -1,0 +1,15 @@
+uuid: 15f7cba2-e905-4f8b-8ea6-b0c9cf00d42e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: remboursement_des_frais
+label: 'Remboursement des frais'
+icon_uuid: null
+icon_default: null
+description: 'Remboursement des frais'
+behavior_plugins: {  }

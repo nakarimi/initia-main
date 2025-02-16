@@ -1,0 +1,19 @@
+uuid: c4d3b918-a4e8-441f-a0ef-a8292203d8f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_notre_equipe_description
+field_name: field_notre_equipe_description
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

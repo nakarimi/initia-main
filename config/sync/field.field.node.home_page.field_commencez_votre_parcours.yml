@@ -1,0 +1,29 @@
+uuid: 4fc3ee5c-ba38-4ab6-94d4-2328e00edb2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_commencez_votre_parcours
+    - node.type.commencez_votre_parcours
+    - node.type.home_page
+id: node.home_page.field_commencez_votre_parcours
+field_name: field_commencez_votre_parcours
+entity_type: node
+bundle: home_page
+label: 'Commencez votre parcours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      commencez_votre_parcours: commencez_votre_parcours
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

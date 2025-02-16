@@ -1,0 +1,23 @@
+uuid: 72d6a563-6c30-4c2e-a897-7230555c8c93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notre_catalogue
+    - node.type.formations_pour_elus
+  module:
+    - link
+id: node.formations_pour_elus.field_notre_catalogue
+field_name: field_notre_catalogue
+entity_type: node
+bundle: formations_pour_elus
+label: 'Notre catalogue'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

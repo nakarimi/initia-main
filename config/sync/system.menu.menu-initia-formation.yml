@@ -1,0 +1,8 @@
+uuid: b98428cf-9062-4623-9c29-a9de32017776
+langcode: en
+status: true
+dependencies: {  }
+id: menu-initia-formation
+label: 'Menu Initia-formation'
+description: ''
+locked: false

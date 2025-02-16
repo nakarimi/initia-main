@@ -1,0 +1,15 @@
+uuid: 7b0af827-1962-4c14-901a-0d17f321dd48
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: nouveautes_et_conditions
+label: 'Nouveautés et conditions'
+icon_uuid: null
+icon_default: null
+description: 'Nouveautés et conditions'
+behavior_plugins: {  }

@@ -1,0 +1,19 @@
+uuid: db17fd3d-f785-4665-9413-7450e8d3d818
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_frais_titre
+    - paragraphs.paragraphs_type.remboursement_des_frais
+id: paragraph.remboursement_des_frais.field_frais_titre
+field_name: field_frais_titre
+entity_type: paragraph
+bundle: remboursement_des_frais
+label: 'Frais titre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

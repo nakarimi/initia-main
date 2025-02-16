@@ -1,0 +1,24 @@
+uuid: e6dc915b-d551-4f42-80f3-9c9629730624
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_compenser_handicap_liste
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.compenser_votre_handicap
+  module:
+    - text
+id: paragraph.compenser_votre_handicap.field_compenser_handicap_liste
+field_name: field_compenser_handicap_liste
+entity_type: paragraph
+bundle: compenser_votre_handicap
+label: 'Compenser handicap liste'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

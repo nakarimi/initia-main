@@ -1,0 +1,24 @@
+uuid: f7db91a6-e29f-40f2-bd82-d8b50fb973b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description_du_bloc_benefi
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.beneficiaires
+  module:
+    - text
+id: paragraph.beneficiaires.field_description_du_bloc_benefi
+field_name: field_description_du_bloc_benefi
+entity_type: paragraph
+bundle: beneficiaires
+label: 'Description du bloc bénéficiaire'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

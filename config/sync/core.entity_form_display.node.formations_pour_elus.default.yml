@@ -1,0 +1,380 @@
+uuid: a4b1e907-342a-4ae4-8298-7df52ae7f4b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.formations_pour_elus.field_description_formation_elus
+    - field.field.node.formations_pour_elus.field_droit_individuel_descripti
+    - field.field.node.formations_pour_elus.field_droit_individuel_sous_titr
+    - field.field.node.formations_pour_elus.field_droit_individuel_titre
+    - field.field.node.formations_pour_elus.field_formation_elus_image
+    - field.field.node.formations_pour_elus.field_formations_aux_elus
+    - field.field.node.formations_pour_elus.field_liste_des_droit_individuel
+    - field.field.node.formations_pour_elus.field_liste_nouveautes_et_condit
+    - field.field.node.formations_pour_elus.field_notre_catalogue
+    - field.field.node.formations_pour_elus.field_nouveautes_et_conditions
+    - field.field.node.formations_pour_elus.field_nouveautes_sous_titre
+    - field.field.node.formations_pour_elus.field_processus_description
+    - field.field.node.formations_pour_elus.field_processus_liste
+    - field.field.node.formations_pour_elus.field_processus_sous_titre
+    - field.field.node.formations_pour_elus.field_processus_titre
+    - field.field.node.formations_pour_elus.field_telecharger_le_guide
+    - field.field.node.formations_pour_elus.field_textes_reglementaires
+    - field.field.node.formations_pour_elus.field_titre_formation_elus
+    - image.style.thumbnail
+    - node.type.formations_pour_elus
+  module:
+    - field_group
+    - image
+    - link
+    - paragraphs
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_header:
+      children:
+        - title
+        - field_titre_formation_elus
+        - field_description_formation_elus
+        - field_formation_elus_image
+        - field_notre_catalogue
+        - field_telecharger_le_guide
+      label: Header
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+    group_liste_des_formations:
+      children:
+        - field_formations_aux_elus
+      label: 'Liste des formations'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+    group_textes_reglementaires:
+      children:
+        - field_textes_reglementaires
+      label: 'Textes réglementaires '
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+    group_droit_individuel_a_la_form:
+      children:
+        - field_droit_individuel_titre
+        - field_droit_individuel_sous_titr
+        - field_droit_individuel_descripti
+        - field_liste_des_droit_individuel
+      label: 'Droit individuel à la formation'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+    group_processus_d_inscription:
+      children:
+        - field_processus_titre
+        - field_processus_sous_titre
+        - field_processus_description
+        - field_processus_liste
+      label: "Processus d'inscription"
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+    group_nouveautes_et_conditions:
+      children:
+        - field_nouveautes_et_conditions
+        - field_nouveautes_sous_titre
+        - field_liste_nouveautes_et_condit
+      label: 'Nouveautés et conditions'
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+id: node.formations_pour_elus.default
+targetEntityType: node
+bundle: formations_pour_elus
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_description_formation_elus:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_droit_individuel_descripti:
+    type: text_textarea
+    weight: 12
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_droit_individuel_sous_titr:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_droit_individuel_titre:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_formation_elus_image:
+    type: image_image
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_formations_aux_elus:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_liste_des_droit_individuel:
+    type: paragraphs
+    weight: 13
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_liste_nouveautes_et_condit:
+    type: paragraphs
+    weight: 14
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_notre_catalogue:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_nouveautes_et_conditions:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_nouveautes_sous_titre:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_processus_description:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_processus_liste:
+    type: paragraphs
+    weight: 29
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_processus_sous_titre:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_processus_titre:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_telecharger_le_guide:
+    type: link_default
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_textes_reglementaires:
+    type: paragraphs
+    weight: 9
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_titre_formation_elus:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

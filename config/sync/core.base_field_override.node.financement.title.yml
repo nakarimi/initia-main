@@ -1,0 +1,18 @@
+uuid: 306b4cf7-f5b6-4ea5-953b-49c9b81cbb72
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.financement
+id: node.financement.title
+field_name: title
+entity_type: node
+bundle: financement
+label: Titre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

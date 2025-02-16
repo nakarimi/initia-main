@@ -1,0 +1,29 @@
+uuid: 3f4d908b-3112-449f-8bc2-cc7c9399b08d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_categorie_formation
+    - paragraphs.paragraphs_type.categorie_de_formations
+    - taxonomy.vocabulary.categories_formation
+id: paragraph.categorie_de_formations.field_categorie_formation
+field_name: field_categorie_formation
+entity_type: paragraph
+bundle: categorie_de_formations
+label: 'Catégorie formation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categories_formation: categories_formation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

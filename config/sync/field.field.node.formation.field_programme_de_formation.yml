@@ -1,0 +1,40 @@
+uuid: fa250b00-85be-4391-8b1d-fae68169c694
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_programme_de_formation
+    - node.type.formation
+    - paragraphs.paragraphs_type.programme_de_formation
+  module:
+    - entity_reference_revisions
+id: node.formation.field_programme_de_formation
+field_name: field_programme_de_formation
+entity_type: node
+bundle: formation
+label: 'Programme de formation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      programme_de_formation: programme_de_formation
+    negate: 0
+    target_bundles_drag_drop:
+      beneficiaires:
+        weight: 5
+        enabled: false
+      description:
+        weight: 6
+        enabled: false
+      objectifs:
+        weight: 7
+        enabled: false
+      programme_de_formation:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions

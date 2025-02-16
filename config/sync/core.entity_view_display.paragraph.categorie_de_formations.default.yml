@@ -1,0 +1,30 @@
+uuid: 45e6e35f-af27-4d13-b425-8b09dbe10415
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.categorie_de_formations.field_categorie_formation
+    - field.field.paragraph.categorie_de_formations.field_formations
+    - paragraphs.paragraphs_type.categorie_de_formations
+id: paragraph.categorie_de_formations.default
+targetEntityType: paragraph
+bundle: categorie_de_formations
+mode: default
+content:
+  field_categorie_formation:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_formations:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

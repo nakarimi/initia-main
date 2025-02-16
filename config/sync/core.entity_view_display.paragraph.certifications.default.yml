@@ -1,0 +1,55 @@
+uuid: 02a0fef1-9095-4a3b-85a8-ce9d10369a5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.certifications.field_diplome_image
+    - field.field.paragraph.certifications.field_liste_des_objectifs
+    - field.field.paragraph.certifications.field_sous_titre_certifications
+    - field.field.paragraph.certifications.field_titre_certifications
+    - paragraphs.paragraphs_type.certifications
+  module:
+    - entity_reference_revisions
+    - image
+id: paragraph.certifications.default
+targetEntityType: paragraph
+bundle: certifications
+mode: default
+content:
+  field_diplome_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_liste_des_objectifs:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_sous_titre_certifications:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_titre_certifications:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

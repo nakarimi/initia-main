@@ -1,0 +1,19 @@
+uuid: 8dc846aa-2062-4691-8cef-3621a647f64c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_commencez_votre_parcours_f
+field_name: field_commencez_votre_parcours_f
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

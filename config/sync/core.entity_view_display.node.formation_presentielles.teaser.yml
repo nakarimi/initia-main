@@ -1,0 +1,28 @@
+uuid: 4b59a9e9-e6d5-4025-958a-f5e963716abd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.formation_presentielles.field_cours_recommande
+    - field.field.node.formation_presentielles.field_cours_recommande_descripti
+    - field.field.node.formation_presentielles.field_liste_des_formations
+    - field.field.node.formation_presentielles.field_sous_titre_formations_pres
+    - node.type.formation_presentielles
+  module:
+    - user
+id: node.formation_presentielles.teaser
+targetEntityType: node
+bundle: formation_presentielles
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cours_recommande: true
+  field_cours_recommande_descripti: true
+  field_liste_des_formations: true
+  field_sous_titre_formations_pres: true

@@ -1,0 +1,15 @@
+uuid: b2cfe4c4-db19-4f26-9d98-23e382b17390
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: ressources_techniques
+label: 'Ressources techniques'
+icon_uuid: null
+icon_default: null
+description: 'Ressources techniques'
+behavior_plugins: {  }

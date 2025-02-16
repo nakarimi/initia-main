@@ -1,0 +1,15 @@
+uuid: 18c4b6e5-a2a1-4ac7-999a-d730916a7571
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: vos_objectifs_pros
+label: 'Vos objectifs pros'
+icon_uuid: null
+icon_default: null
+description: 'Vos objectifs pros'
+behavior_plugins: {  }

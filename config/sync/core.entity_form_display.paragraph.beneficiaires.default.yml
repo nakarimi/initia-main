@@ -1,0 +1,54 @@
+uuid: d90b36e7-68d2-4017-8128-a8f35bac4de8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.beneficiaires.field_description_du_bloc_benefi
+    - field.field.paragraph.beneficiaires.field_image
+    - field.field.paragraph.beneficiaires.field_liste_des_points
+    - field.field.paragraph.beneficiaires.field_titre
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.beneficiaires
+  module:
+    - image
+    - text
+id: paragraph.beneficiaires.default
+targetEntityType: paragraph
+bundle: beneficiaires
+mode: default
+content:
+  field_description_du_bloc_benefi:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: image_image
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_liste_des_points:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_titre:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

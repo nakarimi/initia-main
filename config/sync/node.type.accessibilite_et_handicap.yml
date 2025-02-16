@@ -1,0 +1,18 @@
+uuid: 0d6e7a7c-165b-4b45-985e-7a14be928637
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Accessibilité et handicap'
+type: accessibilite_et_handicap
+description: 'Accessibilité et accompagnement des personnes en situation de Handicap'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

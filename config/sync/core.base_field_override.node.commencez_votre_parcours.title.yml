@@ -1,0 +1,18 @@
+uuid: 69f88539-e6f0-407c-a157-189f05522baa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.commencez_votre_parcours
+id: node.commencez_votre_parcours.title
+field_name: title
+entity_type: node
+bundle: commencez_votre_parcours
+label: Titre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

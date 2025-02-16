@@ -1,0 +1,64 @@
+uuid: a58a3ec9-e70b-43b1-8bfe-68fde9a2a363
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.home_page.field_chiffres_cles
+    - field.field.node.home_page.field_commencez_votre_parcours
+    - field.field.node.home_page.field_compenser_description
+    - field.field.node.home_page.field_compenser_en_savoir_plus
+    - field.field.node.home_page.field_compenser_handicap_image
+    - field.field.node.home_page.field_compenser_handicap_liste
+    - field.field.node.home_page.field_compenser_votre_handicap
+    - field.field.node.home_page.field_en_savoir_plus
+    - field.field.node.home_page.field_formations_populaires
+    - field.field.node.home_page.field_google_avis
+    - field.field.node.home_page.field_home_header_image
+    - field.field.node.home_page.field_home_sous_titre
+    - field.field.node.home_page.field_il_nous_font_confiance
+    - field.field.node.home_page.field_il_nous_font_description
+    - field.field.node.home_page.field_logo_company
+    - field.field.node.home_page.field_nos_diplomes_temoignent
+    - field.field.node.home_page.field_notre_equipe
+    - field.field.node.home_page.field_notre_equipe_description
+    - field.field.node.home_page.field_notre_equipe_image
+    - field.field.node.home_page.field_votre_reussite
+    - field.field.node.home_page.field_votre_reussite_description
+    - field.field.node.home_page.field_votre_reussite_logos
+    - node.type.home_page
+  module:
+    - user
+id: node.home_page.teaser
+targetEntityType: node
+bundle: home_page
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_chiffres_cles: true
+  field_commencez_votre_parcours: true
+  field_compenser_description: true
+  field_compenser_en_savoir_plus: true
+  field_compenser_handicap_image: true
+  field_compenser_handicap_liste: true
+  field_compenser_votre_handicap: true
+  field_en_savoir_plus: true
+  field_formations_populaires: true
+  field_google_avis: true
+  field_home_header_image: true
+  field_home_sous_titre: true
+  field_il_nous_font_confiance: true
+  field_il_nous_font_description: true
+  field_logo_company: true
+  field_nos_diplomes_temoignent: true
+  field_notre_equipe: true
+  field_notre_equipe_description: true
+  field_notre_equipe_image: true
+  field_votre_reussite: true
+  field_votre_reussite_description: true
+  field_votre_reussite_logos: true
