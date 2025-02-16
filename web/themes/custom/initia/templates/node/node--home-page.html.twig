@@ -142,58 +142,11 @@
 					</div>
 				</div>
 				<hr class="mt-5">
-				<div class="row">
 
-					{% if content.field_google_avis %}
-						<div class="col-md-4 avis-block text-start">
-							<div class="d-flex mx-0">
-								<div
-									class="text-start text-md-end me-auto ps-0 me-md-0">
-									<!-- me-auto on mobile, remove on desktop -->
-									<div class="avis-numb">{{ node.field_google_avis.value }}</div>
-									<img src="{{ directory }}/assets/images/stars.svg" alt="">
+				{% if content.field_google_avis %}
+					{{ content.field_google_avis }}
+				{% endif %}
 
-								</div>
-								<div class="text-end text-md-start mt-3 logo-avis col-6">
-									<img src="{{ directory }}/assets/images/google-avis.png" alt="">
-								</div>
-							</div>
-						</div>
-					{% endif %}
-					{% if content.field_google_avis %}
-						<div class="col-md-4 avis-block text-start">
-							<div class="d-flex mx-0">
-								<div
-									class="text-start text-md-end me-auto ps-0 me-md-0">
-									<!-- me-auto on mobile, remove on desktop -->
-									<div class="avis-numb">{{ node.field_google_avis.value }}</div>
-									<img src="{{ directory }}/assets/images/stars.svg" alt="">
-
-								</div>
-								<div class="text-end text-md-start mt-3 logo-avis col-6">
-									<img src="{{ directory }}/assets/images/avis-2.png" alt="">
-								</div>
-							</div>
-						</div>
-					{% endif %}
-					{% if content.field_google_avis %}
-						<div class="col-md-4 avis-block text-start">
-							<div class="d-flex mx-0">
-								<div
-									class="text-start text-md-end me-auto ps-0 me-md-0">
-									<!-- me-auto on mobile, remove on desktop -->
-									<div class="avis-numb">{{ node.field_google_avis.value }}</div>
-									<img src="{{ directory }}/assets/images/stars.svg" alt="">
-
-								</div>
-								<div class="text-end text-md-start mt-3 logo-avis col-6">
-									<img src="{{ directory }}/assets/images/digif-avis.png" alt="">
-								</div>
-							</div>
-						</div>
-					{% endif %}
-
-				</div>
 			</div>
 		</section>
 
@@ -277,8 +230,8 @@
 			</section>
 
 			{# {% if content.field_chiffres_cles %}
-																																																																																													<p class="col-md-4">{{ content.field_chiffres_cles }}</p>
-																																																																																													{% endif %} #}
+																																																																																																<p class="col-md-4">{{ content.field_chiffres_cles }}</p>
+																																																																																																{% endif %} #}
 			<section id="green-section">
 				<div class="container-fluid">
 					<div class="green-section">
@@ -310,7 +263,7 @@
 				<div class="container-fluid">
 					<h2>Nos diplômés Témoignent</h2>
 					<p class="col-md-3">Chez INITIAL FORMATION, nous sommes fiers de la réussite de nos étudiants. Voici ce
-																																																																																																																																																																																										                    que certains d'entre eux ont à dire</p>
+																																																																																																																																																																																																                    que certains d'entre eux ont à dire</p>
 
 
 					<div class="gray-carouselle">
@@ -413,9 +366,5 @@
 			</div>
 		</div>
 	</section>
-</div>{% endblock %}
-
-{% if page.footer %}
-    {{ page.footer }}
-{% endif %}
-
+</div>{% endblock %}{% if page.footer %}
+{{ page.footer }}{% endif %}

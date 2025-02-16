@@ -11,7 +11,7 @@ dependencies:
 id: initia_rightnav
 theme: initia
 region: header
-weight: 0
+weight: -7
 provider: null
 plugin: 'block_content:2abfe124-e09d-4932-aeb9-4cd3dcbec128'
 settings:
