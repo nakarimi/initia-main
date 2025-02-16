@@ -229,29 +229,13 @@
 				</div>
 			</section>
 
-			{# {% if content.field_chiffres_cles %}
-																																																																																																<p class="col-md-4">{{ content.field_chiffres_cles }}</p>
-																																																																																																{% endif %} #}
 			<section id="green-section">
 				<div class="container-fluid">
 					<div class="green-section">
-						<div class="row ">
-							<div class="col-md-3">
-								<p>20 000</p>
-								<span>Apprenants</span>
-							</div>
-							<div class="col-md-3">
-								<p>4000</p>
-								<span>Diplômés</span>
-							</div>
-							<div class="col-md-3">
-								<p>97%</p>
-								<span>Taux de réussite*</span>
-							</div>
-							<div class="col-md-3">
-								<p>4.6/5</p>
-								<span>Satisfaction client</span>
-							</div>
+						<div class="row">
+						{% if content.field_chiffres_cles %}
+							{{ content.field_chiffres_cles }}
+						{% endif %}
 						</div>
 					</div>
 				</div>
@@ -263,7 +247,7 @@
 				<div class="container-fluid">
 					<h2>Nos diplômés Témoignent</h2>
 					<p class="col-md-3">Chez INITIAL FORMATION, nous sommes fiers de la réussite de nos étudiants. Voici ce
-																																																																																																																																																																																																                    que certains d'entre eux ont à dire</p>
+																																																																																																																																																																																																																														                    que certains d'entre eux ont à dire</p>
 
 
 					<div class="gray-carouselle">

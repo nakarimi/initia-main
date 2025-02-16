@@ -463,7 +463,12 @@ a:hover,
   border-left: 1px solid var(--color-white-30);
 }
 
-.green-section p {
+.green-section p + p {
+  font-weight: normal;
+  font-size: 16px;
+
+}
+.green-section p{
   color: var(--color-white);
   font-weight: bold;
   margin: 0px;
