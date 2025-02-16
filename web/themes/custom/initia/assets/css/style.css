@@ -2193,3 +2193,20 @@ ul li.nav-item a{
 li.menu-item{
   list-style: none;
 }
+div.searchblock div{
+  padding: 0px;
+}
+div.searchblock .form-submit{
+  display: none;
+}
+div.searchblock .form-item{
+  width: 95%;
+}
+div.searchblock input{
+  width: 100% !important;
+    background-color: var(--color-8);
+    border: 0;
+    padding: 10px 25px;
+    font-size: 14px;
+    border-radius: var(--bs-border-radius-pill) !important;
+}

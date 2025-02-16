@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  $(".labelSearch").click(function (e) {
+    $("#search-block-form").submit();
+  });
   $(".toggleSearch").click(function (e) {
     e.preventDefault(); // Prevent default anchor behavior
 
