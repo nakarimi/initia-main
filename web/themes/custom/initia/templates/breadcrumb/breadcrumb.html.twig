@@ -1,0 +1,19 @@
+<section id="title-page">
+	<div class="container-fluid">
+		<h1 class="page-title mt-4">{{ label }}</h1>
+		{% if breadcrumb %}
+			<ul class="breadcrumb">
+				{% for item in breadcrumb %}
+					<li class="c-breadcrumbs__item">
+						{% if item.url %}
+							<a href="{{ item.url }}" class="c-breadcrumbs__link">{{ item.text }}</a>
+						{% else %}
+							<span class="c-breadcrumb__label">{{ item.text }}</span>
+						{% endif %}
+					</li>
+				{% endfor %}
+				<li>{{ label }}</li>
+			</ul>
+		{% endif %}
+	</div>
+</section>

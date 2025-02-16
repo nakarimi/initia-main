@@ -1,0 +1,239 @@
+{% set classes = [
+  'view',
+  'view-' ~ id|clean_class,
+  'view-id-' ~ id,
+  'view-display-id-' ~ display_id,
+  dom_id ? 'js-view-dom-id-' ~ dom_id,
+] %}
+<div{{attributes.addClass(classes)}}>
+	{{ page.breadcrumb }}
+	<div class="c-listing__inner o-container">
+		{{ title_prefix }}
+		{% if title %}
+			{{ title }}
+		{% endif %}
+		{{ title_suffix }}
+
+		{% if attachment_before %}
+			<div class="c-listing__attachment c-listing__attachment-before">
+				{{ attachment_before }}
+			</div>
+		{% endif %}
+
+		<div class="c-listing__filters js-filters">
+			{{ exposed }}
+		</div>
+
+		{% set has_padding_top = (header is not empty or exposed['#sorters'] is not empty) %}
+		<div class="c-listing__content">
+			{% if header is not empty %}
+				<div class="c-listing__results-count">
+					{{ header }}
+				</div>
+			{% endif %}
+			{% if rows %}
+				<div class="c-listing__items">
+					<section id="filter-content">
+						<div class="container-fluid my-5">
+							<div class="row">
+								<div class="top-content d-flex justify-content-between justify-content-lg-end">
+									<button class=" btn btn-white navbar-toggler d-block d-lg-none mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22" aria-expanded="false" aria-label="Toggle navigation">
+										<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3 5H10M10 5C10 6.10457 10.8954 7 12 7C13.1046 7 14 6.10457 14 5M10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5M3 12H12M19 12H21M19 12C19 13.1046 18.1046 14 17 14C15.8954 14 15 13.1046 15 12C15 10.8954 15.8954 10 17 10C18.1046 10 19 10.8954 19 12ZM14 5H21M12 19H21M3 19H5M5 19C5 20.1046 5.89543 21 7 21C8.10457 21 9 20.1046 9 19C9 17.8954 8.10457 17 7 17C5.89543 17 5 17.8954 5 19Z" stroke="#28303F" stroke-width="1.5" stroke-linecap="round"></path>
+										</svg>
+										Affinez votre recherche
+									</button>
+									<div class="d-flex flex-row align-items-center  fix-select-area">
+										<span class="d-none d-lg-block">Trier par</span>
+										<select class="form-select  " aria-label="Default select example">
+											<option selected="">Le plus récent</option>
+											<option value="1">Choix 1</option>
+											<option value="2">Choix 2</option>
+											<option value="3">Choix 3</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-2 collapse d-lg-block" id="navbarSupportedContent22">
+									<h5 class="fw-semibold">Affinez votre recherche</h5>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1" checked="">
+										<label class="form-check-label" for="flexCheckChecked1">
+											Formations à Distance (670)
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+										<label class="form-check-label" for="flexCheckChecked2">
+											Formations Présentielles (30)
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
+										<label class="form-check-label" for="flexCheckChecked3">
+											Formations pour Élus (10)
+										</label>
+									</div>
+									<h6 class="my-3">Sujet:</h6>
+									<div class="scrollarea">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="4">
+											<label class="form-check-label" for="4">
+												Photovoltaïque (30)
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="5" checked="">
+											<label class="form-check-label" for="55">
+												Infrastructure de Recharge de Véhicule Electrique (670)
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="6">
+											<label class="form-check-label" for="6">
+												Sécurité (10)
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="7">
+											<label class="form-check-label" for="7">
+												Electricité (230)
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="8">
+											<label class="form-check-label" for="8">
+												Fibre Optique (1230)
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="9">
+											<label class="form-check-label" for="9">
+												Habilitations(80)
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="77">
+											<label class="form-check-label" for="77">
+												Electricité (230)
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="888">
+											<label class="form-check-label" for="888">
+												Fibre Optique (1230)
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="999">
+											<label class="form-check-label" for="999">
+												Habilitations(80)
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="8888">
+											<label class="form-check-label" for="8888">
+												Fibre Optique (1230)
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="9999">
+											<label class="form-check-label" for="9999">
+												Habilitations(80)
+											</label>
+										</div>
+									</div>
+									<h6 class="my-3">Type de formation :</h6>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="11">
+										<label class="form-check-label" for="11">
+											Formation en présentiel
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="22" checked="">
+										<label class="form-check-label" for="22">
+											Apprentissage mixte
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="33">
+										<label class="form-check-label" for="33">
+											Apprentissage à distance
+										</label>
+									</div>
+									<h6 class="my-3">Formation diplômante :</h6>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="44">
+										<label class="form-check-label" for="44">
+											Oui
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="55" checked="">
+										<label class="form-check-label" for="55">
+											Non
+										</label>
+									</div>
+									<h6 class="my-3">Compte personnel de formation éligible (CPF) :</h6>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="66">
+										<label class="form-check-label" for="66">
+											Oui
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="77" checked="">
+										<label class="form-check-label" for="77">
+											Non
+										</label>
+									</div>
+								</div>
+								<div class="col-lg-10 pt-4">
+									<div class="row">
+										{{ rows }}
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				{% if pager %}
+					{{ pager }}
+				{% endif %}
+			{% elseif empty %}
+
+				<div class="c-listing__empty">
+					<div class="c-listing__empty-inner o-content-from-editor">
+						{% if site_settings.search_settings.search_settings.field_no_results_title is not empty %}
+							<h3>{{ site_settings.search_settings.search_settings.field_no_results_title }}</h3>
+						{% endif %}
+
+						{% if site_settings.search_settings.search_settings.field_no_results_text.value|raw is not empty %}
+							<p>{{ site_settings.search_settings.search_settings.field_no_results_text.value|raw }}</p>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		</div>
+
+		{% if attachment_after %}
+			<div class="c-listing__attachment c-listing__attachment-after">
+				{{ attachment_after }}
+			</div>
+		{% endif %}
+		{% if more %}
+			{{ more }}
+		{% endif %}
+		{% if footer %}
+			<div class="c-listing__footer">
+				{{ footer }}
+			</div>
+		{% endif %}
+		{% if feed_icons %}
+			<div class="c-listing__feed-icons">
+				{{ feed_icons }}
+			</div>
+		{% endif %}
+	</div>
+</div>
