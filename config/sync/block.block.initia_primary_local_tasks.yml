@@ -9,7 +9,7 @@ _core:
 id: initia_primary_local_tasks
 theme: initia
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

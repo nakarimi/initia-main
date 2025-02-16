@@ -577,22 +577,26 @@ ul.breadcrumb li a {
   padding: 20px;
 }
 
-/* Footer  */
+/* Footer   */
+.footer-bottom footer,
 footer {
   color: var(--color-4);
   font-size: 12px;
 }
 
+.footer-bottom p,
 footer p {
   color: var(--color-4);
   font-size: 14px;
 }
 
+.footer-bottom h5,
 footer h5 {
   font-weight: 600;
   font-size: 12px;
 }
 
+.footer-bottom a,
 footer a {
   font-size: 14px;
   text-decoration: underline;
@@ -2172,4 +2176,20 @@ hr {
 .votre-reussite-logos .field__items{
   display: flex;
   gap: 115px;
+}
+
+/* New */
+
+ul.navbar-nav{
+  gap: 30px;
+}
+ul li.nav-item a{
+  color: var(--color-4);
+}
+
+.block.block-menu.navigation.menu--main{
+  padding-top: 8px;
+}
+li.menu-item{
+  list-style: none;
 }

@@ -1,15 +1,13 @@
-uuid: adaa6e91-22c3-49ce-82f8-b3b89f87b7de
+uuid: 77de100f-c1d5-4708-b533-44a25c030c4c
 langcode: en
-status: false
+status: true
 dependencies:
   theme:
     - initia
-_core:
-  default_config_hash: Z3nlZUh2mSJP3apMrJWt-duS-aLyP79rcfu_0wpPmDs
-id: initia_page_title
+id: initia_pagetitle
 theme: initia
-region: header
-weight: -4
+region: primary_menu
+weight: 0
 provider: null
 plugin: page_title_block
 settings:
