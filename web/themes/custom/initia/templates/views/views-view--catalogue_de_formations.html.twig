@@ -6,7 +6,30 @@
   dom_id ? 'js-view-dom-id-' ~ dom_id,
 ] %}
 <div{{attributes.addClass(classes)}}>
-	{{ page.breadcrumb }}
+	<section id="title-page">
+		<div class="container-fluid">
+			<h1 class="page-title mt-4">
+				<font style="vertical-align: inherit;">
+					<font style="vertical-align: inherit;">{{ view.getTitle() }}</font>
+				</font>
+			</h1>
+			<ul class="breadcrumb">
+				<li>
+					<a href="/">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Home</font>
+						</font>
+					</a>
+				</li>
+				<li>
+					<font style="vertical-align: inherit;">
+						<font style="vertical-align: inherit;">{{ view.getTitle() }}</font>
+					</font>
+				</li>
+			</ul>
+		</div>
+	</section>
+
 	<div class="c-listing__inner o-container">
 		{{ title_prefix }}
 		{% if title %}
@@ -24,6 +47,21 @@
 			{{ exposed }}
 		</div>
 
+  {# Output the contextual filter argument, if available #}
+  {% if view.args is defined and view.args[0] is defined %}
+    <div class="view-argument">
+      <h3>Filter Argument:</h3>
+      <p>{{ view.args[0] }}</p>
+    </div>
+  {% endif %}
+  {# Print the contextual filter argument, if available. #}
+  {% if view.args[0] is defined %}
+    <div class="view-argument">
+      <h3>Filter Argument:</h3>
+      <p>{{ view.args[0] }}</p>
+    </div>
+  {% endif %}
+
 		{% set has_padding_top = (header is not empty or exposed['#sorters'] is not empty) %}
 		<div class="c-listing__content">
 			{% if header is not empty %}
@@ -31,6 +69,7 @@
 					{{ header }}
 				</div>
 			{% endif %}
+
 			{% if rows %}
 				<div class="c-listing__items">
 					<section id="filter-content">
@@ -55,24 +94,17 @@
 								</div>
 								<div class="col-lg-2 collapse d-lg-block" id="navbarSupportedContent22">
 									<h5 class="fw-semibold">Affinez votre recherche</h5>
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1" checked="">
-										<label class="form-check-label" for="flexCheckChecked1">
-											Formations à Distance (670)
-										</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
-										<label class="form-check-label" for="flexCheckChecked2">
-											Formations Présentielles (30)
-										</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3">
-										<label class="form-check-label" for="flexCheckChecked3">
-											Formations pour Élus (10)
-										</label>
-									</div>
+									{% if sidebar_type_de_formation is defined and sidebar_type_de_formation|length %}
+										{% for term in sidebar_type_de_formation %}
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="{{term.url}}" id="{{term.id}}">
+												<label class="form-check-label" for="flexCheckChecked1">
+													{{term.name}}
+												</label>
+											</div>
+										{% endfor %}
+									{% endif %}
+									
 									<h6 class="my-3">Sujet:</h6>
 									<div class="scrollarea">
 										<div class="form-check">
@@ -143,24 +175,16 @@
 										</div>
 									</div>
 									<h6 class="my-3">Type de formation :</h6>
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="11">
-										<label class="form-check-label" for="11">
-											Formation en présentiel
-										</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="22" checked="">
-										<label class="form-check-label" for="22">
-											Apprentissage mixte
-										</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="33">
-										<label class="form-check-label" for="33">
-											Apprentissage à distance
-										</label>
-									</div>
+									{% if sidebar_type_de_formation is defined and sidebar_type_de_formation|length %}
+										{% for term in sidebar_type_de_formation %}
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="{{term.url}}" id="{{term.id}}">
+												<label class="form-check-label" for="flexCheckChecked1">
+													{{term.name}}
+												</label>
+											</div>
+										{% endfor %}
+									{% endif %}
 									<h6 class="my-3">Formation diplômante :</h6>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" value="" id="44">

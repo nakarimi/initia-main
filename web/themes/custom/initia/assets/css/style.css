@@ -482,6 +482,7 @@ a:hover,
 /* Style the list */
 ul.breadcrumb {
   list-style: none;
+  margin: 0px;
 }
 
 /* Display list items side by side */

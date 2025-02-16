@@ -1,6 +1,5 @@
 <section id="title-page">
 	<div class="container-fluid">
-		<h1 class="page-title mt-4">{{ label }}</h1>
 		{% if breadcrumb %}
 			<ul class="breadcrumb">
 				{% for item in breadcrumb %}
@@ -12,7 +11,6 @@
 						{% endif %}
 					</li>
 				{% endfor %}
-				<li>{{ label }}</li>
 			</ul>
 		{% endif %}
 	</div>

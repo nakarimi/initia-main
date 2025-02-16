@@ -1,22 +1,28 @@
 <?php
 
+function initia_preprocess_views_view(array &$variables) {
+  // Check for your specific view display.
+  // You can check by view id or display id.
+  if ($variables['view']->id() == 'catalogue_de_formations' && $variables['display_id'] == 'page_1') {
+    // Load taxonomy terms from the 'Type de formation' vocabulary.
+    $terms = \Drupal::entityTypeManager()
+      ->getStorage('taxonomy_term')
+      ->loadTree('type_de_formation'); // Use your vocabulary machine name.
 
-
-function initia_preprocess_breadcrumb(&$variables){
-
-  if(($node = \Drupal::routeMatch()->getParameter('node')) && $variables['breadcrumb']){
-// Adding the a divider of between home an the title of the page.
-      $variables['breadcrumb'][] = array(
-          'text' => '>'
-      );
-// Adding the title of the page in the breadcrumb
-      $variables['breadcrumb'][] = array(
-          'text' => $node->getTitle(),
-          'url' => $node->URL()
-      );
-
+    $term_list = [];
+    foreach ($terms as $term) {
+      $term_list[] = [
+        'tid'  => $term->tid,
+        'name' => $term->name,
+        // Build a URL to the taxonomy term page.
+        'url'  => \Drupal\Core\Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $term->tid])->toString(),
+      ];
+    }
+    // Make available to your Twig template.
+    $variables['sidebar_type_de_formation'] = $term_list;
   }
 }
+
 
 /**
  * Implements hook_preprocess_field().
