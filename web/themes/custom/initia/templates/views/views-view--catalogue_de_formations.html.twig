@@ -124,27 +124,27 @@
 									{% endif %}
 									<h6 class="my-3">Formation diplômante :</h6>
 									<div class="form-check">
-										<input name="field_formation_diplomante" class="form-check-input" type="checkbox" value="1" id="field_formation_diplomante">
-										<label class="form-check-label" for="field_formation_diplomante">
+										<input name="field_formation_diplomante_value" class="form-check-input" type="checkbox" value="1" id="field_formation_diplomante_value">
+										<label class="form-check-label" for="field_formation_diplomante_value">
 											Oui
 										</label>
 									</div>
 									<div class="form-check">
-										<input name="field_formation_diplomante" class="form-check-input" type="checkbox" value="0" id="field_formation_diplomante">
-										<label class="form-check-label" for="field_formation_diplomante">
+										<input name="field_formation_diplomante_value" class="form-check-input" type="checkbox" value="0" id="field_formation_diplomante_value">
+										<label class="form-check-label" for="field_formation_diplomante_value">
 											Non
 										</label>
 									</div>
 									<h6 class="my-3">Compte personnel de formation éligible (CPF) :</h6>
 									<div class="form-check">
-										<input name="field_accessible" class="form-check-input" type="checkbox" value="1" id="field_accessible">
-										<label class="form-check-label" for="field_accessible">
+										<input name="field_accessible_value" class="form-check-input" type="checkbox" value="1" id="field_accessible_value">
+										<label class="form-check-label" for="field_accessible_value">
 											Oui
 										</label>
 									</div>
 									<div class="form-check">
-										<input name="field_accessible" class="form-check-input" type="checkbox" value="0" id="field_accessible">
-										<label class="form-check-label" for="field_accessible">
+										<input name="field_accessible_value" class="form-check-input" type="checkbox" value="0" id="field_accessible_value">
+										<label class="form-check-label" for="field_accessible_value">
 											Non
 										</label>
 									</div>
@@ -213,6 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(filterContainer, { childList: true, subtree: true });
 
     attachEventListeners(filterContainer);
+    setCheckboxesFromQuery(filterContainer);
 
   } else {
     console.error("Filter container not found.");
@@ -236,11 +237,11 @@ function handleInputChange() {
   selectedFilters['field_sujet_target_id'] = Array.from(filterContainer.querySelectorAll('input[name="field_sujet_target_id[]"]:checked')).map(cb => cb.value);
     selectedFilters['field_type_de_formation_target_id_2'] = Array.from(filterContainer.querySelectorAll('input[name="field_type_de_formation_target_id_2[]"]:checked')).map(cb => cb.value);
 
-  const formationDiplomante = filterContainer.querySelector('input[name="field_formation_diplomante"]:checked');
-  selectedFilters['field_formation_diplomante'] = formationDiplomante ? formationDiplomante.value : '';
+  const formationDiplomante = filterContainer.querySelector('input[name="field_formation_diplomante_value"]:checked');
+  selectedFilters['field_formation_diplomante_value'] = formationDiplomante ? formationDiplomante.value : '';
 
-  const accessible = filterContainer.querySelector('input[name="field_accessible"]:checked');
-  selectedFilters['field_accessible'] = accessible ? accessible.value : '';
+  const accessible = filterContainer.querySelector('input[name="field_accessible_value"]:checked');
+  selectedFilters['field_accessible_value'] = accessible ? accessible.value : '';
 
   console.log(selectedFilters);
 
@@ -263,5 +264,18 @@ function buildCustomQueryString(params) {
     }
   }
   return queryString.slice(0, -1);
+}
+
+function setCheckboxesFromQuery(filterContainer) {
+  const urlParams = new URLSearchParams(window.location.search);
+
+  urlParams.forEach((value, key) => {
+    const checkboxes = filterContainer.querySelectorAll(`input[name="${key}[]"], input[name="${key}"]`);
+    checkboxes.forEach(checkbox => {
+      if (checkbox.value === value) {
+        checkbox.checked = true;
+      }
+    });
+  });
 }
 </script>
