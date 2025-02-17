@@ -2,6 +2,9 @@ $(document).ready(function () {
   $(".labelSearch").click(function (e) {
     $("#search-block-form").submit();
   });
+
+  console.log('Hello, world!');
+  
   $(".toggleSearch").click(function (e) {
     e.preventDefault(); // Prevent default anchor behavior
 

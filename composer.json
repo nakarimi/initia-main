@@ -19,6 +19,7 @@
         "drupal/address": "^2.0",
         "drupal/admin_toolbar": "^3.5",
         "drupal/adminimal_theme": "^1.7",
+        "drupal/better_exposed_filters": "^7.0",
         "drupal/captcha": "^2.0",
         "drupal/core-composer-scaffold": "^10.4",
         "drupal/core-project-message": "^10.4",

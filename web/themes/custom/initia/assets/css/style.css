@@ -885,6 +885,7 @@ h2 {
   border: 1px solid var(--color-border);
   font-size: 13px;
   border-radius: 12px;
+  min-width: 140px;
 }
 
 .cours-recommande {
@@ -2215,4 +2216,8 @@ div.searchblock input{
     padding: 10px 25px;
     font-size: 14px;
     border-radius: var(--bs-border-radius-pill) !important;
+}
+
+label[for="edit-sort-order"]{
+  display: none;
 }

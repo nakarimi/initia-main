@@ -17,4 +17,8 @@ global-scripts:
     assets/js/lightslider.js: { }
     assets/js/slick.min.js: { minified: true }
     assets/js/main.js: { }
+  dependencies:
+  - core/jquery
+  - core/drupal
+  - core/drupal.once
 
