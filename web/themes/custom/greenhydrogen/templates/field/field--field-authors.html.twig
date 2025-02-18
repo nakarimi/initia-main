@@ -1,3 +1,0 @@
-{% for item in items %}
-  {{ loop.first ? 'By'|trans ~ ' ' }}{{ item.content }}{{ not loop.last ? ',' }}
-{% endfor %}

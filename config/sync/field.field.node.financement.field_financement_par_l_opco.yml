@@ -1,0 +1,24 @@
+uuid: 3c0e3cf9-0c07-4c27-9f7b-bc5136934055
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_financement_par_l_opco
+    - filter.format.restricted_html
+    - node.type.financement
+  module:
+    - text
+id: node.financement.field_financement_par_l_opco
+field_name: field_financement_par_l_opco
+entity_type: node
+bundle: financement
+label: "Financement par l'OPCO"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

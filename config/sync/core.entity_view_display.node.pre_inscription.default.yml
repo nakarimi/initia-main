@@ -1,0 +1,19 @@
+uuid: f3016aa1-4f88-48f1-a65b-c4f3d974c088
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pre_inscription
+  module:
+    - user
+id: node.pre_inscription.default
+targetEntityType: node
+bundle: pre_inscription
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

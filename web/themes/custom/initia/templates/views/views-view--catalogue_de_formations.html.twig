@@ -1,0 +1,281 @@
+{{ attach_library('initia/global-scripts') }}
+
+{% set classes = [
+  'view',
+  'view-' ~ id|clean_class,
+  'view-id-' ~ id,
+  'view-display-id-' ~ display_id,
+  dom_id ? 'js-view-dom-id-' ~ dom_id,
+] %}
+<div{{attributes.addClass(classes)}}>
+	<section id="title-page">
+		<div class="container-fluid">
+			<h1 class="page-title mt-4">
+				<font style="vertical-align: inherit;">
+					<font style="vertical-align: inherit;">{{ view.getTitle() }}</font>
+				</font>
+			</h1>
+			<ul class="breadcrumb">
+				<li>
+					<a href="/">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Home</font>
+						</font>
+					</a>
+				</li>
+				<li>
+					<font style="vertical-align: inherit;">
+						<font style="vertical-align: inherit;">{{ view.getTitle() }}</font>
+					</font>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<div class="c-listing__inner o-container">
+		{{ title_prefix }}
+		{% if title %}
+			{{ title }}
+		{% endif %}
+		{{ title_suffix }}
+
+		{% if attachment_before %}
+			<div class="c-listing__attachment c-listing__attachment-before">
+				{{ attachment_before }}
+			</div>
+		{% endif %}
+
+		{# Output the contextual filter argument, if available #}
+		{% if view.args is defined and view.args[0] is defined %}
+			<div class="view-argument">
+				<h3>Filter Argument:</h3>
+				<p>{{ view.args[0] }}</p>
+			</div>
+		{% endif %}
+		{# Print the contextual filter argument, if available. #}
+		{% if view.args[0] is defined %}
+			<div class="view-argument">
+				<h3>Filter Argument:</h3>
+				<p>{{ view.args[0] }}</p>
+			</div>
+		{% endif %}
+
+		{% set has_padding_top = (header is not empty or exposed['#sorters'] is not empty) %}
+		<div class="c-listing__content">
+			{% if header is not empty %}
+				<div class="c-listing__results-count">
+					{{ header }}
+				</div>
+			{% endif %}
+
+			{% if rows %}
+				<div class="c-listing__items">
+					<section id="filter-content">
+						<div class="container-fluid my-5">
+							<div class="row">
+								<div class="top-content d-flex justify-content-between justify-content-lg-end">
+									<button class=" btn btn-white navbar-toggler d-block d-lg-none mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22" aria-expanded="false" aria-label="Toggle navigation">
+										<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3 5H10M10 5C10 6.10457 10.8954 7 12 7C13.1046 7 14 6.10457 14 5M10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5M3 12H12M19 12H21M19 12C19 13.1046 18.1046 14 17 14C15.8954 14 15 13.1046 15 12C15 10.8954 15.8954 10 17 10C18.1046 10 19 10.8954 19 12ZM14 5H21M12 19H21M3 19H5M5 19C5 20.1046 5.89543 21 7 21C8.10457 21 9 20.1046 9 19C9 17.8954 8.10457 17 7 17C5.89543 17 5 17.8954 5 19Z" stroke="#28303F" stroke-width="1.5" stroke-linecap="round"></path>
+										</svg>
+										Affinez votre recherche
+									</button>
+									<div class="d-flex flex-row align-items-center  fix-select-area">
+										<span class="d-none d-lg-block">Trier par</span>
+										<div class="c-listing__filters js-filters">
+											{{ exposed }}
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-2 collapse d-lg-block" id="navbarSupportedContent22">
+									<h5 class="fw-semibold">Affinez votre recherche</h5>
+									{% if sidebar_type_de_formation is defined and sidebar_type_de_formation|length %}
+										{% for term in sidebar_type_de_formation %}
+											<div class="form-check">
+												<input class="form-check-input" name="field_type_de_formation_target_id[]" type="checkbox" value="{{term.tid}}" id="{{term.tid}}">
+												<label class="form-check-label" for="flexCheckChecked1">
+													{{term.name}}
+												</label>
+											</div>
+										{% endfor %}
+									{% endif %}
+
+									<h6 class="my-3">Sujet:</h6>
+									{% if sidebar_categories_formation is defined and sidebar_categories_formation|length %}
+										{% for term in sidebar_categories_formation %}
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="{{term.url}}" id="{{term.id}}">
+												<label class="form-check-label" for="flexCheckChecked1">
+													{{term.name}}
+												</label>
+											</div>
+										{% endfor %}
+									{% endif %}
+									<h6 class="my-3">Type de formation :</h6>
+									{% if sidebar_type_de_formation is defined and sidebar_type_de_formation|length %}
+										{% for term in sidebar_type_de_formation %}
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="{{term.url}}" id="{{term.id}}">
+												<label class="form-check-label" for="flexCheckChecked1">
+													{{term.name}}
+												</label>
+											</div>
+										{% endfor %}
+									{% endif %}
+									<h6 class="my-3">Formation diplômante :</h6>
+									<div class="form-check">
+										<input name="field_formation_diplomante_value" class="form-check-input" type="checkbox" value="1" id="field_formation_diplomante_value">
+										<label class="form-check-label" for="field_formation_diplomante_value">
+											Oui
+										</label>
+									</div>
+									<div class="form-check">
+										<input name="field_formation_diplomante_value" class="form-check-input" type="checkbox" value="0" id="field_formation_diplomante_value">
+										<label class="form-check-label" for="field_formation_diplomante_value">
+											Non
+										</label>
+									</div>
+									<h6 class="my-3">Compte personnel de formation éligible (CPF) :</h6>
+									<div class="form-check">
+										<input name="field_accessible_value" class="form-check-input" type="checkbox" value="1" id="field_accessible_value">
+										<label class="form-check-label" for="field_accessible_value">
+											Oui
+										</label>
+									</div>
+									<div class="form-check">
+										<input name="field_accessible_value" class="form-check-input" type="checkbox" value="0" id="field_accessible_value">
+										<label class="form-check-label" for="field_accessible_value">
+											Non
+										</label>
+									</div>
+								</div>
+								<div class="col-lg-10 pt-4">
+									<div class="row">
+										{{ rows }}
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				{% if pager %}
+					{{ pager }}
+				{% endif %}
+			{% elseif empty %}
+
+				<div class="c-listing__empty">
+					<div class="c-listing__empty-inner o-content-from-editor">
+						{% if site_settings.search_settings.search_settings.field_no_results_title is not empty %}
+							<h3>{{ site_settings.search_settings.search_settings.field_no_results_title }}</h3>
+						{% endif %}
+
+						{% if site_settings.search_settings.search_settings.field_no_results_text.value|raw is not empty %}
+							<p>{{ site_settings.search_settings.search_settings.field_no_results_text.value|raw }}</p>
+						{% endif %}
+					</div>
+				</div>
+			{% endif %}
+		</div>
+
+		{% if attachment_after %}
+			<div class="c-listing__attachment c-listing__attachment-after">
+				{{ attachment_after }}
+			</div>
+		{% endif %}
+		{% if more %}
+			{{ more }}
+		{% endif %}
+		{% if footer %}
+			<div class="c-listing__footer">
+				{{ footer }}
+			</div>
+		{% endif %}
+		{% if feed_icons %}
+			<div class="c-listing__feed-icons">
+				{{ feed_icons }}
+			</div>
+		{% endif %}
+	</div>
+</div>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterContainer = document.getElementById('navbarSupportedContent22');
+
+  if (filterContainer) {
+    const observer = new MutationObserver(function(mutations) {
+      attachEventListeners(filterContainer);
+    });
+
+    observer.observe(filterContainer, { childList: true, subtree: true });
+
+    attachEventListeners(filterContainer);
+    setCheckboxesFromQuery(filterContainer);
+
+  } else {
+    console.error("Filter container not found.");
+  }
+});
+
+function attachEventListeners(filterContainer) {
+  const inputs = filterContainer.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+
+  inputs.forEach(input => {
+    input.removeEventListener('change', handleInputChange);
+    input.addEventListener('change', handleInputChange);
+  });
+}
+
+function handleInputChange() {
+  const filterContainer = document.getElementById('navbarSupportedContent22');
+  let selectedFilters = {};
+
+  selectedFilters['field_type_de_formation_target_id'] = Array.from(filterContainer.querySelectorAll('input[name="field_type_de_formation_target_id[]"]:checked')).map(cb => cb.value);
+  selectedFilters['field_sujet_target_id'] = Array.from(filterContainer.querySelectorAll('input[name="field_sujet_target_id[]"]:checked')).map(cb => cb.value);
+    selectedFilters['field_type_de_formation_target_id_2'] = Array.from(filterContainer.querySelectorAll('input[name="field_type_de_formation_target_id_2[]"]:checked')).map(cb => cb.value);
+
+  const formationDiplomante = filterContainer.querySelector('input[name="field_formation_diplomante_value"]:checked');
+  selectedFilters['field_formation_diplomante_value'] = formationDiplomante ? formationDiplomante.value : '';
+
+  const accessible = filterContainer.querySelector('input[name="field_accessible_value"]:checked');
+  selectedFilters['field_accessible_value'] = accessible ? accessible.value : '';
+
+  console.log(selectedFilters);
+
+  let baseUrl = window.location.href.split('?')[0];
+  let queryString = buildCustomQueryString(selectedFilters);
+  let redirectUrl = baseUrl + '?' + queryString;
+  window.location.href = redirectUrl;
+
+}
+
+function buildCustomQueryString(params) {
+  let queryString = '';
+  for (const key in params) {
+    if (Array.isArray(params[key])) {
+      params[key].forEach(value => {
+        queryString += `${encodeURIComponent(key)}%5B%5D=${encodeURIComponent(value)}&`;
+      });
+    } else if (params[key] !== '') {
+      queryString += `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}&`;
+    }
+  }
+  return queryString.slice(0, -1);
+}
+
+function setCheckboxesFromQuery(filterContainer) {
+  const urlParams = new URLSearchParams(window.location.search);
+
+  urlParams.forEach((value, key) => {
+    const checkboxes = filterContainer.querySelectorAll(`input[name="${key}[]"], input[name="${key}"]`);
+    checkboxes.forEach(checkbox => {
+      if (checkbox.value === value) {
+        checkbox.checked = true;
+      }
+    });
+  });
+}
+</script>

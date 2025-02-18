@@ -1,0 +1,24 @@
+uuid: 7116be37-c1f3-492d-a452-8b2a9f5fdb57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_droit_individuel_descripti
+    - filter.format.restricted_html
+    - node.type.formations_pour_elus
+  module:
+    - text
+id: node.formations_pour_elus.field_droit_individuel_descripti
+field_name: field_droit_individuel_descripti
+entity_type: node
+bundle: formations_pour_elus
+label: 'Droit individuel description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

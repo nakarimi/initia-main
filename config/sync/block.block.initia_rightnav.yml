@@ -1,0 +1,25 @@
+uuid: 421662ee-1ff2-4f4c-b156-8eef8a2e58ee
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2abfe124-e09d-4932-aeb9-4cd3dcbec128'
+  module:
+    - block_content
+  theme:
+    - initia
+id: initia_rightnav
+theme: initia
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:2abfe124-e09d-4932-aeb9-4cd3dcbec128'
+settings:
+  id: 'block_content:2abfe124-e09d-4932-aeb9-4cd3dcbec128'
+  label: 'right nav'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

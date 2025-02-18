@@ -1,0 +1,15 @@
+uuid: a2c7b363-04ea-4ce9-b57c-1d870d0b9f88
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: temoignage
+label: Témoignage
+icon_uuid: null
+icon_default: null
+description: Témoignage
+behavior_plugins: {  }

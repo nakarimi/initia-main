@@ -1,0 +1,29 @@
+uuid: 0c29b283-c97e-4cd1-90c6-8300b1b44c56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_formations_populaires
+    - node.type.formation
+    - node.type.home_page
+id: node.home_page.field_formations_populaires
+field_name: field_formations_populaires
+entity_type: node
+bundle: home_page
+label: 'Formations populaires'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      formation: formation
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

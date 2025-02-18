@@ -1,0 +1,19 @@
+uuid: 9b07c783-2e69-4e24-b550-ca8c0845ed23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sous_titre_certifications
+    - paragraphs.paragraphs_type.certifications
+id: paragraph.certifications.field_sous_titre_certifications
+field_name: field_sous_titre_certifications
+entity_type: paragraph
+bundle: certifications
+label: 'Sous titre certifications'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

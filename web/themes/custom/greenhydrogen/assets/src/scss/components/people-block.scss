@@ -1,9 +1,0 @@
-.c-people-block {
-  &__people {
-    @include grid(4);
-
-    @include media("<tablet") {
-      grid-template-columns : repeat(2, 1fr);
-    }
-  }
-}

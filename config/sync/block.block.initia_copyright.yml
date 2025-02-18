@@ -1,0 +1,25 @@
+uuid: 254d417f-b926-4c4f-868f-fb01c63aa4b3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:277fb3dd-d47b-4ef3-a69b-bf2bff5cf4de'
+  module:
+    - block_content
+  theme:
+    - initia
+id: initia_copyright
+theme: initia
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:277fb3dd-d47b-4ef3-a69b-bf2bff5cf4de'
+settings:
+  id: 'block_content:277fb3dd-d47b-4ef3-a69b-bf2bff5cf4de'
+  label: Copyright
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,105 @@
+uuid: c9587191-403c-40b6-a678-1c3f9ad38775
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.commencez_votre_parcours.field_commence_description
+    - field.field.node.commencez_votre_parcours.field_decouvrir_les_cours
+    - node.type.commencez_votre_parcours
+  module:
+    - field_group
+    - link
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_commencez_votre_parcours:
+      children:
+        - title
+        - field_commence_description
+        - field_decouvrir_les_cours
+      label: 'Commencez votre parcours'
+      region: hidden
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+id: node.commencez_votre_parcours.default
+targetEntityType: node
+bundle: commencez_votre_parcours
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_commence_description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_decouvrir_les_cours:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,29 @@
+uuid: 58c10c82-d3e9-492d-a738-8a1b6e1ddc92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_formations_aux_elus
+    - node.type.formation
+    - node.type.formations_pour_elus
+id: node.formations_pour_elus.field_formations_aux_elus
+field_name: field_formations_aux_elus
+entity_type: node
+bundle: formations_pour_elus
+label: 'Formations aux Elus'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      formation: formation
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

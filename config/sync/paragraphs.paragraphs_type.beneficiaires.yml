@@ -1,0 +1,15 @@
+uuid: f095c7cc-d773-44f8-b4ae-1ac2c4e5066a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: beneficiaires
+label: Bénéficiaires
+icon_uuid: null
+icon_default: null
+description: 'Bénéficiaires et Exigences'
+behavior_plugins: {  }
