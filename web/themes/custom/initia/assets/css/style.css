@@ -266,7 +266,9 @@ a:hover,
   border-top-right-radius: 0;
   border-bottom-left-radius: 20px;
 }
-
+.messages--error{
+  display: none !important;
+}
 .one-block-elements .block-register .block-detail {
 
   display: flex;
