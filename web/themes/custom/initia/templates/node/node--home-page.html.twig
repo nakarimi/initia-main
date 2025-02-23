@@ -114,11 +114,11 @@
 
 
 					<div class="col-md-8">
-						{% if node.field_votre_reussite.value %}
-							<h3 class="votre-reussite">{{ node.field_votre_reussite.value }}</h3>
+						{% if content.field_votre_reussite %}
+							{{ content.field_votre_reussite }}
 						{% endif %}
-						{% if node.field_votre_reussite_description.value %}
-							<p class="votre-reussite-description">{{ node.field_votre_reussite_description.value|raw }}</p>
+						{% if content.field_votre_reussite_description %}
+							{{ content.field_votre_reussite_description }}
 						{% endif %}
 
 						{% if node.field_en_savoir_plus is not empty %}
