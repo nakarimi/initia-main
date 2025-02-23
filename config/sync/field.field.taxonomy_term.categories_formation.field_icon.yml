@@ -1,0 +1,27 @@
+uuid: 32c77c6d-f51b-4e27-ba42-08601d6b9a44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_icon
+    - taxonomy.vocabulary.categories_formation
+  module:
+    - file
+id: taxonomy_term.categories_formation.field_icon
+field_name: field_icon
+entity_type: taxonomy_term
+bundle: categories_formation
+label: Icon
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png svg'
+  max_filesize: ''
+  description_field: false
+field_type: file

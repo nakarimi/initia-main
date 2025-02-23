@@ -1,5 +1,5 @@
 <?php
-
+use Drupal\taxonomy\Entity\Term;
 
 function initia_preprocess_page(&$variables) {
   $variables['#attached']['library'][] = 'initia/global-scripts';
@@ -79,18 +79,18 @@ function initia_preprocess_views_view(array &$variables) {
 
     $term_list = [];
     foreach ($terms as $term) {
-      // $query = \Drupal::entityQuery('node')
-      //   ->accessCheck(FALSE) // Explicitly disable access checks.
-      //   ->condition('status', 1)
-      //   ->condition('type', 'formation')
-      //   ->condition('categories_formation', $term->tid);
-      // $count = $query->count()->execute();
+
+      $file = \Drupal\file\Entity\File::load($term->field_icon->target_id);
+      $term_obj = Term::load($term->tid);
+      $file_id = $term_obj->get('field_icon')->target_id;
+      $file = \Drupal\file\Entity\File::load($file_id);
+      
+      $icon_url = $file ? $file->createFileUrl() : '';
 
       $term_list[] = [
         'tid'  => $term->tid,
         'name' => $term->name,
-        // 'name' => $term->name  . ' (' . $count . ')',
-        // Build a URL to the taxonomy term page.
+        'icon' => $icon_url,
         'url'  => \Drupal\Core\Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $term->tid])->toString(),
       ];
     }

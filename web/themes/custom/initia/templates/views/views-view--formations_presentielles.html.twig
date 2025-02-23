@@ -77,17 +77,18 @@
 							</svg>
 						</div>
 						<a class="d-none  hidden-to-replace active">reppp me</a>
-						{% if sidebar_type_de_formation is defined and sidebar_type_de_formation|length %}
-							{% for term in sidebar_type_de_formation %}
-								{# {% if sidebar_categories_formation is defined and sidebar_categories_formation|length %}
-																															{% for term in sidebar_categories_formation %} #}
-
-								<a href="#{{term.name|striptags|lower|replace({' ': '_'})}}" class="custom-link">
-									<img src="{{ directory }}/assets/images/h2-1.svg">
-									{{term.name}}
-								</a>
-							{% endfor %}
-						{% endif %}
+						{# {% if sidebar_type_de_formation is defined and sidebar_type_de_formation|length %}
+							{% for term in sidebar_type_de_formation %} #}
+							{% if sidebar_categories_formation is defined and sidebar_categories_formation|length %}
+								{% for term in sidebar_categories_formation %}
+									<a href="#{{ term.name|striptags|lower|replace({' ': '_'}) }}" class="custom-link">
+										{% if term.icon %}
+											<img width="32" height="32" src="{{ term.icon }}" alt="{{ term.name }}">
+										{% endif %}
+										{{ term.name }}
+									</a>
+								{% endfor %}
+							{% endif %}
 					</div>
 				</div>
 			</section>
