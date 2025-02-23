@@ -75,7 +75,7 @@
 							{% for term in sidebar_type_de_formation %} #}
 							{% if sidebar_categories_formation is defined and sidebar_categories_formation|length %}
 								{% for term in sidebar_categories_formation %}
-									<a href="#{{ term.name|striptags|lower|replace({' ': '_'}) }}" class="custom-link">
+									<a data-id="{{ term.name|striptags|lower|replace({' ': '_'}) }}" href="#{{ term.name|striptags|lower|replace({' ': '_'}) }}" class="custom-link">
 										{% if term.icon %}
 											<img width="32" height="32" src="{{ term.icon }}" alt="{{ term.name }}">
 										{% endif %}
@@ -112,7 +112,6 @@
 					<div class="container-fluid my-5">
 						<div class="row">
 							{{ rows }}
-
 						</div>
 					</div>
 				</div>
@@ -173,6 +172,62 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     console.error("Filter container not found.");
   }
+
+  // Select all anchor elements with the class .custom-link
+const customLinks = document.querySelectorAll('a.custom-link');
+
+customLinks.forEach(link => {
+    // Get the id from data-id attribute
+    const id = link.getAttribute('data-id');
+    
+    // Find the div with the matching id
+    const matchingDiv = document.getElementById(id);
+    
+    if (matchingDiv) {
+        // Find the img inside the .custom-link
+        const img = link.querySelector('img');
+        
+        if (img) {
+            // Clone the img
+            const clonedImg = img.cloneNode(true);
+            // Find the h2 inside the matching div
+            const h2Element = matchingDiv.querySelector('h2');
+            clonedImg.style.width = '48px';
+			clonedImg.style.height = '48px';
+            if (h2Element) {
+                // Insert the cloned img inside the h2
+                h2Element.insertBefore(clonedImg, h2Element.firstChild);
+            }
+        }
+    }
+});
+// Select all elements with the class .tax-box
+const taxBoxes = document.querySelectorAll('.tax-box');
+
+taxBoxes.forEach(box => {
+    // Find the h2 element inside the current tax-box
+    const h2Element = box.querySelector('h2');
+
+    if (h2Element) {
+        // Find the existing anchor element inside the h2
+        const linkElement = h2Element.querySelector('a');
+
+        if (linkElement) {
+            // Get the link from the anchor element
+            const link = linkElement.href; // Get the href attribute of the link
+            
+            // Find the anchor with the class .rounded-pill inside the current tax-box
+            const roundedPillLink = box.querySelector('a.rounded-pill');
+
+            if (roundedPillLink) {
+                // Set the href of the rounded-pill link to the extracted link
+                roundedPillLink.href = link;
+            }
+        }
+    }
+});
+
+
 });
 
 function attachEventListeners(filterContainer) {

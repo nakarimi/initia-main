@@ -1,10 +1,14 @@
 <?php
-use Drupal\taxonomy\Entity\Term;
 
-function initia_preprocess_page(&$variables) {
+use Drupal\taxonomy\Entity\Term;
+use Drupal\views\ViewExecutable;
+
+function initia_preprocess_page(&$variables)
+{
   $variables['#attached']['library'][] = 'initia/global-scripts';
 }
-function initia_preprocess_views_view(array &$variables) {
+function initia_preprocess_views_view(array &$variables)
+{
   // Check for your specific view display.
   // You can check by view id or display id.
   if ($variables['view']->id() == 'catalogue_de_formations' && $variables['display_id'] == 'page_1') {
@@ -84,7 +88,7 @@ function initia_preprocess_views_view(array &$variables) {
       $term_obj = Term::load($term->tid);
       $file_id = $term_obj->get('field_icon')->target_id;
       $file = \Drupal\file\Entity\File::load($file_id);
-      
+
       $icon_url = $file ? $file->createFileUrl() : '';
 
       $term_list[] = [
