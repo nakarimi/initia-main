@@ -1,4 +1,4 @@
-uuid: 9fbc93a1-cd73-4f6f-b39c-c862ec84e050
+uuid: d34b5263-d3b5-4e53-8a9d-f37a3e407076
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: initia_footer
 theme: initia
 region: footer
-weight: -5
+weight: 0
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
