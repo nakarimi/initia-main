@@ -158,8 +158,8 @@
 							{% if node.field_notre_equipe.value %}
 								<h3>{{ node.field_notre_equipe.value }}</h3>
 							{% endif %}
-							{% if node.field_notre_equipe_description.value %}
-								<p>{{ node.field_notre_equipe_description.value }}</p>
+							{% if content.field_notre_equipe_description %}
+								<p>{{ content.field_notre_equipe_description }}</p>
 							{% endif %}
 						</div>
 						<div
@@ -199,7 +199,7 @@
 						{% if content.field_compenser_description %}
 							<p>{{ content.field_compenser_description }}</p>
 						{% endif %}
-						<div class="px-3 why-forma">
+						<div class="px-3 why-forma pt-4">
 							{% if node.field_compenser_handicap_liste is not empty %}
 								{% for formation in node.field_compenser_handicap_liste %}
 									<div class="d-flex align-items-start mb-3">
@@ -223,7 +223,7 @@
 					</div>
 					{% if node.field_compenser_handicap_image.entity.uri.value %}
 						<div class="col-md-4 offset-md-2  order-1 order-md-0 mb-2">
-							<img src="{{ file_url(node.field_compenser_handicap_image.entity.uri.value) }}" alt="{{ node.field_compenser_handicap_image.entity.alt }}" class="w-100"/>
+							<img class="w-100 img-border-20" src="{{ file_url(node.field_compenser_handicap_image.entity.uri.value) }}" alt="{{ node.field_compenser_handicap_image.entity.alt }}" />
 						</div>
 					{% endif %}
 				</div>
