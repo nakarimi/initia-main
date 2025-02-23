@@ -6,8 +6,6 @@ dependencies:
     - core.entity_view_mode.node.cours_recommande
     - field.storage.node.field_type_de_formation
     - node.type.formation
-  content:
-    - 'node:commencez_votre_parcours:3a3e9255-6e8f-4087-9d75-3eff0deb3f2a'
   module:
     - better_exposed_filters
     - node
@@ -143,7 +141,7 @@ display:
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 3
+          items_per_page: 4
           total_pages: null
           id: 0
           tags:
@@ -188,7 +186,23 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
       arguments:
         field_type_de_formation_target_id:
           id: field_type_de_formation_target_id

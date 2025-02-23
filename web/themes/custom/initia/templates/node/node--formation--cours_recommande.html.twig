@@ -1,4 +1,5 @@
 <div class="cours-slider ">
+<a href="/node/{{node.id}}" >
 	{% if node.field_beneficiaires.entity %}
 		{% set beneficiaries = node.field_beneficiaires.entity %}
 		{% if beneficiaries.field_image.entity.uri.value %}
@@ -21,6 +22,8 @@
 			{% endif %}
 		</span>
 	</div>
+	</a>
+
 	<div class="cours-slider-details">
 		<div class="d-flex align-items-end justify-content-between flex-column flex-lg-row">
 			<div class="col-lg-5">
