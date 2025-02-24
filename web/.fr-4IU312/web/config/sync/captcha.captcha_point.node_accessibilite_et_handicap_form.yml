@@ -1,7 +1,0 @@
-uuid: f333da66-b901-4dc4-8eb1-113897517e1a
-langcode: en
-status: false
-dependencies: {  }
-formId: node_accessibilite_et_handicap_form
-captchaType: default
-label: node_accessibilite_et_handicap_form

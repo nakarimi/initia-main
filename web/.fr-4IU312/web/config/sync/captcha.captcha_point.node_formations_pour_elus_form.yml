@@ -1,7 +1,0 @@
-uuid: 1f2f6dd7-12c6-4a7e-a836-a708501b2ba5
-langcode: en
-status: false
-dependencies: {  }
-formId: node_formations_pour_elus_form
-captchaType: default
-label: node_formations_pour_elus_form

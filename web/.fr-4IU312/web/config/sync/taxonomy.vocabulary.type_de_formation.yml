@@ -1,9 +1,0 @@
-uuid: 627a5170-2a83-4d4b-b2a1-20f76e71add8
-langcode: en
-status: true
-dependencies: {  }
-name: 'Type de formation'
-vid: type_de_formation
-description: 'Type de formation'
-weight: -10
-new_revision: false
