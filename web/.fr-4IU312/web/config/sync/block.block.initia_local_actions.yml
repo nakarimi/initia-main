@@ -1,0 +1,20 @@
+uuid: 98964502-243a-481b-8228-e047b0925fff
+langcode: en
+status: true
+dependencies:
+  theme:
+    - initia
+_core:
+  default_config_hash: ik4PTMlBD0MWansnSMpSXq5SUlWRJ1IVVt6C7AIbQmc
+id: initia_local_actions
+theme: initia
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

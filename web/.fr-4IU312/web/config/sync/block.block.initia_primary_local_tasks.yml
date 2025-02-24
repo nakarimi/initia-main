@@ -1,0 +1,22 @@
+uuid: 9e14f0a8-9b60-4145-8ca3-58d1ca1fb9b2
+langcode: en
+status: false
+dependencies:
+  theme:
+    - initia
+_core:
+  default_config_hash: CyX_aDKAka2_eihevNLscCHDYrzDgIqwWzFVEFRKIww
+id: initia_primary_local_tasks
+theme: initia
+region: header
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: acb9aef4-0884-42c9-a28d-bda5109dae31
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - initia
+id: initia_mainnavigation
+theme: initia
+region: header
+weight: -8
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

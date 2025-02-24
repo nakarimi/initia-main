@@ -39,7 +39,7 @@ mode: default
 content:
   field_chiffres_cles:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 116
@@ -54,7 +54,7 @@ content:
     region: content
   field_compenser_description:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 118
@@ -84,7 +84,7 @@ content:
     region: content
   field_compenser_handicap_liste:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -121,7 +121,7 @@ content:
     region: content
   field_google_avis:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 108
@@ -155,7 +155,7 @@ content:
     region: content
   field_il_nous_font_description:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 120
@@ -190,7 +190,7 @@ content:
     region: content
   field_notre_equipe_description:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 110
@@ -207,16 +207,15 @@ content:
     weight: 111
     region: content
   field_votre_reussite:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
+    type: text_default
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
-    weight: 104
+    weight: 124
     region: content
   field_votre_reussite_description:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 105

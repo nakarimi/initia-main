@@ -280,7 +280,7 @@ content:
     third_party_settings: {  }
   field_en_savoir_plus:
     type: link_default
-    weight: 12
+    weight: 32
     region: content
     settings:
       placeholder_url: ''
@@ -387,16 +387,16 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
   field_votre_reussite:
-    type: string_textfield
-    weight: 9
+    type: text_textarea
+    weight: 29
     region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_votre_reussite_description:
     type: text_textarea
-    weight: 10
+    weight: 30
     region: content
     settings:
       rows: 5
@@ -404,7 +404,7 @@ content:
     third_party_settings: {  }
   field_votre_reussite_logos:
     type: image_image
-    weight: 11
+    weight: 31
     region: content
     settings:
       progress_indicator: throbber

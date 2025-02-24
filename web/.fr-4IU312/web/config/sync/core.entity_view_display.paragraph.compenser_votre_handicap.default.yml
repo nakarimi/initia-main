@@ -1,0 +1,22 @@
+uuid: e95c2d47-4c2c-45b1-b64a-2641c51c4d13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.compenser_votre_handicap.field_compenser_handicap_liste
+    - paragraphs.paragraphs_type.compenser_votre_handicap
+  module:
+    - text
+id: paragraph.compenser_votre_handicap.default
+targetEntityType: paragraph
+bundle: compenser_votre_handicap
+mode: default
+content:
+  field_compenser_handicap_liste:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

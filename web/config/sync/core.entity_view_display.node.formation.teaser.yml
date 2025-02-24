@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.formation.field_accessible
     - field.field.node.formation.field_beneficiaires
     - field.field.node.formation.field_capacite
+    - field.field.node.formation.field_categorie_formation
     - field.field.node.formation.field_certifications
     - field.field.node.formation.field_delai_de_connexion
     - field.field.node.formation.field_description
@@ -44,6 +45,7 @@ hidden:
   field_accessible: true
   field_beneficiaires: true
   field_capacite: true
+  field_categorie_formation: true
   field_certifications: true
   field_delai_de_connexion: true
   field_description: true

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.formation.field_accessible
     - field.field.node.formation.field_beneficiaires
     - field.field.node.formation.field_capacite
+    - field.field.node.formation.field_categorie_formation
     - field.field.node.formation.field_certifications
     - field.field.node.formation.field_delai_de_connexion
     - field.field.node.formation.field_description
@@ -238,6 +239,16 @@ content:
     weight: 36
     region: content
     settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_categorie_formation:
+    type: entity_reference_autocomplete
+    weight: 42
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }

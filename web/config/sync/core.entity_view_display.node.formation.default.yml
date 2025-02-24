@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.formation.field_accessible
     - field.field.node.formation.field_beneficiaires
     - field.field.node.formation.field_capacite
+    - field.field.node.formation.field_categorie_formation
     - field.field.node.formation.field_certifications
     - field.field.node.formation.field_delai_de_connexion
     - field.field.node.formation.field_description
@@ -70,6 +71,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 111
+    region: content
+  field_categorie_formation:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 124
     region: content
   field_certifications:
     type: entity_reference_revisions_entity_view
