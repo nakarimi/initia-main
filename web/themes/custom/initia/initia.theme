@@ -100,6 +100,12 @@ function initia_preprocess_views_view(array &$variables)
     }
     // Make available to your Twig template.
     $variables['sidebar_categories_formation'] = $term_list;
+    $variables['custom_filter_by_checkboxes'] = [
+      ["name" => "Eligible CPF", "tid" => "field_eligible_cpf_value"] ,
+      ["name" => "Eligible aux Elus", "tid" => "field_eligible_aux_elus_value"] ,
+      ["name" => "Formation populaire", "tid" => "field_formation_populaire_value"] ,
+      ["name" => "Formation diplomante", "tid" => "field_formation_diplomante_value_1"] ,
+    ];
   }
 }
 

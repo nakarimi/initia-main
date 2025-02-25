@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.formation.field_certifications
     - field.field.node.formation.field_delai_de_connexion
     - field.field.node.formation.field_description
+    - field.field.node.formation.field_display_as_cours_recommand
     - field.field.node.formation.field_duree
     - field.field.node.formation.field_eligible_aux_elus
     - field.field.node.formation.field_eligible_cpf
@@ -241,3 +242,4 @@ content:
     region: content
 hidden:
   field_categorie_formation: true
+  field_display_as_cours_recommand: true

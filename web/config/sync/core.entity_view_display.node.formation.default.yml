@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.formation.field_certifications
     - field.field.node.formation.field_delai_de_connexion
     - field.field.node.formation.field_description
+    - field.field.node.formation.field_display_as_cours_recommand
     - field.field.node.formation.field_duree
     - field.field.node.formation.field_eligible_aux_elus
     - field.field.node.formation.field_eligible_cpf
@@ -105,6 +106,16 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_display_as_cours_recommand:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 125
     region: content
   field_duree:
     type: string

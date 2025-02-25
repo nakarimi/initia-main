@@ -574,6 +574,170 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+        field_eligible_aux_elus_value:
+          id: field_eligible_aux_elus_value
+          table: node__field_eligible_aux_elus
+          field: field_eligible_aux_elus_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: boolean
+          operator: '='
+          value: All
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Eligible aux Elus (field_eligible_aux_elus)'
+            description: ''
+            use_operator: false
+            operator: field_eligible_aux_elus_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_eligible_aux_elus_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_eligible_cpf_value:
+          id: field_eligible_cpf_value
+          table: node__field_eligible_cpf
+          field: field_eligible_cpf_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: boolean
+          operator: '='
+          value: All
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Eligible CPF (field_eligible_cpf)'
+            description: ''
+            use_operator: false
+            operator: field_eligible_cpf_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_eligible_cpf_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_formation_diplomante_value_1:
+          id: field_formation_diplomante_value_1
+          table: node__field_formation_diplomante
+          field: field_formation_diplomante_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: boolean
+          operator: '='
+          value: All
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Formation diplomante (field_formation_diplomante)'
+            description: ''
+            use_operator: false
+            operator: field_formation_diplomante_value_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_formation_diplomante_value_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_formation_populaire_value:
+          id: field_formation_populaire_value
+          table: node__field_formation_populaire
+          field: field_formation_populaire_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: boolean
+          operator: '='
+          value: All
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Formation populaire (field_formation_populaire)'
+            description: ''
+            use_operator: false
+            operator: field_formation_populaire_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_formation_populaire_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: OR
         groups:

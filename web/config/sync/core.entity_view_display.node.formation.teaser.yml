@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.formation.field_certifications
     - field.field.node.formation.field_delai_de_connexion
     - field.field.node.formation.field_description
+    - field.field.node.formation.field_display_as_cours_recommand
     - field.field.node.formation.field_duree
     - field.field.node.formation.field_eligible_aux_elus
     - field.field.node.formation.field_eligible_cpf
@@ -49,6 +50,7 @@ hidden:
   field_certifications: true
   field_delai_de_connexion: true
   field_description: true
+  field_display_as_cours_recommand: true
   field_duree: true
   field_eligible_aux_elus: true
   field_eligible_cpf: true

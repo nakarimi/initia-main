@@ -97,9 +97,9 @@
 							{% endif %}
 
 						</select>
-						<select name="field_type_de_formation_target_id" class="form-select form-select-lg" aria-label="Default select example">
-							{% if sidebar_categories_formation is defined and sidebar_categories_formation|length %}
-								{% for term in sidebar_categories_formation %}
+						<select name="custom_filter_by_checkboxes" class="form-select form-select-lg" aria-label="Default select example">
+							{% if custom_filter_by_checkboxes is defined and custom_filter_by_checkboxes|length %}
+								{% for term in custom_filter_by_checkboxes %}
 									<option value="{{term.tid}}">{{term.name}}</option>
 								{% endfor %}
 							{% endif %}
@@ -167,8 +167,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     observer.observe(filterContainer, { childList: true, subtree: true });
 
-    attachEventListeners(filterContainer);
     setFiltersFromQuery(filterContainer);
+    attachEventListeners(filterContainer);
   } else {
     console.error("Filter container not found.");
   }
@@ -245,7 +245,6 @@ function handleInputChange() {
 
   selectedFilters['field_type_de_formation_target_id'] = Array.from(filterContainer.querySelectorAll('input[name="field_type_de_formation_target_id[]"]:checked')).map(cb => cb.value);
   selectedFilters['field_sujet_target_id'] = Array.from(filterContainer.querySelectorAll('input[name="field_sujet_target_id[]"]:checked')).map(cb => cb.value);
-  selectedFilters['field_type_de_formation_target_id_2'] = Array.from(filterContainer.querySelectorAll('input[name="field_type_de_formation_target_id_2[]"]:checked')).map(cb => cb.value);
 
   const formationDiplomante = filterContainer.querySelector('input[name="field_formation_diplomante_value"]:checked');
   selectedFilters['field_formation_diplomante_value'] = formationDiplomante ? formationDiplomante.value : '';
@@ -256,6 +255,12 @@ function handleInputChange() {
   const selectField = filterContainer.querySelector('select[name="field_type_de_formation_target_id"]');
   if (selectField) {
     selectedFilters['field_type_de_formation_target_id'] = selectField.value ? [selectField.value] : [];
+  }
+
+  // Handling the custom dropdown filter
+  const customSelect = filterContainer.querySelector('select[name="custom_filter_by_checkboxes"]');
+  if (customSelect && customSelect.value) {
+    selectedFilters[customSelect.value] = '1';
   }
 
   console.log(selectedFilters);
@@ -284,19 +289,38 @@ function buildCustomQueryString(params) {
 function setFiltersFromQuery(filterContainer) {
   const urlParams = new URLSearchParams(window.location.search);
 
-  urlParams.forEach((value, key) => {
-    const checkboxes = filterContainer.querySelectorAll(`input[name="${key}[]"], input[name="${key}"]`);
-    checkboxes.forEach(checkbox => {
-      if (checkbox.value === value) {
-        checkbox.checked = true;
-      }
-    });
-
-    const selectField = filterContainer.querySelector(`select[name="${key}"]`);
-    if (selectField) {
-      selectField.value = value;
+  // Set values for select fields based on URL params
+  if (urlParams.has("field_type_de_formation_target_id[0]")) {
+    const fieldTypeSelect = filterContainer.querySelector(`select[name="field_type_de_formation_target_id"]`);
+    if (fieldTypeSelect) {
+      fieldTypeSelect.value = urlParams.get("field_type_de_formation_target_id[0]");
     }
-  });
+  }
+
+  if (urlParams.has("field_eligible_aux_elus_value")) {
+    const customFilterSelect = filterContainer.querySelector(`select[name="custom_filter_by_checkboxes"]`);
+    if (customFilterSelect) {
+      customFilterSelect.value = "field_eligible_aux_elus_value";
+    }
+  }
+  if (urlParams.has("field_eligible_cpf_value")) {
+    const customFilterSelect = filterContainer.querySelector(`select[name="custom_filter_by_checkboxes"]`);
+    if (customFilterSelect) {
+      customFilterSelect.value = "field_eligible_cpf_value";
+    }
+  }
+  if (urlParams.has("field_formation_diplomante_value_1")) {
+    const customFilterSelect = filterContainer.querySelector(`select[name="custom_filter_by_checkboxes"]`);
+    if (customFilterSelect) {
+      customFilterSelect.value = "field_formation_diplomante_value_1";
+    }
+  }
+  if (urlParams.has("field_formation_populaire_value")) {
+    const customFilterSelect = filterContainer.querySelector(`select[name="custom_filter_by_checkboxes"]`);
+    if (customFilterSelect) {
+      customFilterSelect.value = "field_formation_populaire_value";
+    }
+  }
 }
 
 
