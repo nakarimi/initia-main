@@ -1,0 +1,21 @@
+# Files.
+.editorconfig
+.env.example
+.gitattributes
+.gitignore
+.travis.yml
+docker-compose.yml
+phpunit.xml.dist
+README.md
+
+# Directories.
+vendor
+tests
+web/core
+web/modules/contrib
+web/profiles/contrib
+web/themes/contrib
+web/sites/default/files
+
+# Drupal shared resources.
+web/sites/default/settings.php

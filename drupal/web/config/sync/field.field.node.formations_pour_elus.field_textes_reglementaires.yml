@@ -1,0 +1,64 @@
+uuid: 94718c75-adf9-4410-80e0-ce7291137fb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_textes_reglementaires
+    - node.type.formations_pour_elus
+    - paragraphs.paragraphs_type.textes_reglementaires
+  module:
+    - entity_reference_revisions
+id: node.formations_pour_elus.field_textes_reglementaires
+field_name: field_textes_reglementaires
+entity_type: node
+bundle: formations_pour_elus
+label: 'Textes réglementaires'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      textes_reglementaires: textes_reglementaires
+    negate: 0
+    target_bundles_drag_drop:
+      beneficiaires:
+        weight: 13
+        enabled: false
+      certifications:
+        weight: 14
+        enabled: false
+      description:
+        weight: 15
+        enabled: false
+      methodes_d_evaluation:
+        weight: 16
+        enabled: false
+      nos_experts:
+        weight: 17
+        enabled: false
+      objectifs:
+        weight: 18
+        enabled: false
+      prochaines_sessions_dates:
+        weight: 19
+        enabled: false
+      programme_de_formation:
+        weight: 20
+        enabled: false
+      ressources_techniques:
+        weight: 21
+        enabled: false
+      temoignage:
+        weight: 22
+        enabled: false
+      textes_reglementaires:
+        weight: 23
+        enabled: true
+      vos_objectifs_pros:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

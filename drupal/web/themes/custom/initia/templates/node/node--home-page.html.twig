@@ -1,0 +1,354 @@
+{% block content %}
+	<div class="home-page">
+		<section id="home-head" class="">
+			<div class="container-fluid">
+				<div class="home-head-bg" style="background-image: url('{{ file_url(content.field_home_header_image['#items'].entity.uri.value) }}')">
+					{% if label %}
+						<h1 class="col-md-6">{{ label['#markup']|striptags }}</h1>
+					{% endif %}
+					{% if content.field_home_sous_titre %}
+						<p class="col-md-4">{{ content.field_home_sous_titre['#items'].0.value }}</p>
+					{% endif %}
+
+				</div>
+			</div>
+		</section>
+
+		<section id="forma-populaire" class="mt-5">
+			<div class="container-fluid">
+				<div class="top-section d-flex justify-content-between align-items-center mb-5">
+					<h2>FORMATION POPULAIRES</h2>
+					<a href="#" class="rounded-pill">Voir Tous
+						<svg width="26" height="27" viewbox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M16.1091 12.5991C16.3397 12.8298 16.3397 13.2037 16.1091 13.4343L10.0875 19.4559C9.8568 19.6866 9.48289 19.6866 9.25223 19.4559L8.97378 19.1775C8.74312 18.9468 8.74312 18.5729 8.97378 18.3422L14.2993 13.0167L8.97378 7.69116C8.74312 7.4605 8.74312 7.08659 8.97378 6.85593L9.25224 6.57747C9.48289 6.34682 9.8568 6.34682 10.0875 6.57747L16.1091 12.5991Z" fill="white"/>
+						</svg>
+					</a>
+				</div>
+				{% if node.field_formations_populaires is not empty %}
+					<div class="mycarouselle">
+						{% for formation in node.field_formations_populaires %}
+							<div>
+								<div class="block-register">
+									<div class="block-img">
+										{% if formation.entity.field_beneficiaires.entity %}
+											{% set beneficiaries = formation.entity.field_beneficiaires.entity %}
+											{% if beneficiaries.field_image.entity.uri.value %}
+												<img src="{{ file_url(beneficiaries.field_image.entity.uri.value) }}" alt="{{ beneficiaries.field_image.entity.alt }}"/>
+											{% endif %}
+										{% endif %}
+										<span class="cpf rounded-pill">
+											{{ formation.entity.field_eligible_cpf.value == 1 ? 'CPF' : '' }}
+											<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0003 18.3337C14.6027 18.3337 18.3337 14.6027 18.3337 10.0003C18.3337 5.39795 14.6027 1.66699 10.0003 1.66699C5.39795 1.66699 1.66699 5.39795 1.66699 10.0003C1.66699 14.6027 5.39795 18.3337 10.0003 18.3337ZM13.827 7.88407C14.0389 7.6116 13.9898 7.21893 13.7174 7.00701C13.4449 6.79509 13.0522 6.84417 12.8403 7.11664L9.50115 11.4099C9.4269 11.5053 9.28723 11.5177 9.19734 11.4368L7.0851 9.5358C6.82853 9.30488 6.43335 9.32568 6.20244 9.58225C5.97153 9.83882 5.99233 10.234 6.24889 10.4649L8.36113 12.3659C8.9904 12.9323 9.96808 12.8455 10.4878 12.1773L13.827 7.88407Z" fill="white"/>
+											</svg>
+										</span>
+										<span class="presential rounded-pill">{{  formation.entity.label }}</span>
+
+									</div>
+
+									<div class="block-detail px-3">
+										<h3>
+											{% if formation.entity.field_beneficiaires.entity %}
+												{% set beneficiaries = formation.entity.field_beneficiaires.entity %}
+												{% if beneficiaries.field_titre.value %}
+													{# Access the value directly #}
+													{{ beneficiaries.field_titre.value }}
+													{# Output the title #}
+												{% endif %}
+											{% endif %}
+										</h3>
+										<p>
+											{% if formation.entity.field_beneficiaires.entity %}
+												{% set beneficiaries = formation.entity.field_beneficiaires.entity %}
+												{% if beneficiaries.field_description_du_bloc_benefi.value %}
+													{# Access the value directly #}
+													{{ beneficiaries.field_description_du_bloc_benefi.value }}
+													{# Output the description #}
+												{% endif %}
+											{% endif %}
+										</p>
+										<div class="d-flex justify-content-between block-time-access">
+											<div>
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M22 12V6C22 3.79086 20.2091 2 18 2H6C3.79086 2 2 3.79086 2 6V18C2 20.2091 3.79086 22 6 22H22" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round"/>
+													<path d="M22 12L20 10" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M12 6V10.5M10.5 13.5L9 15" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M13.5 12C13.5 12.8284 12.8284 13.5 12 13.5C11.1716 13.5 10.5 12.8284 10.5 12C10.5 11.1716 11.1716 10.5 12 10.5C12.8284 10.5 13.5 11.1716 13.5 12Z" stroke="#757B7B" stroke-width="1.5"/>
+												</svg>
+												39 heures (5 jours)
+											</div>
+											<div>
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.5 3.5C13.5 4.32843 12.8284 5 12 5C11.1716 5 10.5 4.32843 10.5 3.5C10.5 2.67157 11.1716 2 12 2C12.8284 2 13.5 2.67157 13.5 3.5Z" fill="#757B7B"/>
+													<path d="M13 21C13 21.5523 12.5523 22 12 22C11.4477 22 11 21.5523 11 21C11 20.4477 11.4477 20 12 20C12.5523 20 13 20.4477 13 21Z" fill="#757B7B"/>
+													<path d="M9 21C9 21.5523 8.55228 22 8 22C7.44772 22 7 21.5523 7 21C7 20.4477 7.44772 20 8 20C8.55228 20 9 20.4477 9 21Z" fill="#757B7B"/>
+													<path d="M17 21C17 21.5523 16.5523 22 16 22C15.4477 22 15 21.5523 15 21C15 20.4477 15.4477 20 16 20C16.5523 20 17 20.4477 17 21Z" fill="#757B7B"/>
+													<path d="M5 6C10.4235 7.33725 13.3997 7.32941 19 6" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M10 12V7H14V12H10Z" fill="#757B7B"/>
+													<path d="M11 10L10 18" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M13 10L14 18" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+												Accessible
+											</div>
+										</div>
+										<a href="#" class="btn btn-secondary w-100 mt-3">Inscription</a>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				{% endif %}
+			</div>
+		</section>
+
+		<section id="reussite">
+			<div class="bg-white container-fluid pt-5">
+				<div class="row">
+					<div class="col-md-3 mb-4">
+						<h2>Votre
+							<br>
+							réussite
+							<br>
+							est la nôtre.</h2>
+					</div>
+
+
+					<div class="col-md-8">
+						{% if content.field_votre_reussite %}
+							{{ content.field_votre_reussite }}
+						{% endif %}
+						{% if content.field_votre_reussite_description %}
+							{{ content.field_votre_reussite_description }}
+						{% endif %}
+
+						{% if node.field_en_savoir_plus is not empty %}
+							{% for item in node.field_en_savoir_plus %}
+
+								<a class="btn btn-secondary" href="{{ item.uri }}" {% if item.options.target %} target="{{ item.options.target }}" {% endif %}>
+									{{ item.title }}
+									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+							{% endfor %}
+						{% endif %}
+
+						<div class="row mt-4 fix-imgs">
+							{% if content.field_votre_reussite_logos %}
+								<div class="votre-reussite-logos">{{ content.field_votre_reussite_logos }}</div>
+							{% endif %}
+						</div>
+
+					</div>
+				</div>
+				<hr class="mt-5">
+
+				{% if content.field_google_avis %}
+					{{ content.field_google_avis }}
+				{% endif %}
+
+			</div>
+		</section>
+
+		<section id="our-team" class="my-5">
+			<div class="container-fluid">
+				<div class="our-team">
+					<div class="row">
+						<div class="col-md-4 order-2 order-md-0">
+							{% if node.field_notre_equipe.value %}
+								<h3>{{ node.field_notre_equipe.value }}</h3>
+							{% endif %}
+							{% if content.field_notre_equipe_description %}
+								<p>{{ content.field_notre_equipe_description }}</p>
+							{% endif %}
+						</div>
+						<div
+							class="col-md-7 offset-md-1 order-1 order-md-0">
+							<!-- On mobile, comes first -->
+							{% if node.field_notre_equipe_image %}
+								<div class="row">
+									{% for image in node.field_notre_equipe_image %}
+										{% set image_url = file_url(image.entity.uri.value) %}
+										{% set image_alt = image.entity.alt %}
+										{% if loop.index == 1 %}
+											<div class="col-5">
+												<img src="{{ image_url }}" alt="{{ image_alt }}"/>
+											</div>
+										{% elseif loop.index == 2 %}
+											<div class="col-7">
+												<img src="{{ image_url }}" alt="{{ image_alt }}"/>
+											</div>
+										{% endif %}
+									{% endfor %}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section id="formation-team">
+			<div class="container-fluid my-5">
+				<div class="row">
+					<div class="col-md-6  order-2 order-md-0">
+						{% if node.field_compenser_votre_handicap.value %}
+							<h2>{{ node.field_compenser_votre_handicap.value }}</h2>
+						{% endif %}
+
+						{% if content.field_compenser_description %}
+							<p>{{ content.field_compenser_description }}</p>
+						{% endif %}
+						<div class="px-3 why-forma pt-4">
+							{% if node.field_compenser_handicap_liste is not empty %}
+								{% for formation in node.field_compenser_handicap_liste %}
+									<div class="d-flex align-items-start mb-3">
+										<img width="32" height="32" src="{{ file_url(formation.entity.field_icon.entity.uri.value) }}"/>
+										<p class="px-2">{{ formation.entity.field_compenser_handicap_liste.value }}</p>
+									</div>
+								{% endfor %}
+							{% endif %}
+						</div>
+						{% if node.field_compenser_en_savoir_plus is not empty %}
+							{% for item in node.field_compenser_en_savoir_plus %}
+
+								<a class="btn btn-secondary" href="{{ item.uri }}" {% if item.options.target %} target="{{ item.options.target }}" {% endif %}>
+									{{ item.title }}
+									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+							{% endfor %}
+						{% endif %}
+					</div>
+					{% if node.field_compenser_handicap_image.entity.uri.value %}
+						<div class="col-md-4 offset-md-2  order-1 order-md-0 mb-2">
+							<img class="w-100 img-border-20" src="{{ file_url(node.field_compenser_handicap_image.entity.uri.value) }}" alt="{{ node.field_compenser_handicap_image.entity.alt }}" />
+						</div>
+					{% endif %}
+				</div>
+			</section>
+
+			<section id="green-section">
+				<div class="container-fluid">
+					<div class="green-section">
+						<div class="row">
+						{% if content.field_chiffres_cles %}
+							{{ content.field_chiffres_cles }}
+						{% endif %}
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+
+			<section id="nos-diplomes" class="my-5">
+				<div class="container-fluid">
+					<h2>Nos diplômés Témoignent</h2>
+					<p class="col-md-3">Chez INITIAL FORMATION, nous sommes fiers de la réussite de nos étudiants. Voici ce
+																																																																																																																																																																																																																														                    que certains d'entre eux ont à dire</p>
+
+
+					<div class="gray-carouselle">
+						{% if node.field_nos_diplomes_temoignent is not empty %}
+							{% for temoignage in node.field_nos_diplomes_temoignent %}
+								<div class=" d-flex m-2">
+									{% if temoignage.entity.field_photo_du_temoin.entity.uri.value %}
+										<img src="{{ file_url(temoignage.entity.field_photo_du_temoin.entity.uri.value) }}" alt="{{ node.field_compenser_handicap_image.entity.alt }}"/>
+									{% endif %}
+									<div>
+										<h4>{{ temoignage.entity.field_nom_et_prenom.value }}</h4>
+										<p>{{ temoignage.entity.field_le_temoignage.value }}</p>
+										<hr>
+										<div>
+											<svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M6.6665 11.0062C8.35421 11.2676 10.2369 11.7021 11.9998 12.3838M6.6665 16.3395C7.51916 16.4716 8.42157 16.6478 9.33317 16.8778M15.9998 8.07116V27.07M5.32561 4.01503C8.28344 4.34926 12.2573 5.24843 15.0889 7.2326C15.6331 7.61394 16.3665 7.61394 16.9107 7.2326C19.7423 5.24843 23.7162 4.34926 26.6741 4.01503C28.1379 3.84961 29.3332 5.07203 29.3332 6.58024V21.5999C29.3332 23.1081 28.1379 24.331 26.6741 24.4964C23.7162 24.8307 19.7423 25.7298 16.9107 27.714C16.3665 28.0953 15.6331 28.0953 15.0889 27.714C12.2573 25.7298 8.28344 24.8307 5.32561 24.4964C3.86173 24.331 2.6665 23.1081 2.6665 21.5999V6.58024C2.6665 5.07203 3.86173 3.84961 5.32561 4.01503Z" stroke="#353942" stroke-width="2" stroke-linecap="round"/>
+											</svg>
+											<b>{{ temoignage.entity.field_titre_de_la_formation.value }}</b>
+
+										</div>
+									</div>
+								</div>
+
+							{% endfor %}
+						{% endif %}
+					</div>
+					<div class="btn-wrap">
+						<button class="prev-btn btn-link btn me-2 mt-3 p-0">
+							<svg width="48" height="49" viewbox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="24" cy="24.4541" r="23" stroke="#1C5B90" stroke-width="2"/>
+								<path d="M22 20.4541L18 24.4541M18 24.4541L22 28.4541M18 24.4541L30 24.4541" stroke="#1C5B90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<button class="next-btn btn-link btn mt-3 p-0">
+							<svg width="48" height="49" viewbox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="24" cy="24.4541" r="23" stroke="#1C5B90" stroke-width="2"/>
+								<path d="M26 28.4541L30 24.4541M30 24.4541L26 20.4541M30 24.4541L18 24.4541" stroke="#1C5B90" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+					</div>
+				</section>
+
+
+				<section id="confiance" class="my-5">
+					<div class="container-fluid">
+						{% if node.field_il_nous_font_confiance.value %}
+							<h2>{{ node.field_il_nous_font_confiance.value }}</h2>
+						{% endif %}
+						{% if content.field_il_nous_font_description %}
+							<div class="row">
+								<div class="col-md-6">
+									<p>{{ content.field_il_nous_font_description }}</p>
+								</div>
+							</div>
+						{% endif %}
+						<div class="logos-block mb-5">
+							{% if node.field_logo_company is not empty %}
+								{% for logo in node.field_logo_company %}
+									{% if logo.entity is not empty and logo.entity.uri.value %}
+										<div>
+											<img src="{{ file_url(logo.entity.uri.value) }}" alt="{{ logo.entity.getFilename() }}">
+										</div>
+									{% endif %}
+								{% endfor %}
+							{% endif %}
+						</div>
+
+					</div>
+				</section>
+
+				{% if node.field_commencez_votre_parcours is not empty %}
+					{% set parcours_item = node.field_commencez_votre_parcours.entity %}
+					<section id="start-parcours" class="my-5">
+						<div class="container-fluid">
+							<div class="parcours">
+								<div class="row align-items-center">
+									<div class="col-md-5">
+										<h2>{{ parcours_item.title.value }}</h2>
+										{% if parcours_item.field_commence_description.value %}
+											<p>{{ parcours_item.field_commence_description.value|raw }}</p>
+										{% endif %}
+									</div>
+									{% if parcours_item.field_decouvrir_les_cours.uri %}
+
+										<div class="col-md-2 offset-md-5">
+											<a href="{{ parcours_item.field_decouvrir_les_cours.uri }}" target="{{ parcours_item.field_decouvrir_les_cours.options.target }}" class="btn btn-green-big">
+												{{ parcours_item.field_decouvrir_les_cours.title }}
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</a>
+										</div>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					</section>
+
+				{% endif %}
+			</div>
+		</div>
+	</section>
+</div>{% endblock %}{% if page.footer %}
+{{ page.footer }}{% endif %}

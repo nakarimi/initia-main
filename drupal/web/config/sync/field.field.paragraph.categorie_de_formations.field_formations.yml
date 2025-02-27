@@ -1,0 +1,29 @@
+uuid: 75d33035-721c-488c-b616-0e844d1752a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_formations
+    - node.type.formation
+    - paragraphs.paragraphs_type.categorie_de_formations
+id: paragraph.categorie_de_formations.field_formations
+field_name: field_formations
+entity_type: paragraph
+bundle: categorie_de_formations
+label: Formations
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      formation: formation
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

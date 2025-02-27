@@ -1,0 +1,24 @@
+uuid: d3af9527-a90c-4bc5-a77a-04e9bc025247
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.commencez_votre_parcours.field_commence_description
+    - field.field.node.commencez_votre_parcours.field_decouvrir_les_cours
+    - node.type.commencez_votre_parcours
+  module:
+    - user
+id: node.commencez_votre_parcours.teaser
+targetEntityType: node
+bundle: commencez_votre_parcours
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_commence_description: true
+  field_decouvrir_les_cours: true

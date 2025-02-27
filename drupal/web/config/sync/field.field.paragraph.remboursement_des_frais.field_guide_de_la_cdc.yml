@@ -1,0 +1,23 @@
+uuid: 51c0e5bc-0828-47a7-81a6-ab2a7293d622
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_guide_de_la_cdc
+    - paragraphs.paragraphs_type.remboursement_des_frais
+  module:
+    - link
+id: paragraph.remboursement_des_frais.field_guide_de_la_cdc
+field_name: field_guide_de_la_cdc
+entity_type: paragraph
+bundle: remboursement_des_frais
+label: 'Guide de la CDC'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

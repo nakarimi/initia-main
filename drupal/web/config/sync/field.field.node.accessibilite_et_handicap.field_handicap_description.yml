@@ -1,0 +1,24 @@
+uuid: a42b65ec-6207-4546-bb8a-9f331e88f2da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_handicap_description
+    - filter.format.restricted_html
+    - node.type.accessibilite_et_handicap
+  module:
+    - text
+id: node.accessibilite_et_handicap.field_handicap_description
+field_name: field_handicap_description
+entity_type: node
+bundle: accessibilite_et_handicap
+label: 'Handicap description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

@@ -1,0 +1,24 @@
+uuid: 957a00db-e504-40a0-beca-7e11812cf71c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comment_garantir
+    - filter.format.restricted_html
+    - node.type.accessibilite_et_handicap
+  module:
+    - text
+id: node.accessibilite_et_handicap.field_comment_garantir
+field_name: field_comment_garantir
+entity_type: node
+bundle: accessibilite_et_handicap
+label: 'Comment garantir'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

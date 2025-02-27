@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+
+<!-- footer-->
+<footer class=" ">
+  <div class="container-fluid">
+      <div class="footer-top row">
+          <div class="col-md-7">
+              <a href="#">
+                  {{ elements.initia_sitebranding_2 }}
+              </a>
+              {{ elements.initia_footerinformation_2 }}
+          </div>
+          <div class="col-md-5">
+              <div class="d-flex justify-content-md-end footer-right-menu">
+                  <div class="me-5">
+                      {{ elements.initia_footer }}
+                  </div>
+                  <div>
+                      {{ elements.initia_menuinitiaformation }}
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom py-3 mt-5">
+              {{ elements.initia_copyright }}
+      </div>
+  </div>
+</footer>

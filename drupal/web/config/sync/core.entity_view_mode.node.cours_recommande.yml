@@ -1,0 +1,11 @@
+uuid: 2715b454-6cd9-46cf-8f29-b9c4ec41f160
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.cours_recommande
+label: 'Cours recommandé'
+description: ''
+targetEntityType: node
+cache: true

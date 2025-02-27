@@ -1,0 +1,21 @@
+uuid: 5a3fbbdf-9424-490c-8b4c-d11106b3ab7d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_delai_de_connexion
+field_name: field_delai_de_connexion
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: f34c8be2-1eb8-455b-961e-22de11a332f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_compenser_votre_handicap
+field_name: field_compenser_votre_handicap
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

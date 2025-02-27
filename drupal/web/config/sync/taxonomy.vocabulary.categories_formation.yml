@@ -1,0 +1,9 @@
+uuid: 2a5f6cd9-e06e-43a3-b275-a347ffa769ef
+langcode: en
+status: true
+dependencies: {  }
+name: 'Catégories formation'
+vid: categories_formation
+description: 'Catégories formation'
+weight: 0
+new_revision: false

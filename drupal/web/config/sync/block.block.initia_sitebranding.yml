@@ -1,0 +1,23 @@
+uuid: 1ed677e4-67f6-43a3-8110-d9e3afb820b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - initia
+id: initia_sitebranding
+theme: initia
+region: header
+weight: -9
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

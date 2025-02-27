@@ -1,0 +1,19 @@
+uuid: 5b3750bb-25b9-41a3-abe6-aadf03385f96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nouveautes_sous_titre
+    - node.type.formations_pour_elus
+id: node.formations_pour_elus.field_nouveautes_sous_titre
+field_name: field_nouveautes_sous_titre
+entity_type: node
+bundle: formations_pour_elus
+label: 'Nouveautés sous-titre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

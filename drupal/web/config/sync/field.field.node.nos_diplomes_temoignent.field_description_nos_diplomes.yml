@@ -1,0 +1,24 @@
+uuid: c10e49f2-3fdf-431f-a6d0-77b724016c78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_nos_diplomes
+    - filter.format.restricted_html
+    - node.type.nos_diplomes_temoignent
+  module:
+    - text
+id: node.nos_diplomes_temoignent.field_description_nos_diplomes
+field_name: field_description_nos_diplomes
+entity_type: node
+bundle: nos_diplomes_temoignent
+label: 'Description nos diplômés'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

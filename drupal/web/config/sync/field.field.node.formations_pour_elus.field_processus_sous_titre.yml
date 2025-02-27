@@ -1,0 +1,19 @@
+uuid: a3da1923-0ec5-4482-8aaf-cfa8728a30e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_processus_sous_titre
+    - node.type.formations_pour_elus
+id: node.formations_pour_elus.field_processus_sous_titre
+field_name: field_processus_sous_titre
+entity_type: node
+bundle: formations_pour_elus
+label: 'Processus sous titre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

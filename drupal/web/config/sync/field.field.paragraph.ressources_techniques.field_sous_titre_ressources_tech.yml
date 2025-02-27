@@ -1,0 +1,19 @@
+uuid: eac4b7af-cf1b-4a65-8920-4f703c995975
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sous_titre_ressources_tech
+    - paragraphs.paragraphs_type.ressources_techniques
+id: paragraph.ressources_techniques.field_sous_titre_ressources_tech
+field_name: field_sous_titre_ressources_tech
+entity_type: paragraph
+bundle: ressources_techniques
+label: 'Sous titre ressources techniques'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

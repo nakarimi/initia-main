@@ -1,0 +1,21 @@
+uuid: 4e0d5a9d-d4f7-4f72-8624-5f5e0f481c7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_formation_diplomante
+    - node.type.formation
+id: node.formation.field_formation_diplomante
+field_name: field_formation_diplomante
+entity_type: node
+bundle: formation
+label: 'Formation diplomante'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Oui
+  off_label: Non
+field_type: boolean

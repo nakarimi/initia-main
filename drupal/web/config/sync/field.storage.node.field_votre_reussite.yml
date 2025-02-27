@@ -1,0 +1,19 @@
+uuid: 612c3964-b092-403d-b64a-df2b949e0f3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_votre_reussite
+field_name: field_votre_reussite
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

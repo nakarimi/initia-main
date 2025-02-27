@@ -1,0 +1,29 @@
+uuid: e4c7ef85-b973-425c-858d-d574eea6ed2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_de_formation
+    - node.type.formation
+    - taxonomy.vocabulary.type_de_formation
+id: node.formation.field_type_de_formation
+field_name: field_type_de_formation
+entity_type: node
+bundle: formation
+label: 'Type de formation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      type_de_formation: type_de_formation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

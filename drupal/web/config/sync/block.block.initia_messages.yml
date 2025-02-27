@@ -1,0 +1,22 @@
+uuid: 84879945-d579-4256-b631-380dbebfb8af
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - initia
+_core:
+  default_config_hash: YqKTtloWJ8FjLtfVNfrHaK6kVgxT67lC1cJ3j6i6WLo
+id: initia_messages
+theme: initia
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

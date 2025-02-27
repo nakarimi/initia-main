@@ -1,0 +1,24 @@
+uuid: 1ac02b08-55c7-4ce8-b26f-110d980b91d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_le_temoignage
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.temoignage
+  module:
+    - text
+id: paragraph.temoignage.field_le_temoignage
+field_name: field_le_temoignage
+entity_type: paragraph
+bundle: temoignage
+label: 'Le témoignage'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

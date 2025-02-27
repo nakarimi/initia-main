@@ -1,0 +1,19 @@
+uuid: 5bcaa3dd-1484-4456-b33a-402e01a70ab0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_liste_des_points
+    - paragraphs.paragraphs_type.beneficiaires
+id: paragraph.beneficiaires.field_liste_des_points
+field_name: field_liste_des_points
+entity_type: paragraph
+bundle: beneficiaires
+label: 'Liste des points'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

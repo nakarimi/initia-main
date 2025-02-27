@@ -1,0 +1,34 @@
+uuid: 85c945c3-9d4d-40be-a351-86a86bae12bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.textes_reglementaires.field_liste_textes_reglementaire
+    - field.field.paragraph.textes_reglementaires.field_texte_reglementaires_titre
+    - paragraphs.paragraphs_type.textes_reglementaires
+  module:
+    - text
+id: paragraph.textes_reglementaires.default
+targetEntityType: paragraph
+bundle: textes_reglementaires
+mode: default
+content:
+  field_liste_textes_reglementaire:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_texte_reglementaires_titre:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

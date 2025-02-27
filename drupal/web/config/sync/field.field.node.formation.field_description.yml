@@ -1,0 +1,34 @@
+uuid: 9b42f97f-15f6-4275-b2ec-4af5457de407
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.formation
+    - paragraphs.paragraphs_type.description
+  module:
+    - entity_reference_revisions
+id: node.formation.field_description
+field_name: field_description
+entity_type: node
+bundle: formation
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      description: description
+    negate: 0
+    target_bundles_drag_drop:
+      description:
+        weight: 3
+        enabled: true
+      objectifs:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

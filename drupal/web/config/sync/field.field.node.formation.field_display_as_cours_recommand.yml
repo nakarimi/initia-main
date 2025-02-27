@@ -1,0 +1,23 @@
+uuid: dcc9f471-6624-4b5d-b2b3-ccae10158367
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_as_cours_recommand
+    - node.type.formation
+id: node.formation.field_display_as_cours_recommand
+field_name: field_display_as_cours_recommand
+entity_type: node
+bundle: formation
+label: 'Display as Cours recommandé'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

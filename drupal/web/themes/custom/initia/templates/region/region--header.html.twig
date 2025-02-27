@@ -1,0 +1,51 @@
+<header>
+	<div class="header-bottom py-3">
+		<nav class="navbar navbar-expand-lg ">
+			<div class="container-fluid">
+				{{ elements.initia_sitebranding }}
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto   mb-2 mb-lg-0">
+
+						{{ elements.initia_mainnavigation }}
+
+					</ul>
+					<div class="right-navbar">
+						<div class="bottom-right-navbar">
+							{{ elements.initia_rightnav }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="container-fluid">
+			<div class="searchblock">
+				<div>
+
+					<div class="d-flex justify-content-between align-items-center">
+						<label for="search" class=" labelSearch align-items-center d-flex ">
+
+							<svg width="24" height="26" viewbox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18.5 19.572L22 23.1107M21 12.4946C21 7.18995 16.7467 2.88965 11.5 2.88965C6.25329 2.88965 2 7.18995 2 12.4946C2 17.7993 6.25329 22.0996 11.5 22.0996C16.7467 22.0996 21 17.7993 21 12.4946Z" stroke="#28303F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							Rechercher
+						</label>
+						<div class="w-100">
+							{{ elements.initia_searchform }}
+							{# <input type="text" class="form-control rounded-pill" placeholder="Rechercher ....." id="search"> #}
+						</div>
+						<div class="">
+							<span class="toggleSearch closesearch rounded-circle">
+								<img src="{{ directory }}/assets/images/close.svg">
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</header>

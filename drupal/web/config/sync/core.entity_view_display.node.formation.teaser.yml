@@ -1,0 +1,68 @@
+uuid: a2f26f50-5a41-4dab-8797-0dd52971ba66
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.formation.field_accessibilite
+    - field.field.node.formation.field_accessible
+    - field.field.node.formation.field_beneficiaires
+    - field.field.node.formation.field_capacite
+    - field.field.node.formation.field_categorie_formation
+    - field.field.node.formation.field_certifications
+    - field.field.node.formation.field_delai_de_connexion
+    - field.field.node.formation.field_description
+    - field.field.node.formation.field_display_as_cours_recommand
+    - field.field.node.formation.field_duree
+    - field.field.node.formation.field_eligible_aux_elus
+    - field.field.node.formation.field_eligible_cpf
+    - field.field.node.formation.field_formation_diplomante
+    - field.field.node.formation.field_formation_populaire
+    - field.field.node.formation.field_lieu_de_formation
+    - field.field.node.formation.field_methodes_d_evaluation
+    - field.field.node.formation.field_nos_experts
+    - field.field.node.formation.field_objectifs_de_la_formation
+    - field.field.node.formation.field_prix
+    - field.field.node.formation.field_prochaines_sessions_dates
+    - field.field.node.formation.field_programme_de_formation
+    - field.field.node.formation.field_ressources_techniques
+    - field.field.node.formation.field_taux_de_satisfaction
+    - field.field.node.formation.field_type_de_formation
+    - node.type.formation
+  module:
+    - user
+id: node.formation.teaser
+targetEntityType: node
+bundle: formation
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_accessibilite: true
+  field_accessible: true
+  field_beneficiaires: true
+  field_capacite: true
+  field_categorie_formation: true
+  field_certifications: true
+  field_delai_de_connexion: true
+  field_description: true
+  field_display_as_cours_recommand: true
+  field_duree: true
+  field_eligible_aux_elus: true
+  field_eligible_cpf: true
+  field_formation_diplomante: true
+  field_formation_populaire: true
+  field_lieu_de_formation: true
+  field_methodes_d_evaluation: true
+  field_nos_experts: true
+  field_objectifs_de_la_formation: true
+  field_prix: true
+  field_prochaines_sessions_dates: true
+  field_programme_de_formation: true
+  field_ressources_techniques: true
+  field_taux_de_satisfaction: true
+  field_type_de_formation: true
