@@ -13,11 +13,11 @@ bundle: prochaines_sessions_dates
 mode: default
 content:
   field_prochaine_session:
-    type: datetime_default
-    label: above
+    type: datetime_custom
+    label: hidden
     settings:
       timezone_override: ''
-      format_type: medium
+      date_format: Y-m-d
     third_party_settings: {  }
     weight: 0
     region: content

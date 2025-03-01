@@ -1,0 +1,27 @@
+{# Check if the field has value #}
+{% if items|length %}
+<ul>
+    {% for item in items %}
+      {# Accessing the paragraph referenced in this field #}
+      {% set paragraph = item.content['#paragraph'] %}
+      
+      {# Access the subfields inside the paragraph: field_liste and field_titre_de_l_objectif #}
+      {% set titre_objectif = paragraph.field_titre_de_l_objectif.value %}
+      {% set liste_objectif = paragraph.field_liste.value %}
+      
+      <li>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12.9998L8.52642 15.8209C9.35374 16.4827 10.5536 16.3846 11.2624 15.5971L19 6.99976" stroke="#96AE41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </span>
+        <p>
+        {{ titre_objectif }}
+        </p>
+      </li>
+      {# <div class="objectif-item">
+        <p>{{ liste_objectif }}</p>
+      </div> #}
+    {% endfor %}
+  </ul>
+{% endif %}

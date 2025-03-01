@@ -1,0 +1,9 @@
+<h4 class="text-blue">
+    Programme de Formation
+</h4>
+<p class="h2 pt-2 pb-3">À qui s'adresse cette<br> formation ?</p>
+{% if items|length %}
+    {% for item in items %}
+      {{item.content}}
+    {% endfor %}
+{% endif %}

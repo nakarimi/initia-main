@@ -39,7 +39,7 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 'Comma separated'
     third_party_settings: {  }
   field_titre:
     type: string_textfield

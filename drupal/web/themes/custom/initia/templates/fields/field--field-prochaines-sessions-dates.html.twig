@@ -1,0 +1,19 @@
+{# Check if the field has value #}
+{% if items|length %}
+  <div class="prochaines-sessions-dates">
+    {% for item in items %}
+      {# The 'field_prochaine_session' field stores multiple dates as field items #}
+      {% set dates = item.content['#paragraph'].field_prochaine_session %}
+      {% if dates %}
+        <div class="session">
+          {# Accessing the dates in the field (assuming two dates per session) #}
+          {% set start_date = dates[0].value|date("m/d/Y") %}
+          {% set end_date = dates[1].value|date("m/d/Y") %}
+          <p> {{ start_date }} au {{ end_date }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% else %}
+  <p>No upcoming sessions available.</p>
+{% endif %}

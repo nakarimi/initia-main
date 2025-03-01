@@ -1,0 +1,27 @@
+{# Check if the field has values #}
+{% if items|length %}
+  <div class="description-formation">
+    {% for item in items %}
+      {# Accessing the paragraph referenced in this field #}
+      {% set paragraph = item.content['#paragraph'] %}
+      
+      {# Access the subfields inside the paragraph: field_titre_de_la_description and field_texte_decriptif #}
+      {% set titre_description = paragraph.field_titre_de_la_description.value %}
+      {% set texte_description = paragraph.field_texte_decriptif.value %}
+      
+      <div class="description-item">
+        {# Display the title if it exists #}
+        {% if titre_description %}
+          <h4>{{ titre_description }}</h4>
+        {% endif %}
+        
+        {# Display the descriptive text (raw for formatted text) if it exists #}
+        {% if texte_description %}
+          <div class="description-text">
+            {{ texte_description|raw }}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

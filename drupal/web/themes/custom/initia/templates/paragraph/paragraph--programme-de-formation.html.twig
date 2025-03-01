@@ -1,0 +1,30 @@
+{# This template will render a paragraph of type 'programme_de_formation' #}
+{% set unique_id = 'collapse' ~ random() %}
+<div class="programme-de-formation">
+</div>
+
+    <div class="accordion custom-accordion"> <div class="accordion-item mb-3">
+        <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-{{ unique_id }}" aria-expanded="true" aria-controls="panelsStayOpen-{{ unique_id }}">
+                {% if content.field_titre_programme %}
+                    <h2>
+                        {{ content.field_titre_programme }}
+                    </h2>
+                {% endif %}
+            </button>
+        </h3>
+        <div id="panelsStayOpen-{{ unique_id }}" class="accordion-collapse collapse">
+            <div class="accordion-body ">
+                <div class="bg-white-rad">
+                    {% if content.field_liste_des_points_programme %}
+                        <p>
+                            {{ content.field_liste_des_points_programme }}
+                        </p>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

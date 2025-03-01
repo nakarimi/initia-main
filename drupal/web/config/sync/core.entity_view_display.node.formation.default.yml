@@ -41,7 +41,7 @@ mode: default
 content:
   field_accessibilite:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 113
@@ -67,7 +67,7 @@ content:
     region: content
   field_capacite:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -92,7 +92,7 @@ content:
     region: content
   field_delai_de_connexion:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -167,7 +167,7 @@ content:
     region: content
   field_lieu_de_formation:
     type: address_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 112
