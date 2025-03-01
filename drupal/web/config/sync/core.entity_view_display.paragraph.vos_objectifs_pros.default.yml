@@ -8,7 +8,7 @@ dependencies:
     - field.field.paragraph.vos_objectifs_pros.field_titre_objectifs_pros
     - paragraphs.paragraphs_type.vos_objectifs_pros
   module:
-    - image
+    - file
     - text
 id: paragraph.vos_objectifs_pros.default
 targetEntityType: paragraph
@@ -23,15 +23,12 @@ content:
     weight: 2
     region: content
   field_picto_objectifs_pro:
-    type: image
+    type: file_default
     label: above
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
+      use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
   field_titre_objectifs_pros:
     type: string

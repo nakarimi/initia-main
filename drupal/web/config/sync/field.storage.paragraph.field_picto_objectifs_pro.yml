@@ -1,27 +1,20 @@
-uuid: e687ff96-e589-4534-855e-20ef36a84938
+uuid: ffd5d8e0-18fb-4e94-98b7-8834c7c5da13
 langcode: en
 status: true
 dependencies:
   module:
     - file
-    - image
     - paragraphs
 id: paragraph.field_picto_objectifs_pro
 field_name: field_picto_objectifs_pro
 entity_type: paragraph
-type: image
+type: file
 settings:
   target_type: file
   display_field: false
   display_default: false
   uri_scheme: public
-  default_image:
-    uuid: ''
-    alt: ''
-    title: ''
-    width: null
-    height: null
-module: image
+module: file
 locked: false
 cardinality: 1
 translatable: true

@@ -10,26 +10,23 @@ dependencies:
     - paragraphs.paragraphs_type.certifications
   module:
     - entity_reference_revisions
-    - image
+    - file
 id: paragraph.certifications.default
 targetEntityType: paragraph
 bundle: certifications
 mode: default
 content:
   field_diplome_image:
-    type: image
-    label: above
+    type: file_default
+    label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
+      use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
   field_liste_des_objectifs:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -38,7 +35,7 @@ content:
     region: content
   field_sous_titre_certifications:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -46,7 +43,7 @@ content:
     region: content
   field_titre_certifications:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

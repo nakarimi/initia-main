@@ -1,0 +1,27 @@
+{# Template for the "Méthodes d'évaluation" paragraph type #}
+
+
+<div class="d-flex align-items-center justify-content-between certificat-block">
+
+	<div>
+		{% if paragraph.field_titre_certifications.value %}
+			<h4 class="text-blue">
+				{{ paragraph.field_titre_certifications.value }}
+			</h4>
+		{% endif %}
+
+
+		{% if paragraph.field_sous_titre_certifications.value %}
+			<p class="h2 pt-2 pb-3">{{ paragraph.field_sous_titre_certifications.value }}</p>
+		{% endif %}
+	</div>
+
+	<div>
+		{% if paragraph.field_diplome_image.entity and paragraph.field_diplome_image.entity.uri.value %}
+			<img src="{{ file_url(paragraph.field_diplome_image.entity.uri.value) }}" class="">
+		{% endif %}
+	</div>
+</div>
+{% if content.field_liste_des_objectifs %}
+	{{ content.field_liste_des_objectifs }}
+{% endif %}

@@ -1,0 +1,19 @@
+{# Template for the "Méthodes d'évaluation" paragraph type #}
+
+
+<div class="icon-box">
+
+	{% if paragraph.field_picto_objectifs_pro.entity and paragraph.field_picto_objectifs_pro.entity.uri.value %}
+		<img src="{{ file_url(paragraph.field_picto_objectifs_pro.entity.uri.value) }}" class="">
+	{% endif %}
+	<div>
+		{% if paragraph.field_titre_objectifs_pros.value %}
+			<strong>
+				{{ paragraph.field_titre_objectifs_pros.value }}
+			</strong>
+		{% endif %}
+		{% if paragraph.field_description_objectifs_pro.value %}
+			<p>{{ paragraph.field_description_objectifs_pro.value }}</p>
+		{% endif %}
+	</div>
+</div>

@@ -7,10 +7,9 @@ dependencies:
     - field.field.paragraph.certifications.field_liste_des_objectifs
     - field.field.paragraph.certifications.field_sous_titre_certifications
     - field.field.paragraph.certifications.field_titre_certifications
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.certifications
   module:
-    - image
+    - file
     - paragraphs
 id: paragraph.certifications.default
 targetEntityType: paragraph
@@ -18,12 +17,11 @@ bundle: certifications
 mode: default
 content:
   field_diplome_image:
-    type: image_image
+    type: file_generic
     weight: 2
     region: content
     settings:
       progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
   field_liste_des_objectifs:
     type: paragraphs

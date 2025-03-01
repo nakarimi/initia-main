@@ -1,27 +1,20 @@
-uuid: 6a836200-d022-4c79-8f63-2e87ff2f0c46
+uuid: cfa78a9e-70f1-44d5-be66-caab283af2a5
 langcode: en
 status: true
 dependencies:
   module:
     - file
-    - image
     - paragraphs
 id: paragraph.field_diplome_image
 field_name: field_diplome_image
 entity_type: paragraph
-type: image
+type: file
 settings:
   target_type: file
   display_field: false
   display_default: false
   uri_scheme: public
-  default_image:
-    uuid: ''
-    alt: ''
-    title: ''
-    width: null
-    height: null
-module: image
+module: file
 locked: false
 cardinality: 1
 translatable: true

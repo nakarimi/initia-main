@@ -78,6 +78,10 @@ img {
   color: var(--color-2) !important;
 }
 
+.evaluation-list ul {
+  margin: 0px;
+  
+}
 ul li {
   color: var(--color-4);
   padding-bottom: 8px;

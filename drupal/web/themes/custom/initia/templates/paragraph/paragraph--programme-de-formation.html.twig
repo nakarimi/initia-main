@@ -7,9 +7,7 @@
         <h3 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-{{ unique_id }}" aria-expanded="true" aria-controls="panelsStayOpen-{{ unique_id }}">
                 {% if content.field_titre_programme %}
-                    <h2>
-                        {{ content.field_titre_programme }}
-                    </h2>
+                    {{ content.field_titre_programme }}
                 {% endif %}
             </button>
         </h3>
@@ -17,9 +15,7 @@
             <div class="accordion-body ">
                 <div class="bg-white-rad">
                     {% if content.field_liste_des_points_programme %}
-                        <p>
-                            {{ content.field_liste_des_points_programme }}
-                        </p>
+                        {{ content.field_liste_des_points_programme }}
                     {% endif %}
 
                 </div>

@@ -83,7 +83,7 @@ content:
     region: content
   field_certifications:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -174,7 +174,7 @@ content:
     region: content
   field_methodes_d_evaluation:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -183,7 +183,7 @@ content:
     region: content
   field_nos_experts:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -227,7 +227,7 @@ content:
     region: content
   field_ressources_techniques:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''

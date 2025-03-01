@@ -1,0 +1,25 @@
+<div class="bg-blue box-text-course mb-5">
+    <div class="row align-items-center">
+        <div class="col-md-7">
+            {% if content.field_titre_nos_experts %}
+                <h4>{{ content.field_titre_nos_experts }}</h4>
+            {% endif %}
+
+            {% if paragraph.field_sous_titre_nos_experts.value %}
+                <p class="h2 pt-2 pb-3 text-white">
+                    {{ paragraph.field_sous_titre_nos_experts.value }}
+                </p>
+            {% endif %}
+
+            {% if content.field_description_nos_experts %}
+                {{ content.field_description_nos_experts }}
+            {% endif %}
+        </div>
+
+        <div class="col-md-5">
+            {% if paragraph.field_image_nos_experts.entity and paragraph.field_image_nos_experts.entity.uri.value %}
+                <img src="{{ file_url(paragraph.field_image_nos_experts.entity.uri.value) }}" class="round-25">
+            {% endif %}
+        </div>
+    </div>
+</div>

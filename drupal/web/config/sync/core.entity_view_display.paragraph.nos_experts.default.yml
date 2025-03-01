@@ -18,14 +18,14 @@ mode: default
 content:
   field_description_nos_experts:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 3
     region: content
   field_image_nos_experts:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
       image_style: ''
@@ -36,7 +36,7 @@ content:
     region: content
   field_sous_titre_nos_experts:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -44,7 +44,7 @@ content:
     region: content
   field_titre_nos_experts:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

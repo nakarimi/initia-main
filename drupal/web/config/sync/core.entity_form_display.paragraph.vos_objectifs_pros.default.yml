@@ -6,10 +6,9 @@ dependencies:
     - field.field.paragraph.vos_objectifs_pros.field_description_objectifs_pro
     - field.field.paragraph.vos_objectifs_pros.field_picto_objectifs_pro
     - field.field.paragraph.vos_objectifs_pros.field_titre_objectifs_pros
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.vos_objectifs_pros
   module:
-    - image
+    - file
     - text
 id: paragraph.vos_objectifs_pros.default
 targetEntityType: paragraph
@@ -25,12 +24,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_picto_objectifs_pro:
-    type: image_image
-    weight: 1
+    type: file_generic
+    weight: 3
     region: content
     settings:
       progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
   field_titre_objectifs_pros:
     type: string_textfield

@@ -1,0 +1,13 @@
+{# Template for the "Méthodes d'évaluation" paragraph type #}
+
+
+{% if paragraph.field_titre_methodes_d_evaluatio.value %}
+	<p class="h2 pt-2 pb-3">{{ paragraph.field_titre_methodes_d_evaluatio.value|raw }}</p>
+{% endif %}
+
+
+{% if content.field_liste_methodes %}
+	<div class="evaluation-list">
+		{{ content.field_liste_methodes }}
+	</div>
+{% endif %}
