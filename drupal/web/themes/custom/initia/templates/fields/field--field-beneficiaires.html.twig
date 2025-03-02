@@ -1,6 +1,6 @@
 {# Check if the field has values #}
 {% if items|length %}
-    <div class="beneficiaires">
+    <div class="beneficiaires" id="Bénéficiaires-et-Exigences">
         {% for item in items %}
             {# Accessing the paragraph referenced in this field #}
             {% set paragraph = item.content['#paragraph'] %}

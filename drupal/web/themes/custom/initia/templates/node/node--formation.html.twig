@@ -21,8 +21,8 @@
 										<h2>
 											{{ node.label }}
 											{# {% if node.field_description.entity.field_titre_de_la_description.value %}
-																						{{ node.field_description.entity.field_titre_de_la_description.value }}
-																					{% endif %} #}
+																																																																						{{ node.field_description.entity.field_titre_de_la_description.value }}
+																																																																					{% endif %} #}
 										</h2>
 
 										<div class="review-block">
@@ -65,27 +65,27 @@
 							</div>
 
 							<div class="tags-block  d-flex gap-3 pt-3 pb-3">
-								<a href="#" class="active">
+								<a href="#Objectifs-de-la-Formation" class="active">
+									<span>
+										Objectifs de la Formation
+									</span>
+								</a>
+								<a href="#programme-de-formation">
 									<span>
 										Programme de formation
 									</span>
 								</a>
-								<a href="#">
-									<span>
-										Programme de formation
-									</span>
-								</a>
-								<a href="#">
+								<a href="#Bénéficiaires-et-Exigences">
 									<span>
 										Bénéficiaires et Exigences
 									</span>
 								</a>
-								<a href="#">
+								<a href="#Équipe-et-Évaluation">
 									<span>
 										Équipe et Évaluation
 									</span>
 								</a>
-								<a href="#">
+								<a href="#Certification">
 									<span>
 										Certification
 									</span>
@@ -97,7 +97,7 @@
 									{{ content.field_description }}
 								</p>
 
-								<h4 class="text-blue mb-3">
+								<h4 class="text-blue mb-3" id="Objectifs-de-la-Formation">
 									Objectifs de la Formation
 								</h4>
 
@@ -117,7 +117,7 @@
 
 
 									<hr/>
-									<h4 class="text-blue">
+									<h4 class="text-blue" id="Bénéficiaires-et-Exigences">
 										Méthodes d'Évaluation
 									</h4>
 									{{ content.field_methodes_d_evaluation }}
@@ -138,7 +138,7 @@
 
 									<div class="info-formation-block">
 
-										<div class="info-formation-block-item">
+										<div class="info-formation-block-item" >
 											<span>
 												Type de formation
 											</span>
@@ -217,7 +217,7 @@
 											Training created on
 											{{ node.created.value|date("m/d/Y") }}
 											.
-																													Last update on
+																																																																													Last update on
 											{{ node.changed.value|date("m/d/Y") }}
 											.
 											<pr/>
@@ -295,108 +295,37 @@
 						</div>
 					</section>
 
+					{# Nos diplômés Témoignent #}
 					<section id="nos-diplomes" class="my-5">
 						<div class="container-fluid">
-							<h2 class="h2">
-								Nos diplômés Témoignent
-							</h2>
-							<p class="col-md-3">
-								Chez INITIAL FORMATION, nous sommes fiers de la réussite de nos étudiants. Voici ce
-																												que certains d'entre eux ont à dire
-							</p>
+							<h2>Nos diplômés Témoignent</h2>
+							<p class="col-md-3">Chez INITIAL FORMATION, nous sommes fiers de la réussite de nos étudiants. Voici ce
+																																																																																																																																																																																																																																																						que certains d'entre eux ont à dire</p>
+
 
 							<div class="gray-carouselle">
-								<div class=" d-flex m-2">
-									<img src="./images/student-1.png" alt="">
-									<div>
-										<h4>
-											Lincoln Saris
-										</h4>
-										<p>
-											« Je viens de recevoir mon premier salaire après avoir terminé la formation et je suis
-																																			100% satisfaite des résultats ! Je l'ai recommandé à tous mes amis »
-										</p>
-										<hr>
-										<div>
-											<svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M6.6665 11.0062C8.35421 11.2676 10.2369 11.7021 11.9998 12.3838M6.6665 16.3395C7.51916 16.4716 8.42157 16.6478 9.33317 16.8778M15.9998 8.07116V27.07M5.32561 4.01503C8.28344 4.34926 12.2573 5.24843 15.0889 7.2326C15.6331 7.61394 16.3665 7.61394 16.9107 7.2326C19.7423 5.24843 23.7162 4.34926 26.6741 4.01503C28.1379 3.84961 29.3332 5.07203 29.3332 6.58024V21.5999C29.3332 23.1081 28.1379 24.331 26.6741 24.4964C23.7162 24.8307 19.7423 25.7298 16.9107 27.714C16.3665 28.0953 15.6331 28.0953 15.0889 27.714C12.2573 25.7298 8.28344 24.8307 5.32561 24.4964C3.86173 24.331 2.6665 23.1081 2.6665 21.5999V6.58024C2.6665 5.07203 3.86173 3.84961 5.32561 4.01503Z" stroke="#353942" stroke-width="2" stroke-linecap="round"/>
-											</svg>
-											<b>
-												Bootcamp Monteur équipements photovoltaïques
-											</b>
+								{% if field_nos_diplomes_temoignent is not empty %}
+									{% for temoignage in field_nos_diplomes_temoignent %}
+										<div class=" d-flex m-2">
+											{% if temoignage.field_photo_du_temoin.entity.uri.value %}
+												<img src="{{ file_url(temoignage.field_photo_du_temoin.entity.uri.value) }}" alt="{{ node.field_compenser_handicap_image.entity.alt }}"/>
+											{% endif %}
+											<div>
+												<h4>{{ temoignage.field_nom_et_prenom.value }}</h4>
+												<p>{{ temoignage.field_le_temoignage.value }}</p>
+												<hr>
+												<div>
+													<svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M6.6665 11.0062C8.35421 11.2676 10.2369 11.7021 11.9998 12.3838M6.6665 16.3395C7.51916 16.4716 8.42157 16.6478 9.33317 16.8778M15.9998 8.07116V27.07M5.32561 4.01503C8.28344 4.34926 12.2573 5.24843 15.0889 7.2326C15.6331 7.61394 16.3665 7.61394 16.9107 7.2326C19.7423 5.24843 23.7162 4.34926 26.6741 4.01503C28.1379 3.84961 29.3332 5.07203 29.3332 6.58024V21.5999C29.3332 23.1081 28.1379 24.331 26.6741 24.4964C23.7162 24.8307 19.7423 25.7298 16.9107 27.714C16.3665 28.0953 15.6331 28.0953 15.0889 27.714C12.2573 25.7298 8.28344 24.8307 5.32561 24.4964C3.86173 24.331 2.6665 23.1081 2.6665 21.5999V6.58024C2.6665 5.07203 3.86173 3.84961 5.32561 4.01503Z" stroke="#353942" stroke-width="2" stroke-linecap="round"/>
+													</svg>
+													<b>{{ temoignage.field_titre_de_la_formation.value }}</b>
 
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
 
-								<div class=" d-flex m-2">
-									<img src="./images/student-2.png" alt="">
-									<div>
-										<h4>
-											Hanna Donin
-										</h4>
-										<p>
-											« Je viens de recevoir mon premier salaire après avoir terminé la formation et je suis
-																																					100% satisfaite des résultats ! Je l'ai recommandé à tous mes amis »
-										</p>
-										<hr>
-										<div>
-											<svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M6.6665 11.0062C8.35421 11.2676 10.2369 11.7021 11.9998 12.3838M6.6665 16.3395C7.51916 16.4716 8.42157 16.6478 9.33317 16.8778M15.9998 8.07116V27.07M5.32561 4.01503C8.28344 4.34926 12.2573 5.24843 15.0889 7.2326C15.6331 7.61394 16.3665 7.61394 16.9107 7.2326C19.7423 5.24843 23.7162 4.34926 26.6741 4.01503C28.1379 3.84961 29.3332 5.07203 29.3332 6.58024V21.5999C29.3332 23.1081 28.1379 24.331 26.6741 24.4964C23.7162 24.8307 19.7423 25.7298 16.9107 27.714C16.3665 28.0953 15.6331 28.0953 15.0889 27.714C12.2573 25.7298 8.28344 24.8307 5.32561 24.4964C3.86173 24.331 2.6665 23.1081 2.6665 21.5999V6.58024C2.6665 5.07203 3.86173 3.84961 5.32561 4.01503Z" stroke="#353942" stroke-width="2" stroke-linecap="round"/>
-											</svg>
-											<b>
-												Bootcamp Monteur équipements photovoltaïques
-											</b>
-
-										</div>
-									</div>
-								</div>
-
-								<div class=" d-flex m-2">
-									<img src="./images/student-3.png" alt="">
-									<div>
-										<h4>
-											Alena Franci
-										</h4>
-										<p>
-											« Je viens de recevoir mon premier salaire après avoir terminé la formation et je suis
-																																							100% satisfaite des résultats ! Je l'ai recommandé à tous mes amis »
-										</p>
-										<hr>
-										<div>
-											<svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M6.6665 11.0062C8.35421 11.2676 10.2369 11.7021 11.9998 12.3838M6.6665 16.3395C7.51916 16.4716 8.42157 16.6478 9.33317 16.8778M15.9998 8.07116V27.07M5.32561 4.01503C8.28344 4.34926 12.2573 5.24843 15.0889 7.2326C15.6331 7.61394 16.3665 7.61394 16.9107 7.2326C19.7423 5.24843 23.7162 4.34926 26.6741 4.01503C28.1379 3.84961 29.3332 5.07203 29.3332 6.58024V21.5999C29.3332 23.1081 28.1379 24.331 26.6741 24.4964C23.7162 24.8307 19.7423 25.7298 16.9107 27.714C16.3665 28.0953 15.6331 28.0953 15.0889 27.714C12.2573 25.7298 8.28344 24.8307 5.32561 24.4964C3.86173 24.331 2.6665 23.1081 2.6665 21.5999V6.58024C2.6665 5.07203 3.86173 3.84961 5.32561 4.01503Z" stroke="#353942" stroke-width="2" stroke-linecap="round"/>
-											</svg>
-											<b>
-												Bootcamp Monteur équipements photovoltaïques
-											</b>
-
-										</div>
-									</div>
-								</div>
-
-								<div class=" d-flex m-2">
-									<img src="./images/student-2.png" alt="">
-									<div>
-										<h4>
-											Hanna Donin
-										</h4>
-										<p>
-											« Je viens de recevoir mon premier salaire après avoir terminé la formation et je suis
-																																									100% satisfaite des résultats ! Je l'ai recommandé à tous mes amis »
-										</p>
-										<hr>
-										<div>
-											<svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M6.6665 11.0062C8.35421 11.2676 10.2369 11.7021 11.9998 12.3838M6.6665 16.3395C7.51916 16.4716 8.42157 16.6478 9.33317 16.8778M15.9998 8.07116V27.07M5.32561 4.01503C8.28344 4.34926 12.2573 5.24843 15.0889 7.2326C15.6331 7.61394 16.3665 7.61394 16.9107 7.2326C19.7423 5.24843 23.7162 4.34926 26.6741 4.01503C28.1379 3.84961 29.3332 5.07203 29.3332 6.58024V21.5999C29.3332 23.1081 28.1379 24.331 26.6741 24.4964C23.7162 24.8307 19.7423 25.7298 16.9107 27.714C16.3665 28.0953 15.6331 28.0953 15.0889 27.714C12.2573 25.7298 8.28344 24.8307 5.32561 24.4964C3.86173 24.331 2.6665 23.1081 2.6665 21.5999V6.58024C2.6665 5.07203 3.86173 3.84961 5.32561 4.01503Z" stroke="#353942" stroke-width="2" stroke-linecap="round"/>
-											</svg>
-											<b>
-												Bootcamp Monteur équipements photovoltaïques
-											</b>
-
-										</div>
-									</div>
-								</div>
+									{% endfor %}
+								{% endif %}
 							</div>
 							<div class="btn-wrap">
 								<button class="prev-btn btn-link btn me-2 mt-3 p-0">
@@ -412,33 +341,37 @@
 									</svg>
 								</button>
 							</div>
-						</div>
-					</section>
+						</section>
+					{# END Nos diplômés Témoignent #}
 
-					<section id="start-parcours" class="my-5">
-						<div class="container-fluid">
-							<div class="parcours">
-								<div class="row align-items-center">
-									<div class="col-md-5">
-										<h2>
-											Commencez votre parcours d'apprentissage dès aujourd'hui
-										</h2>
-										<p>
-											Libérez votre potentiel et embarquez pour un voyage d'apprentissage tout au long de la
-																																										vie
-										</p>
-									</div>
-									<div class="col-md-2 offset-md-5">
-										<a href="#" class="btn btn-green-big">
-											Découvrir les cours
-											<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-											</svg>
-										</a>
+						{% if field_commencez_votre_parcours is not empty %}
+							{% set parcours_item = field_commencez_votre_parcours[0] %}
+							<section id="start-parcours" class="my-5">
+								<div class="container-fluid">
+									<div class="parcours">
+										<div class="row align-items-center">
+											<div class="col-md-5">
+												<h2>{{ parcours_item.title.value }}</h2>
+												{% if parcours_item.field_commence_description.value %}
+													<p>{{ parcours_item.field_commence_description.value|raw }}</p>
+												{% endif %}
+											</div>
+											{% if parcours_item.field_decouvrir_les_cours.uri %}
+
+												<div class="col-md-2 offset-md-5">
+													<a href="{{ parcours_item.field_decouvrir_les_cours.uri }}" target="{{ parcours_item.field_decouvrir_les_cours.options.target }}" class="btn btn-green-big">
+														{{ parcours_item.field_decouvrir_les_cours.title }}
+														<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+														</svg>
+													</a>
+												</div>
+											{% endif %}
+										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-					</section>
-				</main>
-				<!-- main Content-->
+							</section>
+
+						{% endif %}
+					</main>
+					<!-- main Content-->
