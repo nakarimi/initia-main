@@ -3,9 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.contact.field_adresse
+    - field.field.node.contact.field_calandly
+    - field.field.node.contact.field_e_mail
+    - field.field.node.contact.field_facebook
+    - field.field.node.contact.field_form
+    - field.field.node.contact.field_google_iframe
+    - field.field.node.contact.field_left_image
+    - field.field.node.contact.field_linkedin
+    - field.field.node.contact.field_sub_title
+    - field.field.node.contact.field_telephone
+    - field.field.node.contact.field_title
+    - field.field.node.contact.field_twitter
+    - image.style.thumbnail
     - node.type.contact
   module:
+    - image
     - path
+    - text
+    - webform
 id: node.contact.default
 targetEntityType: node
 bundle: contact
@@ -16,6 +32,106 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_adresse:
+    type: string_textfield
+    weight: 126
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_calandly:
+    type: text_textarea_with_summary
+    weight: 129
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_e_mail:
+    type: string_textfield
+    weight: 128
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_facebook:
+    type: string_textfield
+    weight: 130
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_form:
+    type: webform_entity_reference_select
+    weight: 121
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+  field_google_iframe:
+    type: text_textarea_with_summary
+    weight: 124
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_left_image:
+    type: image_image
+    weight: 125
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_linkedin:
+    type: string_textfield
+    weight: 131
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sub_title:
+    type: string_textfield
+    weight: 123
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_telephone:
+    type: string_textfield
+    weight: 127
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 122
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_twitter:
+    type: string_textfield
+    weight: 132
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

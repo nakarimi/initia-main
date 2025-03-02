@@ -1,0 +1,19 @@
+uuid: 98eac08b-395e-45c6-bdec-dd8f787e1eed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title
+    - node.type.reclamation
+id: node.reclamation.field_title
+field_name: field_title
+entity_type: node
+bundle: reclamation
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

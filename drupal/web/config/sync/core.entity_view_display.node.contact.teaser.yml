@@ -4,6 +4,18 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.contact.field_adresse
+    - field.field.node.contact.field_calandly
+    - field.field.node.contact.field_e_mail
+    - field.field.node.contact.field_facebook
+    - field.field.node.contact.field_form
+    - field.field.node.contact.field_google_iframe
+    - field.field.node.contact.field_left_image
+    - field.field.node.contact.field_linkedin
+    - field.field.node.contact.field_sub_title
+    - field.field.node.contact.field_telephone
+    - field.field.node.contact.field_title
+    - field.field.node.contact.field_twitter
     - node.type.contact
   module:
     - user
@@ -17,4 +29,16 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_adresse: true
+  field_calandly: true
+  field_e_mail: true
+  field_facebook: true
+  field_form: true
+  field_google_iframe: true
+  field_left_image: true
+  field_linkedin: true
+  field_sub_title: true
+  field_telephone: true
+  field_title: true
+  field_twitter: true

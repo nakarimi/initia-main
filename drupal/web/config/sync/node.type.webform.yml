@@ -1,0 +1,16 @@
+uuid: c4c0b97d-50bd-4cb9-89e2-2aad1c9e0e4b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform_node
+_core:
+  default_config_hash: BuY_3PjmYtRTSuvyFORJZUe0-TQiNXEE6yYQ_dkjxW8
+name: Webform
+type: webform
+description: 'A basic page with a webform attached.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

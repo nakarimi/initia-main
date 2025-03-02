@@ -1,0 +1,67 @@
+<form {{attributes}}>
+
+
+	<div class="row">
+
+		<div class="col-md-6">
+			<div class="form-input">
+				{{ element.elements.prenom }}
+			</div>
+
+		</div>
+
+
+		<div class="col-md-6">
+			<div class="form-input">
+				{{ element.elements.nom }}
+			</div>
+
+		</div>
+
+
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+
+			<div class="form-input">
+				{{ element.elements.e_mail }}
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-3">
+
+			<div class="form-input">
+				{{ element.elements.code }}
+			</div>
+
+		</div>
+
+		<div class="col-md-9">
+			<div class="form-input">
+				{{ element.elements.telephone }}
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-input">
+				{{ element.elements.message }}
+			</div>
+		</div>
+
+		<div class="col-md-5">
+			{{ element.form_token }}
+			{{ element.form_build_id }}
+			{{ element.form_id }}
+			{{ element.actions }}
+			<button class="btn btn-secondary w-100" type="submit">Envoyer</button>
+		</div>
+
+	</div>
+</form>

@@ -1,0 +1,26 @@
+uuid: 8334ad18-d05e-4be5-b98c-7c08936542ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_google_iframe
+    - filter.format.full_html
+    - node.type.contact
+  module:
+    - text
+id: node.contact.field_google_iframe
+field_name: field_google_iframe
+entity_type: node
+bundle: contact
+label: 'Google Iframe'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary

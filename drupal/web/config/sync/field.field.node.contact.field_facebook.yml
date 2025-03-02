@@ -1,0 +1,19 @@
+uuid: c39487f6-81a4-4f6d-a67b-b20f80b1ad21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_facebook
+    - node.type.contact
+id: node.contact.field_facebook
+field_name: field_facebook
+entity_type: node
+bundle: contact
+label: facebook
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

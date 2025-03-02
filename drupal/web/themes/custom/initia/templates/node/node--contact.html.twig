@@ -1,0 +1,115 @@
+<main>
+	<section class="contact pt-6 pb-6">
+
+
+		<div class="container-fluid">
+
+			<div class="row contact-content">
+
+
+				<div class="col-md-5">
+
+					<div class="bg-blue contact-block-info">
+
+						<div class=" contact-block-info-img">
+							{% if node.field_left_image.entity.uri.value %}
+								<img src="{{ file_url(node.field_left_image.entity.uri.value) }}" alt="{{ node.field_left_image.entity.alt }}"/>
+							{% endif %}
+						</div>
+
+
+						<div class="row mt-4">
+							<div class="col-md-6">
+								<div class="contact-block-item">
+									<span class="icon-contact">
+										<img src="/{{ directory }}/assets/images/map.svg">
+									</span>
+									<h4>Adresse</h4>
+									<p>{{ node.field_adresse.value }}</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="contact-block-item">
+									<span class="icon-contact">
+										<img src="/{{ directory }}/assets/images/call.svg">
+									</span>
+									<h4>Téléphone</h4>
+									<strong>{{ node.field_telephone.value }}</strong>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<div class="contact-block-item d-flex align-items-center gap-3">
+									<span class="icon-contact mb-0">
+										<img src="/{{ directory }}/assets/images/mail-white.svg">
+									</span>
+									<div>
+										<h4>E-mail</h4>
+										<strong>{{ node.field_e_mail.value }}</strong>
+									</div>
+
+								</div>
+							</div>
+
+
+							<div class="col-md-12">
+								{{ content.field_calandly }}
+							</div>
+
+
+							<div class="col-md-12">
+								<div class="social-media-block d-flex align-items-center gap-5 mt-3">
+
+									<span>Réseaux sociaux</span>
+									<div class="d-flex align-items-center gap-4">
+										<a href="{{ node.field_twitter.value }}"><img src="/{{ directory }}/assets/images/twitter.svg"></a>
+										<a href="{{ node.field_linkedin.value }}"><img src="/{{ directory }}/assets/images/linkedin-1.svg"></a>
+										<a href="{{ node.field_facebook.value }}"><img src="/{{ directory }}/assets/images/fb.svg"></a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="col-md-6 ">
+
+					<div class="contact-form pe-4 ps-4">
+						{% if node.label %}
+							<span>{{ node.label }}</span>
+						{% endif %}
+
+						{% if node.field_title.value %}
+							<h2>{{ node.field_title.value }}</h2>
+						{% endif %}
+
+						{% if node.field_sub_title.value %}
+							<p>{{ node.field_sub_title.value }}</p>
+						{% endif %}
+
+						{% if content.field_form %}
+							{{ content.field_form }}
+						{% endif %}
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<div class="row mt-5">
+				<div class="col-md-12">
+					<div class="map-bock">
+						{{ content.field_google_iframe }}
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+</main>

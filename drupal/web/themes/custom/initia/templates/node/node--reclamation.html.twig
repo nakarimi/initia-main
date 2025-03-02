@@ -1,0 +1,47 @@
+<main>
+	<section class="contact pt-6 pb-6">
+
+
+		<div class="container-fluid">
+
+			<div class="row  ">
+
+
+				<div class="col-md-6 ">
+
+					<div class="contact-form pe-4 ps-4">
+						{% if node.label %}
+							<span>{{ node.label }}</span>
+						{% endif %}
+
+						{% if node.field_title.value %}
+							<h2>{{ node.field_title.value }}</h2>
+						{% endif %}
+
+						{% if node.field_sub_title.value %}
+							<p>{{ node.field_sub_title.value }}</p>
+						{% endif %}
+
+						{% if content.field_form %}
+							{{ content.field_form }}
+						{% endif %}
+
+
+					</div>
+
+				</div>
+
+				{% if content.field_right_side %}
+                    <div class="col-md-4 offset-lg-1">
+                        {{ content.field_right_side }}
+                    </div>
+                {% endif %}
+
+			</div>
+
+
+		</div>
+
+	</section>
+
+</main>

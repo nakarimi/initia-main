@@ -1444,9 +1444,10 @@ h2 {
   font-size: 16px;
   display: block;
   margin-bottom: 8px;
+  font-weight: normal;
 }
 
-.contact-form .form-input .form-control {
+.contact-form .form-input .form-control, .form-text {
   border: 1px solid #E4E3E3;
   padding: 15px 10px;
   font-size: 14px;

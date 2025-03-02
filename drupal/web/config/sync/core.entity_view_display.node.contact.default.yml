@@ -3,17 +3,126 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.contact.field_adresse
+    - field.field.node.contact.field_calandly
+    - field.field.node.contact.field_e_mail
+    - field.field.node.contact.field_facebook
+    - field.field.node.contact.field_form
+    - field.field.node.contact.field_google_iframe
+    - field.field.node.contact.field_left_image
+    - field.field.node.contact.field_linkedin
+    - field.field.node.contact.field_sub_title
+    - field.field.node.contact.field_telephone
+    - field.field.node.contact.field_title
+    - field.field.node.contact.field_twitter
     - node.type.contact
   module:
+    - image
+    - text
     - user
+    - webform
 id: node.contact.default
 targetEntityType: node
 bundle: contact
 mode: default
 content:
-  links:
+  field_adresse:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_calandly:
+    type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 8
     region: content
-hidden: {  }
+  field_e_mail:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_facebook:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_form:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_google_iframe:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_left_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_linkedin:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_sub_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_telephone:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_twitter:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+hidden:
+  links: true

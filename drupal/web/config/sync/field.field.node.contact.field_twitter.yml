@@ -1,0 +1,19 @@
+uuid: 0924c90f-d135-4990-ade1-97431adc65f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_twitter
+    - node.type.contact
+id: node.contact.field_twitter
+field_name: field_twitter
+entity_type: node
+bundle: contact
+label: twitter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

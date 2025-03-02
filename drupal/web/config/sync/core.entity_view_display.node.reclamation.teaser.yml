@@ -4,6 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.reclamation.field_form
+    - field.field.node.reclamation.field_right_side
+    - field.field.node.reclamation.field_sub_title
+    - field.field.node.reclamation.field_title
     - node.type.reclamation
   module:
     - user
@@ -17,4 +21,8 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_form: true
+  field_right_side: true
+  field_sub_title: true
+  field_title: true
