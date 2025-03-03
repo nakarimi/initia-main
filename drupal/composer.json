@@ -31,6 +31,7 @@
         "drupal/honeypot": "^2.2",
         "drupal/jquery_ui_accordion": "^2.1",
         "drupal/paragraphs": "^1.18",
+        "drupal/pathauto": "^1.13",
         "drupal/search_api": "^1.37",
         "drupal/starrating": "^4.1@alpha",
         "drupal/token_filter": "^2.2",

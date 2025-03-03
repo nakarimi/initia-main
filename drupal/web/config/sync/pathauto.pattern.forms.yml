@@ -1,0 +1,23 @@
+uuid: fa0c3943-4cb5-4e5d-b7f7-1a3702ce54ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: forms
+label: Forms
+type: 'canonical_entities:node'
+pattern: '[current-page:title]'
+selection_criteria:
+  c24ff734-150c-4e4f-9b21-a3e50964963c:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: c24ff734-150c-4e4f-9b21-a3e50964963c
+    context_mapping:
+      node: node
+    bundles:
+      contact: contact
+      reclamation: reclamation
+selection_logic: and
+weight: -5
+relationships: {  }
