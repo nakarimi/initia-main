@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.formation.field_eligible_cpf
     - field.field.node.formation.field_formation_diplomante
     - field.field.node.formation.field_formation_populaire
+    - field.field.node.formation.field_image
     - field.field.node.formation.field_lieu_de_formation
     - field.field.node.formation.field_methodes_d_evaluation
     - field.field.node.formation.field_nos_experts
@@ -27,10 +28,12 @@ dependencies:
     - field.field.node.formation.field_ressources_techniques
     - field.field.node.formation.field_taux_de_satisfaction
     - field.field.node.formation.field_type_de_formation
+    - image.style.wide
     - node.type.formation
   module:
     - address
     - entity_reference_revisions
+    - image
     - starrating
     - text
     - user
@@ -164,6 +167,17 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 122
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: wide
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: -1
     region: content
   field_lieu_de_formation:
     type: address_default

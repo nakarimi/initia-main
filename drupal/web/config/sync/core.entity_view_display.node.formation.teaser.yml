@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.formation.field_eligible_cpf
     - field.field.node.formation.field_formation_diplomante
     - field.field.node.formation.field_formation_populaire
+    - field.field.node.formation.field_image
     - field.field.node.formation.field_lieu_de_formation
     - field.field.node.formation.field_methodes_d_evaluation
     - field.field.node.formation.field_nos_experts
@@ -28,14 +29,27 @@ dependencies:
     - field.field.node.formation.field_ressources_techniques
     - field.field.node.formation.field_taux_de_satisfaction
     - field.field.node.formation.field_type_de_formation
+    - image.style.medium
     - node.type.formation
   module:
+    - image
     - user
 id: node.formation.teaser
 targetEntityType: node
 bundle: formation
 mode: teaser
 content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: -1
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }

@@ -1,11 +1,17 @@
 <div class="block-register">
 	<div class="block-img">
-		{% if node.field_beneficiaires.entity %}
+		{% set image_url_entity = "" %}
+		{% if node.field_image.entity.uri.value %}
+			{% set image_url_entity = node.field_image.entity %}
+			
+		{% elseif node.field_beneficiaires.entity %}
 			{% set beneficiaries = node.field_beneficiaires.entity %}
 			{% if beneficiaries.field_image.entity.uri.value %}
-				<img src="{{ file_url(beneficiaries.field_image.entity.uri.value) }}" alt="{{ beneficiaries.field_image.entity.alt }}"/>
+				{% set image_url_entity = beneficiaries.field_image.entity %}
 			{% endif %}
 		{% endif %}
+		<img src="{{ file_url(image_url_entity.uri.value) }}" alt="{{ image_url_entity.alt }}"/>
+
 		<span class="cpf rounded-pill">{{ node.field_eligible_cpf.value == 1 ? 'CPF' : '' }}
 			<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0003 18.3337C14.6027 18.3337 18.3337 14.6027 18.3337 10.0003C18.3337 5.39795 14.6027 1.66699 10.0003 1.66699C5.39795 1.66699 1.66699 5.39795 1.66699 10.0003C1.66699 14.6027 5.39795 18.3337 10.0003 18.3337ZM13.827 7.88407C14.0389 7.6116 13.9898 7.21893 13.7174 7.00701C13.4449 6.79509 13.0522 6.84417 12.8403 7.11664L9.50115 11.4099C9.4269 11.5053 9.28723 11.5177 9.19734 11.4368L7.0851 9.5358C6.82853 9.30488 6.43335 9.32568 6.20244 9.58225C5.97153 9.83882 5.99233 10.234 6.24889 10.4649L8.36113 12.3659C8.9904 12.9323 9.96808 12.8455 10.4878 12.1773L13.827 7.88407Z" fill="white"></path>

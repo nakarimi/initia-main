@@ -1,14 +1,17 @@
 <div class="cours-slider ">
-<a href="/node/{{node.id}}" >
-	{% if node.field_beneficiaires.entity %}
-		{% set beneficiaries = node.field_beneficiaires.entity %}
-		{% if beneficiaries.field_image.entity.uri.value %}
-			<div class="img-bglinear" style="background-image: url('{{ file_url(beneficiaries.field_image.entity.uri.value) }}')">
-
-		{% else %}
-			<div class="img-bglinear">
+	<a href="/node/{{node.id}}" >
+		{% set image_url = "" %}
+		{% if node.field_image.entity.uri.value %}
+			{% set image_url = node.field_image.entity.uri.value %}
+			
+		{% elseif node.field_beneficiaires.entity %}
+			{% set beneficiaries = node.field_beneficiaires.entity %}
+			{% if beneficiaries.field_image.entity.uri.value %}
+				{% set image_url = beneficiaries.field_image.entity.uri.value %}
 			{% endif %}
 		{% endif %}
+		<div class="img-bglinear" style="background-image: url('{{ file_url(image_url) }}')">
+
 		<span class="cpf rounded-pill d-flex align-items-center">
 			<span class="me-1">{{ node.field_eligible_cpf.value == 1 ? 'CPF' : '' }}</span>
 			<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

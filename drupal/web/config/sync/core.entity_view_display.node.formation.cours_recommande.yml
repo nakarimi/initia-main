@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.formation.field_eligible_cpf
     - field.field.node.formation.field_formation_diplomante
     - field.field.node.formation.field_formation_populaire
+    - field.field.node.formation.field_image
     - field.field.node.formation.field_lieu_de_formation
     - field.field.node.formation.field_methodes_d_evaluation
     - field.field.node.formation.field_nos_experts
@@ -243,3 +244,4 @@ content:
 hidden:
   field_categorie_formation: true
   field_display_as_cours_recommand: true
+  field_image: true

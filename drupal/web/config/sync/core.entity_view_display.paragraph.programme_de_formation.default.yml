@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.programme_de_formation.field_list
     - field.field.paragraph.programme_de_formation.field_liste_des_points_programme
     - field.field.paragraph.programme_de_formation.field_titre_programme
     - paragraphs.paragraphs_type.programme_de_formation
@@ -11,6 +12,16 @@ targetEntityType: paragraph
 bundle: programme_de_formation
 mode: default
 content:
+  field_list:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_liste_des_points_programme:
     type: string
     label: hidden

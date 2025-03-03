@@ -13,11 +13,11 @@
         </h3>
         <div id="panelsStayOpen-{{ unique_id }}" class="accordion-collapse collapse">
             <div class="accordion-body ">
-                <div class="bg-white-rad">
+                <div class="bg-white-rad {% if paragraph.field_list.value %} list-style {% endif %}">
                     {% if content.field_liste_des_points_programme %}
                         {{ content.field_liste_des_points_programme }}
                     {% endif %}
-
+                
                 </div>
             </div>
         </div>

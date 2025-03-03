@@ -1647,6 +1647,13 @@ span.badge-white {
   font-size: 45px;
 }
 
+.bg-white-rad.list-style  {
+  padding-left: 45px;
+}
+.list-style .field__item{
+  display: list-item;
+}
+
 .pre-register-block.contact-block-info strong sub {
   font-size: 30px;
   bottom: -1px;
@@ -1657,6 +1664,7 @@ span.badge-white {
   text-transform: none;
   font-size: 30px;
   font-family: 'inter';
+  min-width: 00px;
 }
 
 .rating-block {
