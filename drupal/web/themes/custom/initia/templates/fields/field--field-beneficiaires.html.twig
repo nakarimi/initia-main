@@ -8,7 +8,7 @@
             {# Access the subfields inside the paragraph: field_description_du_bloc_benefi, field_image, field_liste_des_points, and field_titre #}
             {% set description_beneficiaire = paragraph.field_description_du_bloc_benefi.value %}
             {% set image_beneficiaire = paragraph.field_image.entity %}
-            {% set points_beneficiaire = paragraph.field_liste_des_points.value %}
+            {% set points_beneficiaire = paragraph.field_liste_des_points %}
             {% set titre_beneficiaire = paragraph.field_titre.value %}
 
             <div class="row">
@@ -39,14 +39,14 @@
 
                                 {% if points_beneficiaire %}
                                     <div class="formation-tag">
-                                        {% for point in points_beneficiaire|split(',') %}
+                                        {% for point in points_beneficiaire %}
                                             <span>
                                                 <small>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                         <path d="M5 12.9998L8.52642 15.8209C9.35374 16.4827 10.5536 16.3846 11.2624 15.5971L19 6.99976" stroke="#96AE41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                                     </svg>
                                                 </small>
-                                                {{ point }}
+                                                {{ point.value }}
                                             </span>
                                         {% endfor %}
                                     </div>

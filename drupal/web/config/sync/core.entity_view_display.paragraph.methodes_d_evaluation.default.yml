@@ -6,17 +6,16 @@ dependencies:
     - field.field.paragraph.methodes_d_evaluation.field_liste_methodes
     - field.field.paragraph.methodes_d_evaluation.field_titre_methodes_d_evaluatio
     - paragraphs.paragraphs_type.methodes_d_evaluation
-  module:
-    - text
 id: paragraph.methodes_d_evaluation.default
 targetEntityType: paragraph
 bundle: methodes_d_evaluation
 mode: default
 content:
   field_liste_methodes:
-    type: text_default
-    label: hidden
-    settings: {  }
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 1
     region: content

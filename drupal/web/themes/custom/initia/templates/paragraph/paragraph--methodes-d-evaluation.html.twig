@@ -5,9 +5,10 @@
 	<p class="h2 pt-2 pb-3">{{ paragraph.field_titre_methodes_d_evaluatio.value|raw }}</p>
 {% endif %}
 
-
-{% if content.field_liste_methodes %}
-	<div class="evaluation-list">
-		{{ content.field_liste_methodes }}
-	</div>
-{% endif %}
+<ul>
+	{% for item in paragraph.field_liste_methodes %}
+		<li>
+			{{ item.value }}
+		</li>
+	{% endfor %}
+</ul>

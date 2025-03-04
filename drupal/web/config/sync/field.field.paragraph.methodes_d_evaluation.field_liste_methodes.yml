@@ -1,13 +1,10 @@
-uuid: ea0a319d-55b8-4968-bfc3-632f35a5ec45
+uuid: 25fc4b5d-6778-42ec-9b26-9a5d617b0a12
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_liste_methodes
-    - filter.format.restricted_html
     - paragraphs.paragraphs_type.methodes_d_evaluation
-  module:
-    - text
 id: paragraph.methodes_d_evaluation.field_liste_methodes
 field_name: field_liste_methodes
 entity_type: paragraph
@@ -18,7 +15,5 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  allowed_formats:
-    - restricted_html
-field_type: text_long
+settings: {  }
+field_type: string

@@ -9,10 +9,10 @@
 {% if paragraph.field_sous_titre_ressources_tech.value %}
 	<p class="h2 pt-2 pb-3">{{ paragraph.field_sous_titre_ressources_tech.value }}</p>
 {% endif %}
-
-
-{% if content.field_liste_des_points_ressource %}
-	<div class="evaluation-list">
-		{{ content.field_liste_des_points_ressource }}
-	</div>
-{% endif %}
+<ul>
+	{% for item in paragraph.field_liste_des_points_ressource %}
+		<li>
+			{{ item.value }}
+		</li>
+	{% endfor %}
+</ul>

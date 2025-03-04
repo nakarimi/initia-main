@@ -7,17 +7,16 @@ dependencies:
     - field.field.paragraph.ressources_techniques.field_sous_titre_ressources_tech
     - field.field.paragraph.ressources_techniques.field_titre_ressources_technique
     - paragraphs.paragraphs_type.ressources_techniques
-  module:
-    - text
 id: paragraph.ressources_techniques.default
 targetEntityType: paragraph
 bundle: ressources_techniques
 mode: default
 content:
   field_liste_des_points_ressource:
-    type: text_default
-    label: hidden
-    settings: {  }
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 2
     region: content

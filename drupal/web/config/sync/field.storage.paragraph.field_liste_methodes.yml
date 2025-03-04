@@ -1,18 +1,20 @@
-uuid: e7ec837c-1d23-4680-8233-e5992721bbab
+uuid: 50fd0ada-b0c1-4a5b-8386-07cb4a2548c8
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-    - text
 id: paragraph.field_liste_methodes
 field_name: field_liste_methodes
 entity_type: paragraph
-type: text_long
-settings: {  }
-module: text
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
