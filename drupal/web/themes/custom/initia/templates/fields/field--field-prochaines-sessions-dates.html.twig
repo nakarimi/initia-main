@@ -7,8 +7,8 @@
       {% if dates %}
         <div class="session">
           {# Accessing the dates in the field (assuming two dates per session) #}
-          {% set start_date = dates[0].value|date("m/d/Y") %}
-          {% set end_date = dates[1].value|date("m/d/Y") %}
+          {% set start_date = dates[0].value|date("m/d/y") %}
+          {% set end_date = dates[1].value|date("m/d/y") %}
           <p> {{ start_date }} au {{ end_date }}</p>
         </div>
       {% endif %}

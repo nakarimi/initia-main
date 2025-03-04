@@ -4,7 +4,8 @@ $(document).ready(function () {
   });
 
   console.log('Hello, world!');
-  
+  $(".field--type-address br").replaceWith(" - ");
+
   $(".toggleSearch").click(function (e) {
     e.preventDefault(); // Prevent default anchor behavior
 

@@ -1,0 +1,13 @@
+{% if items %}
+  <div class="field--address">
+    {% for item in items %}
+      {% set address = item.content['#address'] %}
+      {{ address.address_line1|default('') }} -
+      {{ address.address_line2|default('') }} -
+      {{ address.locality|default('') }} -
+      {{ address.administrative_area|default('') }} -
+      {{ address.postal_code|default('') }} -
+      {{ address.country_code|default('') }}
+    {% endfor %}
+  </div>
+{% endif %}
