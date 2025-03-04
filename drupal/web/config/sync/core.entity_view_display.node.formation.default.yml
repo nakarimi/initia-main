@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.formation.field_accessibilite
     - field.field.node.formation.field_accessible
+    - field.field.node.formation.field_badges
     - field.field.node.formation.field_beneficiaires
     - field.field.node.formation.field_capacite
     - field.field.node.formation.field_categorie_formation
@@ -58,6 +59,14 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 120
+    region: content
+  field_badges:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 126
     region: content
   field_beneficiaires:
     type: entity_reference_revisions_entity_view

@@ -172,15 +172,11 @@
 							</div>
 							{# TODO:: ADDING FIELD #}
 							<div class="d-flex gap-3  pt-2 pb-2">
-								<span class="badge-green">
-									Private client
+								{% for item in node.field_badges %}
+								<span class="{{ loop.index > 1 ? 'badge-white' : 'badge-green' }}">
+									{{ item.value }}
 								</span>
-								<span class="badge-white">
-									Self-employed
-								</span>
-								<span class="badge-white">
-									Company
-								</span>
+								{% endfor %}
 							</div>
 
 							<strong>
@@ -189,7 +185,7 @@
 								{% endif %}
 							</strong>
 								<div class="action-btn pt-2 pb-2">
-									<a href="#" class="btn btn-secondary w-100 mb-2">
+									<a href="/inscription" class="btn btn-secondary w-100 mb-2">
 										Inscription
 									</a>
 									<a href="#" class="btn btn-green w-100">
