@@ -194,13 +194,10 @@
 							</div>
 
 							<strong>
-								<sub>
-									{% if node.field_prix.value %}
-										{{ node.field_prix.value }}
-										<sub>€</sub>
-									{% endif %}
-									<sub></sub>
-								</strong>
+								{% if node.field_prix.value %}
+									{{node.field_prix.value}}<sub>€</sub>
+								{% endif %}
+							</strong>
 								<div class="action-btn pt-2 pb-2">
 									<a href="#" class="btn btn-secondary w-100 mb-2">
 										Inscription
@@ -214,13 +211,9 @@
 									</a>
 								</div>
 								<p class="footer-course">
-									Training created on
-									{{ node.created.value|date("m/d/Y") }}
-									.
-																																																																																																	Last update on
-									{{ node.changed.value|date("m/d/Y") }}
-									.
-									<pr/>
+									Training created on {{ node.created.value|date("m/d/Y") }}.
+									Last update on {{ node.changed.value|date("m/d/Y") }}.
+									<br/>
 									{# TODO:: ADDING FIELD #}
 									Programme version: 2
 								</p>

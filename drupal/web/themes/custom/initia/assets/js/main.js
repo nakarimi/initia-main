@@ -16,6 +16,8 @@ $(document).ready(function () {
       $searchblock.addClass("expanded"); // Expand the block
     }
   });
+
+  $(".child-1 .custom-accordion .accordion-button").click();
   
   $('.mycarouselle').slick({
       arrows: false,
