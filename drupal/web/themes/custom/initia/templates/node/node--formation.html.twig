@@ -26,16 +26,16 @@
 								</h2>
 
 								<div class="review-block">
-									<span class="badge-blue">
-										{% if node.field_categorie_formation.entity %}
+								{% if node.field_categorie_formation.entity.value %}
+										<span class="badge-blue">
 											{% set term = node.field_categorie_formation.entity %}
 											{{ term.name.value }}
+										</span>
 										{% endif %}
-									</span>
 									<div class=" rating-block  pt-3 pb-3">
 										<strong>
 											{% if node.field_taux_de_satisfaction.value %}
-												{{ node.field_taux_de_satisfaction.value }}
+												{{ node.field_taux_de_satisfaction.value|number_format(1, '.', '')}}
 											{% endif %}
 										</strong>
 										<div>

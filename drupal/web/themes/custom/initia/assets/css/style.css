@@ -1653,7 +1653,9 @@ span.badge-white {
 .list-style .field__item{
   display: list-item;
 }
-
+.form-input .form-item{
+  margin: 0px;
+}
 .pre-register-block.contact-block-info strong sub {
   font-size: 30px;
   bottom: -1px;
@@ -1671,6 +1673,7 @@ span.badge-white {
   display: flex;
   gap: 10px;
   align-items: center;
+  width: max-content;
 }
 
 .rating-block strong {
@@ -1725,6 +1728,9 @@ p.footer-course {
   padding-bottom: 8px;
 }
 
+.objectf-block ul li > span{
+  padding-right: 10px;
+}
 .objectf-block ul li p {
   margin-bottom: 0;
   color: var(--color-4);
@@ -2211,11 +2217,18 @@ hr {
 }
 
 /* New */
-
-ul.navbar-nav{
-  gap: 30px;
+.right-navbar a.btn.btn-secondary{
+  gap: 5px;
+  display: inline-flex;
 }
+ul.navbar-nav{
+  gap: 25px;
+  margin-left: 20px;
+}
+
 ul li.nav-item a{
+  font-size: 15px;
+  font-weight: 600;
   color: var(--color-4);
 }
 
