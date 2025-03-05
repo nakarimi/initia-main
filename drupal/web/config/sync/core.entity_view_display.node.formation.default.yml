@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.formation.field_accessibilite
     - field.field.node.formation.field_accessible
+    - field.field.node.formation.field_avis
     - field.field.node.formation.field_badges
     - field.field.node.formation.field_beneficiaires
     - field.field.node.formation.field_capacite
@@ -59,6 +60,14 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 120
+    region: content
+  field_avis:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 127
     region: content
   field_badges:
     type: string

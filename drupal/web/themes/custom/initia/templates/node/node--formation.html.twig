@@ -50,7 +50,9 @@
 										</div>
 										{# TODO:: ADDING FIELD #}
 										<p>
-											(120 avis)
+											{% if node.field_avis.value %}
+												({{ node.field_avis.value }} avis)
+											{% endif %}
 										</p>
 									</div>
 								</div>

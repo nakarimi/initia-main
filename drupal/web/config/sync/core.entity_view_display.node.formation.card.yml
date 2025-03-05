@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.card
     - field.field.node.formation.field_accessibilite
     - field.field.node.formation.field_accessible
+    - field.field.node.formation.field_avis
     - field.field.node.formation.field_badges
     - field.field.node.formation.field_beneficiaires
     - field.field.node.formation.field_capacite
@@ -41,6 +42,7 @@ content: {  }
 hidden:
   field_accessibilite: true
   field_accessible: true
+  field_avis: true
   field_badges: true
   field_beneficiaires: true
   field_capacite: true

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.formation.field_accessibilite
     - field.field.node.formation.field_accessible
+    - field.field.node.formation.field_avis
     - field.field.node.formation.field_badges
     - field.field.node.formation.field_beneficiaires
     - field.field.node.formation.field_capacite
@@ -180,6 +181,7 @@ third_party_settings:
         - field_formation_populaire
         - field_formation_diplomante
         - field_taux_de_satisfaction
+        - field_avis
         - field_accessible
         - field_delai_de_connexion
         - field_capacite
@@ -213,7 +215,7 @@ content:
     third_party_settings: {  }
   field_accessibilite:
     type: text_textarea
-    weight: 15
+    weight: 16
     region: content
     settings:
       rows: 5
@@ -221,10 +223,18 @@ content:
     third_party_settings: {  }
   field_accessible:
     type: boolean_checkbox
-    weight: 11
+    weight: 12
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  field_avis:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_badges:
     type: string_textfield
@@ -254,7 +264,7 @@ content:
     third_party_settings: {  }
   field_capacite:
     type: string_textfield
-    weight: 13
+    weight: 14
     region: content
     settings:
       size: 60
@@ -286,7 +296,7 @@ content:
     third_party_settings: {  }
   field_delai_de_connexion:
     type: string_textfield
-    weight: 12
+    weight: 13
     region: content
     settings:
       size: 60
@@ -321,7 +331,7 @@ content:
     third_party_settings: {  }
   field_duree:
     type: string_textfield
-    weight: 16
+    weight: 17
     region: content
     settings:
       size: 60
@@ -365,7 +375,7 @@ content:
     third_party_settings: {  }
   field_lieu_de_formation:
     type: address_default
-    weight: 14
+    weight: 15
     region: content
     settings:
       wrapper_type: details
@@ -426,7 +436,7 @@ content:
     third_party_settings: {  }
   field_prix:
     type: string_textfield
-    weight: 17
+    weight: 18
     region: content
     settings:
       size: 60
@@ -434,7 +444,7 @@ content:
     third_party_settings: {  }
   field_prochaines_sessions_dates:
     type: paragraphs
-    weight: 18
+    weight: 19
     region: content
     settings:
       title: Paragraph

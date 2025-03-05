@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.cours_recommande
     - field.field.node.formation.field_accessibilite
     - field.field.node.formation.field_accessible
+    - field.field.node.formation.field_avis
     - field.field.node.formation.field_badges
     - field.field.node.formation.field_beneficiaires
     - field.field.node.formation.field_capacite
@@ -243,6 +244,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_avis: true
   field_badges: true
   field_categorie_formation: true
   field_display_as_cours_recommand: true
