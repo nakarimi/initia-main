@@ -1664,7 +1664,7 @@ span.badge-white {
   text-transform: none;
   font-size: 30px;
   font-family: 'inter';
-  min-width: 300px;
+  min-width: 500px;
 }
 
 .rating-block {
