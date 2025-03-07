@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.formation.field_duree
     - field.field.node.formation.field_eligible_aux_elus
     - field.field.node.formation.field_eligible_cpf
+    - field.field.node.formation.field_formation_description
     - field.field.node.formation.field_formation_diplomante
     - field.field.node.formation.field_formation_populaire
     - field.field.node.formation.field_image
@@ -248,4 +249,5 @@ hidden:
   field_badges: true
   field_categorie_formation: true
   field_display_as_cours_recommand: true
+  field_formation_description: true
   field_image: true

@@ -28,17 +28,17 @@
 	<div class="block-detail px-3">
 
 		<h3>
-			{# {{ node.label }} #}
+			{{ node.label }}
 			{# {% if node.field_beneficiaires.entity.field_titre.value %}
 									                {{ node.field_beneficiaires.entity.field_titre.value }}
 									            {% endif %} #}
-			{% if node.field_description.entity.field_titre_de_la_description.value %}
+			{# {% if node.field_description.entity.field_titre_de_la_description.value %}
 				{{ node.field_description.entity.field_titre_de_la_description.value }}
-			{% endif %}
+			{% endif %} #}
 		</h3>
 		<p>
-			{% if node.field_description.entity.field_texte_decriptif.value %}
-				{{ node.field_description.entity.field_texte_decriptif.value }}
+			{% if node.field_formation_description %}
+				{{ node.field_formation_description.value }}
 			{% endif %}
 		</p>
 		<div class="d-flex justify-content-between block-time-access">

@@ -31,18 +31,21 @@
 		<div class="d-flex align-items-end justify-content-between flex-column flex-lg-row">
 			<div class="col-lg-5">
 				<h3>
-					{# {{ node.label }} #}
+					{{ node.label }}
 					{# {% if node.field_beneficiaires.entity.field_titre.value %}
-																																                {{ node.field_beneficiaires.entity.field_titre.value }}
-																																            {% endif %} #}
-						{% if node.field_description.entity.field_titre_de_la_description.value %}
-					{{ node.field_description.entity.field_titre_de_la_description.value }}
-				{% endif %}
+						{{ node.field_beneficiaires.entity.field_titre.value }}
+					{% endif %} #}
+					{# {% if node.field_description.entity.field_titre_de_la_description.value %}
+						{{ node.field_description.entity.field_titre_de_la_description.value }}
+					{% endif %} #}
 				</h3>
 					<p>
-						{% if node.field_description.entity.field_texte_decriptif.value %}
-					{{ node.field_description.entity.field_texte_decriptif.value }}
-				{% endif %}
+						{% if node.field_formation_description %}
+							{{ node.field_formation_description.value }}
+						{% endif %}
+						{# {% if node.field_description.entity.field_texte_decriptif.value %}
+							{{ node.field_description.entity.field_texte_decriptif.value }}
+						{% endif %} #}
 			</p>
 			</div>
 				<div class="col-lg-2  block-time-access "> <div class="mb-2">

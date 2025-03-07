@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.formation.field_duree
     - field.field.node.formation.field_eligible_aux_elus
     - field.field.node.formation.field_eligible_cpf
+    - field.field.node.formation.field_formation_description
     - field.field.node.formation.field_formation_diplomante
     - field.field.node.formation.field_formation_populaire
     - field.field.node.formation.field_image
@@ -165,6 +166,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 118
+    region: content
+  field_formation_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 128
     region: content
   field_formation_diplomante:
     type: boolean
