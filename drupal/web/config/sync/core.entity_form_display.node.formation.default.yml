@@ -354,11 +354,11 @@ content:
       display_label: true
     third_party_settings: {  }
   field_formation_description:
-    type: text_textfield
+    type: text_textarea
     weight: 1
     region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_formation_diplomante:

@@ -53,47 +53,46 @@
 
 									<div class="block-detail px-3">
 										<h3>
-											{% if formation.entity.field_beneficiaires.entity %}
-												{% set beneficiaries = formation.entity.field_beneficiaires.entity %}
-												{% if beneficiaries.field_titre.value %}
-													{# Access the value directly #}
-													{{ beneficiaries.field_titre.value }}
-													{# Output the title #}
-												{% endif %}
-											{% endif %}
+											{{ formation.entity.label }}
+											{# {% if node.field_beneficiaires.entity.field_titre.value %}
+																					{{ node.field_beneficiaires.entity.field_titre.value }}
+																				{% endif %} #}
+											{# {% if node.field_description.entity.field_titre_de_la_description.value %}
+												{{ node.field_description.entity.field_titre_de_la_description.value }}
+											{% endif %} #}
 										</h3>
 										<p>
-											{% if formation.entity.field_beneficiaires.entity %}
-												{% set beneficiaries = formation.entity.field_beneficiaires.entity %}
-												{% if beneficiaries.field_description_du_bloc_benefi.value %}
-													{# Access the value directly #}
-													{{ beneficiaries.field_description_du_bloc_benefi.value }}
-													{# Output the description #}
-												{% endif %}
+											{% if formation.entity.field_formation_description %}
+												{{ formation.entity.field_formation_description.value }}
 											{% endif %}
 										</p>
 										<div class="d-flex justify-content-between block-time-access">
 											<div>
 												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M22 12V6C22 3.79086 20.2091 2 18 2H6C3.79086 2 2 3.79086 2 6V18C2 20.2091 3.79086 22 6 22H22" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round"/>
-													<path d="M22 12L20 10" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-													<path d="M12 6V10.5M10.5 13.5L9 15" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-													<path d="M13.5 12C13.5 12.8284 12.8284 13.5 12 13.5C11.1716 13.5 10.5 12.8284 10.5 12C10.5 11.1716 11.1716 10.5 12 10.5C12.8284 10.5 13.5 11.1716 13.5 12Z" stroke="#757B7B" stroke-width="1.5"/>
+													<path d="M22 12V6C22 3.79086 20.2091 2 18 2H6C3.79086 2 2 3.79086 2 6V18C2 20.2091 3.79086 22 6 22H22" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round"></path>
+													<path d="M22 12L20 10" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M12 6V10.5M10.5 13.5L9 15" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M13.5 12C13.5 12.8284 12.8284 13.5 12 13.5C11.1716 13.5 10.5 12.8284 10.5 12C10.5 11.1716 11.1716 10.5 12 10.5C12.8284 10.5 13.5 11.1716 13.5 12Z" stroke="#757B7B" stroke-width="1.5"></path>
 												</svg>
-												39 heures (5 jours)
+												{% if formation.entity.field_duree.value %}
+													{{ formation.entity.field_duree.value }} heures ({{ formation.entity.field_duree.value ? ((formation.entity.field_duree.value|number_format // 7) | round) : 0 }} jours)
+												{% endif %}
 											</div>
 											<div>
-												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M13.5 3.5C13.5 4.32843 12.8284 5 12 5C11.1716 5 10.5 4.32843 10.5 3.5C10.5 2.67157 11.1716 2 12 2C12.8284 2 13.5 2.67157 13.5 3.5Z" fill="#757B7B"/>
-													<path d="M13 21C13 21.5523 12.5523 22 12 22C11.4477 22 11 21.5523 11 21C11 20.4477 11.4477 20 12 20C12.5523 20 13 20.4477 13 21Z" fill="#757B7B"/>
-													<path d="M9 21C9 21.5523 8.55228 22 8 22C7.44772 22 7 21.5523 7 21C7 20.4477 7.44772 20 8 20C8.55228 20 9 20.4477 9 21Z" fill="#757B7B"/>
-													<path d="M17 21C17 21.5523 16.5523 22 16 22C15.4477 22 15 21.5523 15 21C15 20.4477 15.4477 20 16 20C16.5523 20 17 20.4477 17 21Z" fill="#757B7B"/>
-													<path d="M5 6C10.4235 7.33725 13.3997 7.32941 19 6" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-													<path d="M10 12V7H14V12H10Z" fill="#757B7B"/>
-													<path d="M11 10L10 18" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-													<path d="M13 10L14 18" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-												</svg>
-												Accessible
+												{% if formation.entity.field_accessible.value == '1' %}
+													<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.5 3.5C13.5 4.32843 12.8284 5 12 5C11.1716 5 10.5 4.32843 10.5 3.5C10.5 2.67157 11.1716 2 12 2C12.8284 2 13.5 2.67157 13.5 3.5Z" fill="#757B7B"></path>
+														<path d="M13 21C13 21.5523 12.5523 22 12 22C11.4477 22 11 21.5523 11 21C11 20.4477 11.4477 20 12 20C12.5523 20 13 20.4477 13 21Z" fill="#757B7B"></path>
+														<path d="M9 21C9 21.5523 8.55228 22 8 22C7.44772 22 7 21.5523 7 21C7 20.4477 7.44772 20 8 20C8.55228 20 9 20.4477 9 21Z" fill="#757B7B"></path>
+														<path d="M17 21C17 21.5523 16.5523 22 16 22C15.4477 22 15 21.5523 15 21C15 20.4477 15.4477 20 16 20C16.5523 20 17 20.4477 17 21Z" fill="#757B7B"></path>
+														<path d="M5 6C10.4235 7.33725 13.3997 7.32941 19 6" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														<path d="M10 12V7H14V12H10Z" fill="#757B7B"></path>
+														<path d="M11 10L10 18" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														<path d="M13 10L14 18" stroke="#757B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+													Accessible
+												{% endif %}
+
 											</div>
 										</div>
 										<a href="{{ url('entity.node.canonical', {'node': formation.entity.id}) }}" class="btn btn-secondary w-100 mt-3">Inscription</a>
@@ -228,7 +227,7 @@
 					</div>
 					{% if node.field_compenser_handicap_image.entity.uri.value %}
 						<div class="col-md-4 offset-md-2  order-1 order-md-0 mb-2">
-							<img class="w-100 img-border-20" src="{{ file_url(node.field_compenser_handicap_image.entity.uri.value) }}" alt="{{ node.field_compenser_handicap_image.entity.alt }}" />
+							<img class="w-100 img-border-20" src="{{ file_url(node.field_compenser_handicap_image.entity.uri.value) }}" alt="{{ node.field_compenser_handicap_image.entity.alt }}"/>
 						</div>
 					{% endif %}
 				</div>
@@ -238,9 +237,9 @@
 				<div class="container-fluid">
 					<div class="green-section">
 						<div class="row">
-						{% if content.field_chiffres_cles %}
-							{{ content.field_chiffres_cles }}
-						{% endif %}
+							{% if content.field_chiffres_cles %}
+								{{ content.field_chiffres_cles }}
+							{% endif %}
 						</div>
 					</div>
 				</div>
@@ -252,7 +251,7 @@
 				<div class="container-fluid">
 					<h2>Nos diplômés Témoignent</h2>
 					<p class="col-md-3">Chez INITIAL FORMATION, nous sommes fiers de la réussite de nos étudiants. Voici ce
-																																																																																																																																																																																																																														                    que certains d'entre eux ont à dire</p>
+																																																																																																																																																																																																																																				                    que certains d'entre eux ont à dire</p>
 
 
 					<div class="gray-carouselle">

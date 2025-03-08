@@ -1,4 +1,4 @@
-uuid: 4d00869e-77a1-44a4-80cb-0865f1a5df12
+uuid: 28aedd90-e1c4-41f5-b557-729213605a13
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ id: node.formation.field_formation_description
 field_name: field_formation_description
 entity_type: node
 bundle: formation
-label: 'Formation Description'
+label: "Formation Description\t"
 description: ''
 required: false
 translatable: false
@@ -21,4 +21,4 @@ default_value_callback: ''
 settings:
   allowed_formats:
     - plain_text
-field_type: text
+field_type: text_long

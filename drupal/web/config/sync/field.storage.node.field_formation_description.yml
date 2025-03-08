@@ -1,4 +1,4 @@
-uuid: 636e6827-5a20-480b-8768-cdf479b7171e
+uuid: acf3f9da-5e30-49ec-a191-24bb3926f090
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,8 @@ dependencies:
 id: node.field_formation_description
 field_name: field_formation_description
 entity_type: node
-type: text
-settings:
-  max_length: 255
+type: text_long
+settings: {  }
 module: text
 locked: false
 cardinality: 1

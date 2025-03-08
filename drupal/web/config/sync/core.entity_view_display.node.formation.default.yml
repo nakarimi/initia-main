@@ -169,7 +169,7 @@ content:
     region: content
   field_formation_description:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 128

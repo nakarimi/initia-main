@@ -34,20 +34,12 @@ dependencies:
     - field.field.node.formation.field_type_de_formation
     - node.type.formation
   module:
-    - text
     - user
 id: node.formation.card
 targetEntityType: node
 bundle: formation
 mode: card
-content:
-  field_formation_description:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
+content: {  }
 hidden:
   field_accessibilite: true
   field_accessible: true
@@ -63,6 +55,7 @@ hidden:
   field_duree: true
   field_eligible_aux_elus: true
   field_eligible_cpf: true
+  field_formation_description: true
   field_formation_diplomante: true
   field_formation_populaire: true
   field_image: true
