@@ -11,7 +11,7 @@ dependencies:
 id: initia_footerinformation_2
 theme: initia
 region: footer
-weight: 0
+weight: -5
 provider: null
 plugin: 'block_content:b541f3f3-8280-4538-b703-d7407d760853'
 settings:

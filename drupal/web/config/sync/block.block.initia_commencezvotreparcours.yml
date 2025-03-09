@@ -1,0 +1,30 @@
+uuid: 407b0507-a78f-40ce-9d28-7a499262ffc2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:commencez_votre_parcours:453a77b5-e2f9-4dcb-b2e8-bf958a1fcf4f'
+  module:
+    - block_content
+    - system
+  theme:
+    - initia
+id: initia_commencezvotreparcours
+theme: initia
+region: footer
+weight: -10
+provider: null
+plugin: 'block_content:453a77b5-e2f9-4dcb-b2e8-bf958a1fcf4f'
+settings:
+  id: 'block_content:453a77b5-e2f9-4dcb-b2e8-bf958a1fcf4f'
+  label: 'Commencez votre parcours'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

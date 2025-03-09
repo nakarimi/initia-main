@@ -151,21 +151,21 @@ function initia_preprocess_field(&$variables)
  * Implements hook_preprocess_HOOK() for node templates.
  */
 function initia_preprocess_node(&$variables) {
-  if ($variables['node']->bundle() == 'formation') {
-    // Get front page node ID from site config
-    $front_page_nid = \Drupal::config('system.site')->get('page.front');
-    $front_page_nid = str_replace('/node/', '', $front_page_nid); // Extract ID safely
+  // if ($variables['node']->bundle() == 'formation') {
+  //   // Get front page node ID from site config
+  //   $front_page_nid = \Drupal::config('system.site')->get('page.front');
+  //   $front_page_nid = str_replace('/node/', '', $front_page_nid); // Extract ID safely
 
-    // Load the front page node
-    if ($front_page_nid && is_numeric($front_page_nid)) {
-      $front_page_node = \Drupal\node\Entity\Node::load($front_page_nid);
+  //   // Load the front page node
+  //   if ($front_page_nid && is_numeric($front_page_nid)) {
+  //     $front_page_node = \Drupal\node\Entity\Node::load($front_page_nid);
 
-      if ($front_page_node && $front_page_node->hasField('field_nos_diplomes_temoignent')) {
-        $paragraphs = $front_page_node->get('field_nos_diplomes_temoignent')->referencedEntities();
-        $variables['field_commencez_votre_parcours'] = $front_page_node->get('field_commencez_votre_parcours')->referencedEntities();
-        // Pass paragraph entities to Twig
-        $variables['field_nos_diplomes_temoignent'] = $paragraphs;
-      }
-    }
-  }
+  //     if ($front_page_node && $front_page_node->hasField('field_nos_diplomes_temoignent')) {
+  //       $paragraphs = $front_page_node->get('field_nos_diplomes_temoignent')->referencedEntities();
+  //       $variables['field_commencez_votre_parcours'] = $front_page_node->get('field_commencez_votre_parcours')->referencedEntities();
+  //       // Pass paragraph entities to Twig
+  //       $variables['field_nos_diplomes_temoignent'] = $paragraphs;
+  //     }
+  //   }
+  // }
 }

@@ -1,0 +1,22 @@
+uuid: 07423681-6205-48db-8550-5832dd73d49a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.commencez_votre_parcours
+    - field.field.block_content.commencez_votre_parcours.field_commencez_votre_parcours
+id: block_content.commencez_votre_parcours.default
+targetEntityType: block_content
+bundle: commencez_votre_parcours
+mode: default
+content:
+  field_commencez_votre_parcours:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

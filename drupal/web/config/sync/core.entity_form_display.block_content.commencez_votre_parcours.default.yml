@@ -1,0 +1,24 @@
+uuid: 37cec061-775f-4cfa-9208-b1f94d4f33b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.commencez_votre_parcours
+    - field.field.block_content.commencez_votre_parcours.field_commencez_votre_parcours
+id: block_content.commencez_votre_parcours.default
+targetEntityType: block_content
+bundle: commencez_votre_parcours
+mode: default
+content:
+  field_commencez_votre_parcours:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  info: true

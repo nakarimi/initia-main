@@ -42,7 +42,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 116
+    weight: 15
     region: content
   field_commencez_votre_parcours:
     type: entity_reference_label
@@ -50,14 +50,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 123
+    weight: 21
     region: content
   field_compenser_description:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 118
+    weight: 17
     region: content
   field_compenser_en_savoir_plus:
     type: link
@@ -69,7 +69,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 115
+    weight: 14
     region: content
   field_compenser_handicap_image:
     type: image
@@ -80,7 +80,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 113
+    weight: 12
     region: content
   field_compenser_handicap_liste:
     type: entity_reference_revisions_entity_view
@@ -89,7 +89,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 114
+    weight: 13
     region: content
   field_compenser_votre_handicap:
     type: string
@@ -97,7 +97,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 112
+    weight: 11
     region: content
   field_en_savoir_plus:
     type: link
@@ -109,7 +109,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 106
+    weight: 5
     region: content
   field_formations_populaires:
     type: entity_reference_label
@@ -117,14 +117,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
   field_google_avis:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 108
+    weight: 7
     region: content
   field_home_header_image:
     type: image
@@ -135,7 +135,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
   field_home_sous_titre:
     type: string
@@ -143,7 +143,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_il_nous_font_confiance:
     type: string
@@ -151,14 +151,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 122
+    weight: 20
     region: content
   field_il_nous_font_description:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 120
+    weight: 18
     region: content
   field_logo_company:
     type: image
@@ -169,7 +169,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 121
+    weight: 19
     region: content
   field_nos_diplomes_temoignent:
     type: entity_reference_revisions_entity_view
@@ -178,7 +178,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 117
+    weight: 16
     region: content
   field_notre_equipe:
     type: string
@@ -186,14 +186,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 109
+    weight: 8
     region: content
   field_notre_equipe_description:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 110
+    weight: 9
     region: content
   field_notre_equipe_image:
     type: image
@@ -204,21 +204,21 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 111
+    weight: 10
     region: content
   field_votre_reussite:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 124
+    weight: 22
     region: content
   field_votre_reussite_description:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 105
+    weight: 4
     region: content
   field_votre_reussite_logos:
     type: image
@@ -229,11 +229,11 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 107
+    weight: 6
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden: {  }
