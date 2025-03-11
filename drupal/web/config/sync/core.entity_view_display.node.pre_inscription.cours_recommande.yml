@@ -1,19 +1,19 @@
-uuid: 5e8ef824-463a-4cb2-b8fa-877ff87e03ba
+uuid: 8dd635d6-cbb7-447d-bd4e-211395dd5ac8
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.cours_recommande
     - field.field.node.pre_inscription.field_entreprise_form
     - field.field.node.pre_inscription.field_particulier_form
     - field.field.node.pre_inscription.field_sub_title
     - node.type.pre_inscription
   module:
     - user
-id: node.pre_inscription.teaser
+id: node.pre_inscription.cours_recommande
 targetEntityType: node
 bundle: pre_inscription
-mode: teaser
+mode: cours_recommande
 content:
   links:
     settings: {  }

@@ -1,0 +1,25 @@
+uuid: 6f1458a3-6591-4e8c-9d89-b6e4a694f790
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_particulier_form
+    - node.type.pre_inscription
+  module:
+    - webform
+id: node.pre_inscription.field_particulier_form
+field_name: field_particulier_form
+entity_type: node
+bundle: pre_inscription
+label: 'Particulier Form'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

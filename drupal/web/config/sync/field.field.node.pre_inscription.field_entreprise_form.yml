@@ -1,0 +1,25 @@
+uuid: 5cbedb2d-d56f-4dcf-8652-0ff4153e2904
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_entreprise_form
+    - node.type.pre_inscription
+  module:
+    - webform
+id: node.pre_inscription.field_entreprise_form
+field_name: field_entreprise_form
+entity_type: node
+bundle: pre_inscription
+label: 'Entreprise Form'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

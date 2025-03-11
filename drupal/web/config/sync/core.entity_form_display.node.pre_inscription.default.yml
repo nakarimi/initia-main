@@ -3,9 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.pre_inscription.field_entreprise_form
+    - field.field.node.pre_inscription.field_particulier_form
+    - field.field.node.pre_inscription.field_sub_title
     - node.type.pre_inscription
   module:
     - path
+    - webform
 id: node.pre_inscription.default
 targetEntityType: node
 bundle: pre_inscription
@@ -16,6 +20,30 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_entreprise_form:
+    type: webform_entity_reference_select
+    weight: 125
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+  field_particulier_form:
+    type: webform_entity_reference_select
+    weight: 126
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+  field_sub_title:
+    type: string_textfield
+    weight: 123
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

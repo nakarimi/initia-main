@@ -151,6 +151,26 @@ function initia_preprocess_field(&$variables)
  * Implements hook_preprocess_HOOK() for node templates.
  */
 function initia_preprocess_node(&$variables) {
+
+  if ($variables['node']->bundle() === 'pre_inscription') {
+    $request = \Drupal::request();
+    $formation_id = $request->query->get('formation_id');
+
+    if ($formation_id && is_numeric($formation_id)) {
+      $formation_node = Node::load($formation_id);
+      if ($formation_node && $formation_node->bundle() === 'formation') {
+        // Render the formation node using 'card' view mode
+        $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
+        $formation_card = $view_builder->view($formation_node, 'side_card');
+        // Disable cache
+        $formation_card['#cache']['max-age'] = 0;
+        $formation_card['#cache']['contexts'][] = 'url.query_args:formation_id';
+
+        $variables['formation_card'] = $formation_card;
+      }
+    }
+  }
+  
   // if ($variables['node']->bundle() == 'formation') {
   //   // Get front page node ID from site config
   //   $front_page_nid = \Drupal::config('system.site')->get('page.front');

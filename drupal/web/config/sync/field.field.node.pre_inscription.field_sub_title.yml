@@ -1,0 +1,19 @@
+uuid: fe7721d9-3830-4859-8a19-c52599d86a50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_title
+    - node.type.pre_inscription
+id: node.pre_inscription.field_sub_title
+field_name: field_sub_title
+entity_type: node
+bundle: pre_inscription
+label: 'Sub Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

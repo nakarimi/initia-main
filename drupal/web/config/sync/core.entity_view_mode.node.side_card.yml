@@ -1,0 +1,11 @@
+uuid: e2b32155-376a-4f4d-94c3-3e59ff299582
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.side_card
+label: 'Side Card'
+description: ''
+targetEntityType: node
+cache: true
