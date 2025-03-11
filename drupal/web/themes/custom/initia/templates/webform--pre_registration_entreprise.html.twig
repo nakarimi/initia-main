@@ -1,0 +1,187 @@
+<form {{attributes}}>
+
+	<fieldset class="fieldgroup">
+
+		<div class="form-input mb-0 ">
+			<div class="row w-100  align-items-center">
+				<div class="col-md-6">
+
+					<div class="date-select">
+
+						<span class="icon-date"><img src="images/calendar.svg"></span>
+						<select class="form-control">
+
+
+							<option value="" class="placeholder" disabled="" selected="selected">20/01/2025 au 31/01/2025</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+						{{ element.elements.selectionnez_une_session }}
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+
+
+	</fieldset>
+
+
+	<fieldset class="fieldgroup">
+
+		<h3>Informations personnelles</h3>
+
+
+		<div class="row">
+
+			<div class="col-md-6">
+				<div class="form-input">
+					{{ element.elements.prenom }}
+				</div>
+
+			</div>
+
+
+			<div class="col-md-6">
+				<div class="form-input">
+					{{ element.elements.nom }}
+				</div>
+
+			</div>
+
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+
+				<div class="form-input">
+					{{ element.elements.e_mail }}
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-3">
+
+				<div class="form-input">
+					{{ element.elements.code }}
+				</div>
+
+			</div>
+
+			<div class="col-md-9">
+				<div class="form-input">
+					{{ element.elements.telephone }}
+				</div>
+			</div>
+		</div>
+
+	</fieldset>
+
+	<fieldset class="fieldgroup">
+
+		<h3>Adresse</h3>
+
+
+		<div class="row">
+
+			<div class="col-md-12">
+				<div class="form-input">
+					{{ element.elements.adresse.address }}
+				</div>
+
+			</div>
+
+
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-6">
+
+				<div class="form-input">
+					{{ element.elements.adresse.city }}
+				</div>
+
+			</div>
+			<div class="col-md-6">
+				<div class="form-input">
+					{{ element.elements.adresse.code }}
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+
+				<div class="form-input">
+					{{ element.elements.adresse.country }}
+				</div>
+
+			</div>
+		</div>
+
+	</fieldset>
+
+
+	<fieldset class="fieldgroup">
+
+		<h3>Autres informations</h3>
+
+
+		<div class="row">
+			<div class="col-md-12">
+
+				<div class="form-input">
+					{{ element.elements.reconnaissance_travailleur_handicape }}
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-6">
+
+				<div class="form-input">
+					{{ element.elements.adresse.city }}
+				</div>
+
+			</div>
+
+			<div class="col-md-6">
+				<div class="form-input">
+					{{ element.elements.adresse.code }}
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+
+				<div class="form-input">
+					{{ element.elements.profession }}
+				</div>
+
+			</div>
+		</div>
+
+
+	</fieldset>
+
+	<button class="btn btn-secondary w-100" type="submit">Envoyer ma demande</button>
+
+	{{ element.form_token }}
+	{{ element.form_build_id }}
+	{{ element.form_id }}
+	{{ element.actions }}
+
+</form>

@@ -162,13 +162,14 @@ function initia_preprocess_node(&$variables) {
         // Render the formation node using 'card' view mode
         $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
         $formation_card = $view_builder->view($formation_node, 'side_card');
-        // Disable cache
-        $formation_card['#cache']['max-age'] = 0;
-        $formation_card['#cache']['contexts'][] = 'url.query_args:formation_id';
-
+       
         $variables['formation_card'] = $formation_card;
       }
     }
+    // Disable cache
+    $formation_card['#cache']['max-age'] = 0;
+    $formation_card['#cache']['contexts'][] = 'url.query_args:formation_id';
+
   }
   
   // if ($variables['node']->bundle() == 'formation') {
