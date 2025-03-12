@@ -1440,14 +1440,21 @@ h2 {
   margin-bottom: 15px;
 }
 
-.contact-form .form-input .label-control {
+.form-input input{
+  width: 100%;
+}
+
+.contact-form .form-input .label-control,
+body .form-input label {
   font-size: 16px;
   display: block;
   margin-bottom: 8px;
   font-weight: normal;
 }
 
-.contact-form .form-input .form-control, .form-text {
+.contact-form .form-input .form-control, 
+body div .form-text, 
+body div .form-select {
   border: 1px solid #E4E3E3;
   padding: 15px 10px;
   font-size: 14px;

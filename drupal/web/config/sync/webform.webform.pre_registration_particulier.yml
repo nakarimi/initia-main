@@ -13,28 +13,6 @@ title: 'Pre Registration Particulier'
 description: ''
 categories: {  }
 elements: |-
-  nom_de_l_entreprise:
-    '#type': textfield
-    '#title': "Nom de l'entreprise"
-    '#title_display': before
-    '#placeholder': "Nom de l'entreprise"
-    '#attributes':
-      class:
-        - form-control
-    '#label_attributes':
-      class:
-        - label-control
-  selectionnez_une_session:
-    '#type': text_format
-    '#title': 'Sélectionnez une session'
-    '#allowed_formats':
-      plain_text: plain_text
-    '#attributes':
-      class:
-        - form-control
-    '#label_attributes':
-      class:
-        - label-control
   prenom:
     '#type': textfield
     '#title': Prénom
@@ -93,6 +71,10 @@ elements: |-
   adresse:
     '#type': webform_address
     '#title': Adresse
+    '#wrapper_type': form_element
+    '#wrapper_attributes':
+      class:
+        - form-control
     '#attributes':
       class:
         - form-control
@@ -133,6 +115,12 @@ elements: |-
     '#label_attributes':
       class:
         - label-control
+  selectionnez_une_session:
+    '#type': textfield
+    '#title': 'Sélectionnez une session'
+    '#attributes':
+      class:
+        - hidden
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -162,7 +150,7 @@ settings:
   form_open_message: ''
   form_close_message: ''
   form_exception_message: ''
-  form_previous_submissions: true
+  form_previous_submissions: false
   form_confidential: false
   form_confidential_message: ''
   form_disable_remote_addr: false

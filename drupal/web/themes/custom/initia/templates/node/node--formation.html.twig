@@ -25,14 +25,14 @@
 																																																																																									{% endif %} #}
 								</h2>
 
-								<div class="review-block">
-										{% if node.field_categorie_formation.entity %}
-										<span class="badge-blue">
-											{% set term = node.field_categorie_formation.entity %}
-											{{ term.name.value }}
-										</span>
-										{% endif %}
+									<div class="review-block">
 									<div class=" rating-block  pt-3 pb-3">
+										{% if node.field_categorie_formation.entity %}
+											{% set term = node.field_categorie_formation.entity %}
+											<span class="badge-blue">
+												{{ term.name.value }}
+											</span>
+										{% endif %}
 										<strong>
 											{% if node.field_taux_de_satisfaction.value %}
 												{{ node.field_taux_de_satisfaction.value|number_format(1, '.', '')}}

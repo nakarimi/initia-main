@@ -1,4 +1,4 @@
-uuid: 0b413ae3-f074-4584-b5a8-d21632e766d3
+uuid: e978127e-6243-4d78-9be9-bc0c7368a780
 langcode: en
 status: open
 dependencies: {  }
@@ -21,14 +21,11 @@ elements: |-
     '#attributes':
       class:
         - form-control
+        - col-md-6
     '#label_attributes':
       class:
         - label-control
-  selectionnez_une_session:
-    '#type': text_format
-    '#title': 'Sélectionnez une session'
-    '#allowed_formats':
-      plain_text: plain_text
+        - d-none
   prenom:
     '#type': textfield
     '#title': Prénom
@@ -87,6 +84,13 @@ elements: |-
   adresse:
     '#type': webform_address
     '#title': Adresse
+    '#wrapper_type': form_element
+    '#wrapper_attributes':
+      class:
+        - form-control
+    '#attributes':
+      class:
+        - form-control
     '#address__title': Adresse
     '#address__placeholder': Adresse
     '#address_2__access': false
@@ -118,6 +122,15 @@ elements: |-
     '#type': textfield
     '#title': Profession
     '#placeholder': Profession
+    '#attributes':
+      class:
+        - form-control
+    '#label_attributes':
+      class:
+        - label-control
+  selectionnez_une_session:
+    '#type': textfield
+    '#title': 'Sélectionnez une session'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
@@ -126,6 +139,10 @@ elements: |-
         - btn
         - btn-secondary
         - w-100
+        - form-control
+    '#label_attributes':
+      class:
+        - label-control
 css: ''
 javascript: ''
 settings:
@@ -143,7 +160,7 @@ settings:
   form_open_message: ''
   form_close_message: ''
   form_exception_message: ''
-  form_previous_submissions: true
+  form_previous_submissions: false
   form_confidential: false
   form_confidential_message: ''
   form_disable_remote_addr: false
@@ -173,7 +190,7 @@ settings:
   share: false
   share_node: false
   share_theme_name: ''
-  share_title: true
+  share_title: false
   share_page_body_attributes: {  }
   submission_label: ''
   submission_exception_message: ''

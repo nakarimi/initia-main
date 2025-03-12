@@ -44,16 +44,48 @@
 
 				</div>
 			</div>
-
 			{% if formation_card %}
 				<div class="col-md-5 offset-lg-1">
-				{{ formation_card }}
+					{{ formation_card }}
 				</div>
 			{% endif %}
-				
+
 		</div>
 
 
 	</div>
 
-</section></main><!-- main Content-->
+</section></main><!-- main Content--><script>
+	document.addEventListener("DOMContentLoaded", function () {
+    const sessionDates = document.querySelectorAll(".prochaines-sessions-dates .session p");
+    const dateSelects = document.querySelectorAll(".date-select select");
+
+    if (dateSelects.length > 0) {
+        dateSelects.forEach(dateSelect => {
+            // Populate each select with session dates
+            sessionDates.forEach(session => {
+                const text = session.textContent.trim();
+
+                const option = document.createElement("option");
+                option.textContent = text;
+                option.value = text;
+                dateSelect.appendChild(option);
+            });
+
+            // Add change event listener to update input field
+            dateSelect.addEventListener("change", function () {
+                const selectedValue = this.value;
+				console.log(selectedValue, this);
+                const inputField = this.closest(".date-select").querySelector('input[name="selectionnez_une_session"]');
+				console.log(inputField);
+
+                if (inputField) {
+                    inputField.value = selectedValue;
+                }
+            });
+        });
+    }
+});
+
+	
+</script>
