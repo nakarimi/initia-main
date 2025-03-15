@@ -14,9 +14,10 @@ bundle: textes_reglementaires
 mode: default
 content:
   field_liste_textes_reglementaire:
-    type: text_default
+    type: text_trimmed
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
     weight: 1
     region: content

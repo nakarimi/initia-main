@@ -1,0 +1,16 @@
+<div class="accordion-item mb-3">
+	<h3 class="accordion-header">
+		<button class="accordion-button" type="button" data-bs-toggle="collapse"
+			data-bs-target="#panelsStayOpen-collapseOne{{paragraph.id.value}}" aria-expanded="false"
+			aria-controls="panelsStayOpen-collapseOne{{paragraph.id.value}}">
+			{{ paragraph.field_nouveautes_titre.value }}
+		</button>
+	</h3>
+	<div id="panelsStayOpen-collapseOne{{paragraph.id.value}}" class="accordion-collapse collapse">
+		<div class="accordion-body ">
+			<div class="bg-white-rad">
+				{{ content.field_nouveautes_description }}
+			</div>
+		</div>
+	</div>
+</div>

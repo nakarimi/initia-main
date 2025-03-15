@@ -6,9 +6,11 @@ dependencies:
     - field.field.paragraph.droit_individuel_liste.field_droit_individuel_discripti
     - field.field.paragraph.droit_individuel_liste.field_droit_individuel_logo
     - field.field.paragraph.droit_individuel_liste.field_guide_d_utilisation
+    - field.field.paragraph.droit_individuel_liste.field_icon
     - image.style.thumbnail
     - paragraphs.paragraphs_type.droit_individuel_liste
   module:
+    - file
     - image
     - link
     - text
@@ -40,6 +42,13 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_icon:
+    type: file_generic
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
     third_party_settings: {  }
 hidden:
   created: true

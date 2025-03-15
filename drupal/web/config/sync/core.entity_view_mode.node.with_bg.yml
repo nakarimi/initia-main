@@ -1,0 +1,11 @@
+uuid: a5017e03-e422-4310-83aa-f77c391f5ed3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.with_bg
+label: 'With BG'
+description: ''
+targetEntityType: node
+cache: true

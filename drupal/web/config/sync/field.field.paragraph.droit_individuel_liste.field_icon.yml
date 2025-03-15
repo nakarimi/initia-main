@@ -1,0 +1,27 @@
+uuid: b4317bce-209e-45b6-a964-a705ca49c9bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon
+    - paragraphs.paragraphs_type.droit_individuel_liste
+  module:
+    - file
+id: paragraph.droit_individuel_liste.field_icon
+field_name: field_icon
+entity_type: paragraph
+bundle: droit_individuel_liste
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'svg png'
+  max_filesize: ''
+  description_field: false
+field_type: file

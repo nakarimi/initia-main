@@ -63,84 +63,89 @@
 			<div class="droit-dife">
 				<div class="row">
 					<div class="col-md-4">
-						<h5 class="text-blue fw-semibold">Droit Individuel à la Formation des Élus (DIFE)</h5>
-						<h2 class=" my-3">Qu’est-ce que le DIFE ?</h2>
-						<p>Chaque membre du Conseil Municipal peut suivre des formations sans coût pour la
-							collectivité grâce à son Droit Individuel à la Formation Élu (DIFE)</p>
+						<h5 class="text-blue fw-semibold">{{ node.field_droit_individuel_titre.value }}</h5>
+						<h2 class=" my-3">{{ node.field_droit_individuel_sous_titr.value }}</h2>
+						<p>{{ content.field_droit_individuel_descripti }}</p>
+					</div>
+					{# {{ content.field_liste_des_droit_individuel }} #}
+					<div class="col-md-4">
+						{% if node.field_liste_des_droit_individuel %}
+							{% for item in node.field_liste_des_droit_individuel %}
+								{% set droit_individuel = item.entity %}
+								{% if droit_individuel and loop.index <= 3 %}
+								{% if droit_individuel.field_droit_individuel_logo.entity and droit_individuel.field_droit_individuel_logo.entity.uri.value %}
+
+								<div class="rule-zone d-flex flex-column align-items-stretch  h-100">
+									{% if droit_individuel.field_icon.entity and droit_individuel.field_icon.entity.uri.value %}
+										<img width="48px" src="{{ file_url(droit_individuel.field_icon.entity.uri.value) }}" class="">
+									{% endif %}
+									<div class="mb-auto">
+										<div class="text-center mb-3"> 
+											{% if droit_individuel.field_droit_individuel_logo.entity and droit_individuel.field_droit_individuel_logo.entity.uri.value %}
+											<img src="{{ file_url(droit_individuel.field_droit_individuel_logo.entity.uri.value) }}" class="">
+											{% endif %}
+										</div>
+										<p class="mt-5">{{ droit_individuel.field_droit_individuel_discripti.value }}</p>
+									</div>
+									<a href="{{droit_individuel.field_guide_d_utilisation.uri}}" class="btn btn-secondary mt-5 w-75">{{ droit_individuel.field_guide_d_utilisation.title }}
+								
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</a>
+								</div>
+								{% else %}
+								<div class="rule-zone d-flex flex-column mb-3">
+								{% if droit_individuel.field_icon.entity and droit_individuel.field_icon.entity.uri.value %}
+								<img width="48px" src="{{ file_url(droit_individuel.field_icon.entity.uri.value) }}" class="">
+								{% endif %}
+								<p class="mt-3">{{ droit_individuel.field_droit_individuel_discripti.value }}</p>
+								</div>
+								{% endif %}								
+								{% endif %}
+							{% endfor %}
+						{% endif %}
 					</div>
 					<div class="col-md-4">
-						<div class="rule-zone d-flex flex-column mb-3">
-							<svg width="48" height="49" viewBox="0 0 48 49" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<circle cx="24" cy="24.5" r="24" fill="#96AE41" />
-								<path d="M23.152 35V19.904H19.696V17.12H26.416V35H23.152Z" fill="white" />
-							</svg>
-							<p class="mt-3">
-								Par l’ordonnance du 20/01/21, le DIFE est à présent monétisé. Le Fond DIF est
-								financé
-								par une cotisation obligatoire de 1% préemptée par les indemnités des élus.</p>
-						</div>
-						<div class="rule-zone d-flex flex-column mb-3">
-							<svg width="48" height="49" viewBox="0 0 48 49" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<circle cx="24" cy="24.5" r="24" fill="#96AE41" />
-								<path
-									d="M17.604 35V32.528L22.452 27.464C23.412 26.456 24.148 25.656 24.66 25.064C25.188 24.456 25.556 23.936 25.764 23.504C25.972 23.072 26.076 22.632 26.076 22.184C26.076 21.432 25.836 20.84 25.356 20.408C24.892 19.976 24.292 19.76 23.556 19.76C22.788 19.76 22.124 19.984 21.564 20.432C21.004 20.864 20.596 21.504 20.34 22.352L17.484 21.464C17.676 20.52 18.068 19.704 18.66 19.016C19.252 18.312 19.972 17.776 20.82 17.408C21.684 17.024 22.596 16.832 23.556 16.832C24.708 16.832 25.716 17.04 26.58 17.456C27.46 17.872 28.14 18.456 28.62 19.208C29.116 19.96 29.364 20.84 29.364 21.848C29.364 22.488 29.244 23.12 29.004 23.744C28.764 24.368 28.404 25.008 27.924 25.664C27.444 26.304 26.82 27.024 26.052 27.824L21.852 32.24H29.604V35H17.604Z"
-									fill="white" />
-							</svg>
-							<p class="mt-3">
-								Pour l’année 2023, l’enveloppe annuelle est fixée à 400 €, dans la limite d’un
-								plafond global de 800€.</p>
-						</div>
-						<div class="rule-zone d-flex flex-column ">
-							<svg width="48" height="49" viewBox="0 0 48 49" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<circle cx="24" cy="24.5" r="24" fill="#96AE41" />
-								<path
-									d="M23.532 34.288C22.556 34.288 21.628 34.112 20.748 33.76C19.884 33.392 19.14 32.88 18.516 32.224C17.908 31.552 17.492 30.76 17.268 29.848L20.124 28.84C20.412 29.656 20.852 30.28 21.444 30.712C22.036 31.128 22.732 31.336 23.532 31.336C24.172 31.336 24.724 31.216 25.188 30.976C25.668 30.736 26.044 30.392 26.316 29.944C26.588 29.48 26.724 28.936 26.724 28.312C26.724 27.688 26.588 27.16 26.316 26.728C26.06 26.28 25.692 25.936 25.212 25.696C24.732 25.456 24.164 25.336 23.508 25.336C23.204 25.336 22.884 25.368 22.548 25.432C22.228 25.496 21.94 25.592 21.684 25.72L20.94 24.16L25.572 18.88H18.276V16.12H29.244V18.688L24.588 24.136L24.636 22.912C25.708 22.928 26.644 23.16 27.444 23.608C28.244 24.056 28.868 24.672 29.316 25.456C29.764 26.24 29.988 27.16 29.988 28.216C29.988 29.368 29.708 30.408 29.148 31.336C28.588 32.248 27.82 32.968 26.844 33.496C25.868 34.024 24.764 34.288 23.532 34.288Z"
-									fill="white" />
-							</svg>
-							<p class="mt-3">
-								Si vous n’utilisez pas votre DIF Elus, votre compte restera donc à 700€ (les 400€
-								annuels ne seront pas crédités et seront perdus puisque le plafond est atteint)</p>
-						</div>
+						{% if node.field_liste_des_droit_individuel %}
+							{% for item in node.field_liste_des_droit_individuel %}
+								{% set droit_individuel = item.entity %}
+								{% if droit_individuel and loop.index > 3 %}
+								{% if droit_individuel.field_droit_individuel_logo.entity and droit_individuel.field_droit_individuel_logo.entity.uri.value %}
+
+								<div class="rule-zone d-flex flex-column align-items-stretch  h-100">
+									{% if droit_individuel.field_icon.entity and droit_individuel.field_icon.entity.uri.value %}
+										<img width="48px" src="{{ file_url(droit_individuel.field_icon.entity.uri.value) }}" class="">
+									{% endif %}
+									<div class="mb-auto">
+										<div class="text-center mb-3"> 
+											{% if droit_individuel.field_droit_individuel_logo.entity and droit_individuel.field_droit_individuel_logo.entity.uri.value %}
+											<img src="{{ file_url(droit_individuel.field_droit_individuel_logo.entity.uri.value) }}" class="">
+											{% endif %}
+										</div>
+										<p class="mt-5">{{ droit_individuel.field_droit_individuel_discripti.value }}</p>
+									</div>
+									<a href="{{droit_individuel.field_guide_d_utilisation.uri}}" class="btn btn-secondary mt-5 w-75">{{ droit_individuel.field_guide_d_utilisation.title }}
+								
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</a>
+								</div>
+								{% else %}
+								<div class="rule-zone d-flex flex-column mb-3">
+								{% if droit_individuel.field_icon.entity and droit_individuel.field_icon.entity.uri.value %}
+								<img width="48px" src="{{ file_url(droit_individuel.field_icon.entity.uri.value) }}" class="">
+								{% endif %}
+								<p class="mt-3">{{ droit_individuel.field_droit_individuel_discripti.value }}</p>
+								</div>
+								{% endif %}								
+								{% endif %}
+							{% endfor %}
+						{% endif %}
 					</div>
-					<div class="col-md-4">
-						<div class="rule-zone d-flex flex-column align-items-stretch  h-100">
-							<svg class="mb-4" width="48" height="49" viewBox="0 0 48 49" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<circle cx="24" cy="24.5" r="24" fill="#96AE41" />
-								<path
-									d="M25.572 35V31.064H17.364V28.328L25.38 17.12H28.788V28.328H31.404V31.064H28.788V35H25.572ZM19.764 29.504L19.188 28.328H25.572V19.688L26.412 19.952L19.764 29.504Z"
-									fill="white" />
-							</svg>
 
 
-							<div class="mb-auto">
-
-								<div class="text-center mb-3"> <img src="images/elu.png"></div>
-
-								<p class="mt-5">
-									Pour connaître ses droits mobilisables, l’élu doit se connecter sur la
-									plateforme
-									Mon Compte Formation. Ses droits en tant qu’élu apparaîtront sur la gauche dans
-									la
-									partie « Votre Compte Elu »</p>
-
-							</div>
-
-
-							<a href="#" class="btn btn-secondary mt-5 w-75">
-								Guide d'utilisation de Mon Compte Elu
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5"
-										stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-							</a>
-
-						</div>
-					</div>
 				</div>
 			</div>
 
@@ -150,188 +155,31 @@
 		<div class="container-fluid  ">
 			<div class="row mt-3">
 				<div class="col-md-4 ">
-					<h5 class="text-blue fw-semibold">Processus d’Inscription et Demande de Prise en Charge</h5>
-					<h2 class=" my-3">Comment s’inscrire à une formation ?</h2>
+					<h5 class="text-blue fw-semibold">{{node.field_processus_titre.value }}</h5>
+					<h2 class=" my-3">{{ node.field_processus_sous_titre.value }}</h2>
 				</div>
 				<div class="col-md-4  offset-md-1 d-none d-md-block mb-3">
-					<p>Depuis le 7 janvier 2022 <br>
-						Les demandes de formation sont digitalisées grâce à la rubrique « Mon Compte Elu » de la
-						plateforme Mon Compte Formation. Elle fournit aux élus des informations sur le montant de
-						leur droit DIF et leur permet de s’inscrire aux formations proposées par INITIA FORMATION.
-					</p>
+					{{ content.field_processus_description }}
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-3 mb-4">
-					<div class="forma-step">
-						<img src="images/poste.svg" class="mb-4">
-						<h5>Créer votre Identité<br /> Numérique La Poste</h5>
-						<p>Si vous ne possédez pas d’Identité Numérique La Poste, il vous faudra au préalable la
-							créer. </p>
-					</div>
-				</div>
-				<div class="col-md-3 mb-4">
-					<div class="forma-step">
-						<svg width="100" height="100" viewBox="0 0 100 100" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<circle cx="50" cy="50" r="50" fill="#96AE41" fill-opacity="0.1" />
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M50 48C54.4183 48 58 44.4183 58 40C58 35.5817 54.4183 32 50 32C45.5817 32 42 35.5817 42 40C42 44.4183 45.5817 48 50 48ZM50 68C57.732 68 64 64.4183 64 60C64 55.5817 57.732 52 50 52C42.268 52 36 55.5817 36 60C36 64.4183 42.268 68 50 68Z"
-								fill="#96AE41" />
-						</svg>
-						<h5>Connectez-vous sur <br />Mon Compte</h5>
-						<p>Si vous ne possédez pas d’Identité Numérique La Poste, il vous faudra au préalable la
-							créer. </p>
-					</div>
-				</div>
-				<div class="col-md-3 mb-4">
-					<div class="forma-step">
-						<svg width="100" height="100" viewBox="0 0 100 100" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<circle cx="50" cy="50" r="50" fill="#96AE41" fill-opacity="0.1" />
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M49.25 37.1578C49.0338 37.0865 48.8258 36.9836 48.6336 36.8489C44.3863 33.8726 38.4254 32.5239 33.9887 32.0225C31.7928 31.7744 30 33.608 30 35.8704V58.3999C30 60.6622 31.7928 62.4965 33.9887 62.7446C38.4254 63.246 44.3863 64.5947 48.6336 67.571C48.8258 67.7057 49.0338 67.8086 49.25 67.8799V37.1578ZM50.75 67.8799C50.9662 67.8086 51.1742 67.7057 51.3664 67.571C55.6137 64.5947 61.5746 63.246 66.0113 62.7446C68.2072 62.4965 70 60.6622 70 58.3999V35.8704C70 33.608 68.2072 31.7744 66.0113 32.0225C61.5746 32.5239 55.6137 33.8726 51.3664 36.8489C51.1742 36.9836 50.9662 37.0865 50.75 37.1578V67.8799ZM35.2588 42.3945C35.3222 41.9852 35.7054 41.7047 36.1148 41.7681C38.6833 42.1659 41.5625 42.829 44.2705 43.8762C44.6568 44.0256 44.8489 44.4599 44.6995 44.8463C44.5501 45.2326 44.1158 45.4247 43.7295 45.2753C41.1486 44.2772 38.3798 43.6368 35.8852 43.2504C35.4759 43.187 35.1954 42.8038 35.2588 42.3945ZM36.1148 49.7681C35.7054 49.7047 35.3222 49.9852 35.2588 50.3945C35.1954 50.8038 35.4759 51.187 35.8852 51.2504C37.1439 51.4454 38.4744 51.7053 39.8165 52.0439C40.2182 52.1453 40.6259 51.9018 40.7272 51.5002C40.8285 51.0986 40.5851 50.6908 40.1835 50.5895C38.7908 50.2381 37.414 49.9693 36.1148 49.7681Z"
-								fill="#96AE41" />
-						</svg>
-						<h5>Choisissez une<br /> formation sur notre site</h5>
-						<p>Si vous ne possédez pas d’Identité Numérique La Poste, il vous faudra au préalable la
-							créer. </p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="forma-step">
-						<svg width="100" height="100" viewBox="0 0 100 100" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<circle cx="50" cy="50" r="50" fill="#96AE41" fill-opacity="0.1" />
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M33 32C31.3431 32 30 33.3431 30 35V39.25H36V35C36 33.3431 34.6569 32 33 32ZM30 40.75V62.6667C30 63.5321 30.2807 64.3743 30.8 65.0667L33 68L35.2 65.0667C35.7193 64.3743 36 63.5321 36 62.6667V40.75H30ZM66 32H46C43.7909 32 42 33.7909 42 36V64C42 66.2091 43.7909 68 46 68H53C53.5523 68 54 67.5523 54 67V57C54 56.4477 54.4477 56 55 56H69C69.5523 56 70 55.5523 70 55V36C70 33.7909 68.2091 32 66 32ZM49.25 40C49.25 39.5858 49.5858 39.25 50 39.25H62C62.4142 39.25 62.75 39.5858 62.75 40C62.75 40.4142 62.4142 40.75 62 40.75H50C49.5858 40.75 49.25 40.4142 49.25 40ZM50 47.25C49.5858 47.25 49.25 47.5858 49.25 48C49.25 48.4142 49.5858 48.75 50 48.75H62C62.4142 48.75 62.75 48.4142 62.75 48C62.75 47.5858 62.4142 47.25 62 47.25H50ZM71.1289 60.9878C71.6744 60.3643 71.6113 59.4167 70.9878 58.8712C70.3644 58.3256 69.4167 58.3888 68.8712 59.0123L63.1314 65.5721C62.9552 65.7734 62.6517 65.8004 62.4427 65.6332L58.9371 62.8287C58.2902 62.3112 57.3463 62.4161 56.8288 63.063C56.3112 63.7099 56.4161 64.6538 57.063 65.1713L60.5687 67.9758C62.0312 69.1459 64.1557 68.9571 65.3891 67.5476L71.1289 60.9878Z"
-								fill="#96AE41" />
-						</svg>
-						<h5>Demande<br /> d'inscription</h5>
-						<p>Si vous ne possédez pas d'Identité Numérique La Poste, il vous faudra au préalable la
-							créer. </p>
-					</div>
-				</div>
+				{{ content.field_processus_liste }}
 			</div>
 		</div>
 	</section>
 
 	{{ content.field_remboursement_des_frais }}
-	<section id="start-parcours" class="my-5">
-		<div class="container-fluid">
-			<div class="remboursement">
-				<div class="row align-items-center">
-					<div class="col-md-5">
-						<h5>Remboursement des Frais</h5>
-						<h2>Comment obtenir le remboursement de mes frais de repas et de déplacement ?</h2>
-						<p>Vous avez mobilisé votre DIF lors d’une formation proposée par INITIA FORMATION et
-							souhaitez désormais obtenir le remboursement de vos frais de repas et de déplacement ?
-						</p>
-					</div>
-					<div class="col-md-3 offset-md-4">
-						<a href="#" class="btn btn-green-big">
-							Télécharger le guide de la CDC
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5"
-									stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<section id="nouveautes">
 		<div class="container-fluid mt-5">
 			<div class="row">
 				<div class="col-md-4">
-					<h5 class="text-blue fw-semibold">Nouveautés et Conditions</h5>
-					<h2 class=" my-3">Comment fonctionne le co-financement des formations pour les élus ?</h2>
+					<h5 class="text-blue fw-semibold">{{ node.field_nouveautes_sous_titre.value }}</h5>
+					<h2 class=" my-3">{{ node.field_nouveautes_et_conditions.value }}</h2>
 				</div>
 				<div class="col-md-8">
 					<div class="accordion custom-accordion">
-						<div class="accordion-item mb-3">
-							<h3 class="accordion-header">
-								<button class="accordion-button" type="button" data-bs-toggle="collapse"
-									data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-									aria-controls="panelsStayOpen-collapseOne">
-									Que se passe-t-il si mes droits ne couvrent
-									pas le coût total de la formation ?
-								</button>
-							</h3>
-							<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-								<div class="accordion-body ">
-									<div class="bg-white-rad">
-										Depuis le 1er janvier 2022, l’élu peut financer le reste à payer directement
-										par
-										carte bancaire.
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="accordion-item mb-3">
-							<h3 class="accordion-header">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-									data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-									aria-controls="panelsStayOpen-collapseTwo">
-									Les communes peuvent-elles financer mes formations ?
-								</button>
-							</h3>
-							<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
-								<div class="accordion-body">
-									<div class="bg-white-rad">
-										<p>Oui, si la formation est en lien avec le mandat, les communes ou EPCI
-											peuvent
-											participer au financement. Cette participation :</p>
-										<ul>
-											<li>Doit être prévue par une délibération spécifique.</li>
-											<li>Ne concerne que les formations conformes aux orientations définies
-												en
-												début de
-												mandat.</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="accordion-item mb-3">
-							<h3 class="accordion-header">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-									data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-									aria-controls="panelsStayOpen-collapseThree">
-									Quelle est la part que je dois payer pour bénéficier du co-financement ?
-								</button>
-							</h3>
-							<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-								<div class="accordion-body">
-									<div class="bg-white-rad">
-										Depuis le 1er janvier 2022, l’élu peut financer le reste à payer directement
-										par
-										carte bancaire.
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="accordion-item mb-3">
-							<h3 class="accordion-header">
-								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-									data-bs-target="#panelsStayOpen-collapsefour" aria-expanded="false"
-									aria-controls="panelsStayOpen-collapseThree">
-									Où la commune ou l'EPCI peut-elle effectuer le paiement ?
-								</button>
-							</h3>
-							<div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse">
-								<div class="accordion-body">
-									<div class="bg-white-rad">
-										Depuis le 1er janvier 2022, l’élu peut financer le reste à payer directement
-										par
-										carte bancaire.
-									</div>
-								</div>
-							</div>
-						</div>
+						{{ content.field_liste_nouveautes_et_condit }}
 					</div>
 				</div>
 			</div>
@@ -339,3 +187,13 @@
 	</section>
 </main>
 <!-- main Content-->
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+    var firstAccordionButton = document.querySelector(".custom-accordion .field__item:first-child .accordion-button");
+    if (firstAccordionButton) {
+        firstAccordionButton.click();
+    }
+});
+
+</script>

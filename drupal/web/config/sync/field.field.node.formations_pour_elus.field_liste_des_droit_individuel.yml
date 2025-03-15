@@ -28,8 +28,14 @@ settings:
       beneficiaires:
         weight: 14
         enabled: false
+      categorie_de_formations:
+        weight: 19
+        enabled: false
       certifications:
         weight: 15
+        enabled: false
+      compenser_votre_handicap:
+        weight: 21
         enabled: false
       description:
         weight: 16
@@ -43,6 +49,9 @@ settings:
       nos_experts:
         weight: 19
         enabled: false
+      nouveautes_et_conditions:
+        weight: 26
+        enabled: false
       objectifs:
         weight: 20
         enabled: false
@@ -51,6 +60,9 @@ settings:
         enabled: false
       programme_de_formation:
         weight: 22
+        enabled: false
+      remboursement_des_frais:
+        weight: 30
         enabled: false
       ressources_techniques:
         weight: 23

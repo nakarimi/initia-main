@@ -1,0 +1,11 @@
+uuid: 00918199-43e2-4463-82af-fc4ccb468792
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.card
+label: Card
+description: ''
+targetEntityType: paragraph
+cache: true

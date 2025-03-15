@@ -1,0 +1,42 @@
+uuid: 742e8df4-4c43-4830-b015-9903675b1d5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.card
+    - field.field.paragraph.vos_objectifs_pros.field_description_objectifs_pro
+    - field.field.paragraph.vos_objectifs_pros.field_picto_objectifs_pro
+    - field.field.paragraph.vos_objectifs_pros.field_titre_objectifs_pros
+    - paragraphs.paragraphs_type.vos_objectifs_pros
+  module:
+    - file
+    - text
+id: paragraph.vos_objectifs_pros.card
+targetEntityType: paragraph
+bundle: vos_objectifs_pros
+mode: card
+content:
+  field_description_objectifs_pro:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_picto_objectifs_pro:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_titre_objectifs_pros:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

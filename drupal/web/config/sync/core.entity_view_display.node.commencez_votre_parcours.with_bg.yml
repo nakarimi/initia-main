@@ -1,0 +1,69 @@
+uuid: 44f40de6-b12c-4416-a5f4-703a566b7093
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.with_bg
+    - field.field.node.commencez_votre_parcours.field_background_image_mobile
+    - field.field.node.commencez_votre_parcours.field_commence_description
+    - field.field.node.commencez_votre_parcours.field_decouvrir_les_cours
+    - field.field.node.commencez_votre_parcours.field_image
+    - image.style.wide
+    - node.type.commencez_votre_parcours
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.commencez_votre_parcours.with_bg
+targetEntityType: node
+bundle: commencez_votre_parcours
+mode: with_bg
+content:
+  field_background_image_mobile:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_commence_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_decouvrir_les_cours:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: wide
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

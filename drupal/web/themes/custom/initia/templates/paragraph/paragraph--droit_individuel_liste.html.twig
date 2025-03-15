@@ -1,0 +1,29 @@
+{% if paragraph.field_droit_individuel_logo.entity and paragraph.field_droit_individuel_logo.entity.uri.value %}
+
+<div class="rule-zone d-flex flex-column align-items-stretch  h-100">
+	{% if paragraph.field_icon.entity and paragraph.field_icon.entity.uri.value %}
+		<img width="48px" src="{{ file_url(paragraph.field_icon.entity.uri.value) }}" class="">
+	{% endif %}
+	<div class="mb-auto">
+		<div class="text-center mb-3"> 
+			{% if paragraph.field_droit_individuel_logo.entity and paragraph.field_droit_individuel_logo.entity.uri.value %}
+			<img src="{{ file_url(paragraph.field_droit_individuel_logo.entity.uri.value) }}" class="">
+			{% endif %}
+		</div>
+		<p class="mt-5">{{ paragraph.field_droit_individuel_discripti.value }}</p>
+	</div>
+	<a href="{{paragraph.field_guide_d_utilisation.uri}}" class="btn btn-secondary mt-5 w-75">{{ paragraph.field_guide_d_utilisation.title }}
+
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		</svg>
+	</a>
+</div>
+{% else %}
+<div class="rule-zone d-flex flex-column mb-3">
+{% if paragraph.field_icon.entity and paragraph.field_icon.entity.uri.value %}
+<img width="48px" src="{{ file_url(paragraph.field_icon.entity.uri.value) }}" class="">
+{% endif %}
+<p class="mt-3">{{ paragraph.field_droit_individuel_discripti.value }}</p>
+</div>
+{% endif %}

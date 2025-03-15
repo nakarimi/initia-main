@@ -43,14 +43,14 @@ content:
     region: content
   field_droit_individuel_descripti:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 110
     region: content
   field_droit_individuel_sous_titr:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -58,7 +58,7 @@ content:
     region: content
   field_droit_individuel_titre:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -86,7 +86,7 @@ content:
     region: content
   field_liste_des_droit_individuel:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -95,7 +95,7 @@ content:
     region: content
   field_liste_nouveautes_et_condit:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -116,7 +116,7 @@ content:
     region: content
   field_nouveautes_et_conditions:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -124,7 +124,7 @@ content:
     region: content
   field_nouveautes_sous_titre:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -132,16 +132,16 @@ content:
     region: content
   field_processus_description:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 113
     region: content
   field_processus_liste:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: card
       link: ''
     third_party_settings: {  }
     weight: 114
@@ -156,7 +156,7 @@ content:
     region: content
   field_processus_titre:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -164,10 +164,10 @@ content:
     region: content
   field_remboursement_des_frais:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
-      view_mode: default
-      link: true
+      view_mode: with_bg
+      link: false
     third_party_settings: {  }
     weight: 119
     region: content
