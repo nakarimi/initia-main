@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.banner
+    - field.field.node.commencez_votre_parcours.field_background_image_mobile
     - field.field.node.commencez_votre_parcours.field_commence_description
     - field.field.node.commencez_votre_parcours.field_decouvrir_les_cours
+    - field.field.node.commencez_votre_parcours.field_image
     - node.type.commencez_votre_parcours
   module:
     - link
@@ -40,4 +42,6 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_background_image_mobile: true
+  field_image: true

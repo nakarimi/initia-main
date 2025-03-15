@@ -3,11 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.commencez_votre_parcours.field_background_image_mobile
     - field.field.node.commencez_votre_parcours.field_commence_description
     - field.field.node.commencez_votre_parcours.field_decouvrir_les_cours
+    - field.field.node.commencez_votre_parcours.field_image
+    - image.style.thumbnail
     - node.type.commencez_votre_parcours
   module:
     - field_group
+    - image
     - link
     - path
     - text
@@ -41,6 +45,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_background_image_mobile:
+    type: image_image
+    weight: 26
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
   field_commence_description:
     type: text_textarea
     weight: 2
@@ -56,6 +68,14 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   path:
     type: path

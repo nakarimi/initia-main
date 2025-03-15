@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.formations_pour_elus.field_processus_liste
     - field.field.node.formations_pour_elus.field_processus_sous_titre
     - field.field.node.formations_pour_elus.field_processus_titre
+    - field.field.node.formations_pour_elus.field_remboursement_des_frais
     - field.field.node.formations_pour_elus.field_telecharger_le_guide
     - field.field.node.formations_pour_elus.field_textes_reglementaires
     - field.field.node.formations_pour_elus.field_titre_formation_elus
@@ -126,7 +127,7 @@ third_party_settings:
       label: 'Nouveautés et conditions'
       region: content
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: fieldset
       format_settings:
         classes: ''
@@ -142,7 +143,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -298,6 +299,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_remboursement_des_frais:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_telecharger_le_guide:
     type: link_default
     weight: 6
@@ -334,27 +345,27 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 8
+    weight: 9
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 11
+    weight: 12
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 9
+    weight: 10
     region: content
     settings:
       display_label: true
@@ -369,7 +380,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS

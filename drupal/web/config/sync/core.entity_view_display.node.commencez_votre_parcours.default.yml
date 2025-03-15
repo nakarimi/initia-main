@@ -3,10 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.commencez_votre_parcours.field_background_image_mobile
     - field.field.node.commencez_votre_parcours.field_commence_description
     - field.field.node.commencez_votre_parcours.field_decouvrir_les_cours
+    - field.field.node.commencez_votre_parcours.field_image
+    - image.style.wide
     - node.type.commencez_votre_parcours
   module:
+    - image
     - link
     - text
     - user
@@ -15,6 +19,17 @@ targetEntityType: node
 bundle: commencez_votre_parcours
 mode: default
 content:
+  field_background_image_mobile:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 103
+    region: content
   field_commence_description:
     type: text_default
     label: above
@@ -33,6 +48,17 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: wide
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: -1
     region: content
   links:
     settings: {  }

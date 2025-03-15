@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_liste_textes_reglementaire
-    - filter.format.restricted_html
+    - filter.format.full_html
     - paragraphs.paragraphs_type.textes_reglementaires
   module:
     - text
@@ -20,5 +20,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   allowed_formats:
-    - restricted_html
+    - full_html
 field_type: text_long

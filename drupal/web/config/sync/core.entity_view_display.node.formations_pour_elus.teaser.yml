@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.formations_pour_elus.field_processus_liste
     - field.field.node.formations_pour_elus.field_processus_sous_titre
     - field.field.node.formations_pour_elus.field_processus_titre
+    - field.field.node.formations_pour_elus.field_remboursement_des_frais
     - field.field.node.formations_pour_elus.field_telecharger_le_guide
     - field.field.node.formations_pour_elus.field_textes_reglementaires
     - field.field.node.formations_pour_elus.field_titre_formation_elus
@@ -51,6 +52,7 @@ hidden:
   field_processus_liste: true
   field_processus_sous_titre: true
   field_processus_titre: true
+  field_remboursement_des_frais: true
   field_telecharger_le_guide: true
   field_textes_reglementaires: true
   field_titre_formation_elus: true

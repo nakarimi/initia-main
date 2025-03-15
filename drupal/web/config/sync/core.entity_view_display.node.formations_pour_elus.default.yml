@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.formations_pour_elus.field_processus_liste
     - field.field.node.formations_pour_elus.field_processus_sous_titre
     - field.field.node.formations_pour_elus.field_processus_titre
+    - field.field.node.formations_pour_elus.field_remboursement_des_frais
     - field.field.node.formations_pour_elus.field_telecharger_le_guide
     - field.field.node.formations_pour_elus.field_textes_reglementaires
     - field.field.node.formations_pour_elus.field_titre_formation_elus
@@ -35,7 +36,7 @@ mode: default
 content:
   field_description_formation_elus:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 102
@@ -75,10 +76,11 @@ content:
     weight: 103
     region: content
   field_formations_aux_elus:
-    type: entity_reference_label
-    label: above
+    type: entity_reference_entity_view
+    label: hidden
     settings:
-      link: true
+      view_mode: wide_card
+      link: false
     third_party_settings: {  }
     weight: 106
     region: content
@@ -160,6 +162,15 @@ content:
     third_party_settings: {  }
     weight: 115
     region: content
+  field_remboursement_des_frais:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 119
+    region: content
   field_telecharger_le_guide:
     type: link
     label: above
@@ -174,7 +185,7 @@ content:
     region: content
   field_textes_reglementaires:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''

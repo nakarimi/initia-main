@@ -1,0 +1,11 @@
+uuid: 9e496269-7351-4764-ac3a-e103f0228ac1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.wide_card
+label: 'Wide Card'
+description: ''
+targetEntityType: node
+cache: true
