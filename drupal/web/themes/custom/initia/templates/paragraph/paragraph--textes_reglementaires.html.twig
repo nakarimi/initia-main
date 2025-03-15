@@ -1,0 +1,15 @@
+<section id="reglement">
+		<div class="container-fluid my-4">
+			<h5 class="text-blue fw-semibold">Textes réglementaires</h5>
+			{% if paragraph.field_texte_reglementaires_titre.value %}
+				<h2 class="col-md-4 my-3">
+					{{ paragraph.field_texte_reglementaires_titre.value }}
+				</h2>
+			{% endif %}
+			<div class="row">
+				{% for item in paragraph.field_liste_textes_reglementaire %}
+					{{ item.content }}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
