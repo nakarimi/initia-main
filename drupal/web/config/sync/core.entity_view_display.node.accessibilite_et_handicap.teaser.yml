@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.accessibilite_et_handicap.field_commencez_parcours
     - field.field.node.accessibilite_et_handicap.field_comment_garantir
     - field.field.node.accessibilite_et_handicap.field_comment_proceder
     - field.field.node.accessibilite_et_handicap.field_handicap_description
@@ -12,6 +11,7 @@ dependencies:
     - field.field.node.accessibilite_et_handicap.field_les_centres_de_formation
     - field.field.node.accessibilite_et_handicap.field_principaux_acteurs
     - field.field.node.accessibilite_et_handicap.field_referent_handicap
+    - field.field.node.accessibilite_et_handicap.field_sub_title
     - node.type.accessibilite_et_handicap
   module:
     - user
@@ -26,7 +26,6 @@ content:
     weight: 100
     region: content
 hidden:
-  field_commencez_parcours: true
   field_comment_garantir: true
   field_comment_proceder: true
   field_handicap_description: true
@@ -34,3 +33,4 @@ hidden:
   field_les_centres_de_formation: true
   field_principaux_acteurs: true
   field_referent_handicap: true
+  field_sub_title: true

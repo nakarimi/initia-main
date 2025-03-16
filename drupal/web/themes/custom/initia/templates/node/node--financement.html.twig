@@ -13,190 +13,44 @@
 
 			<div class="row contact-content">
 				<div class="col-md-6">
-					<h2 class=" mt-4 mb-2 font-55">CPF & OPCO : Financer Votre Formation avec INITIA FORMATION</h2>
-					<p>Chez Initia Formation, nos formations certifiantes et reconnues par France Compétences
-						sont éligibles à des financements adaptés à chaque situation : CPF pour les particuliers
-						ou OPCO pour les entreprises.
-						</h2>
-
-						<img src="/{{ directory }}/assets/images/compte-formation.png" class="w-25">
-
-				</div>
-
-				<div class="col-md-5 offset-lg-1">
-					<img src="/{{ directory }}/assets/images/formation-cp.png" class="round-45">
-				</div>
-			</div>
-
-		</div>
-	</section>
-
-
-
-	<section class="pt-4 pb-4">
-		<div class="container-fluid ">
-			<div class="droit-dife">
-				<div class="row align-items-center">
-					<div class="col-md-4">
-						<h5 class="text-blue fw-semibold">Financer ma formation avec le CPF</h5>
-						<h2 class=" my-3">Qu’est-ce que le CPF ?</h2>
-						<p>Le CPF, ou Compte Personnel de Formation, remplace le DIF depuis 2015. C’est un compte
-							individuel qui comptabilise des heures utilisables pour se former.
-							Ces heures sont automatiquement acquises chaque année et restent accessibles tout au
-							long de votre vie professionnelle</p>
-					</div>
-
-					<div class="col-md-4 offset-lg-1">
-						<p class="strong">Connectez-vous au portail en ligne moncompteactivite.gouv.fr pour suivre
-							vos droits.
-							Quelles étapes dois-je suivre ?</p>
-						<a href="#" class="btn btn-secondary">Mon compte activite
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5"
-									stroke-linecap="round" stroke-linejoin="round"></path>
-							</svg>
-						</a>
-					</div>
-
-				</div>
-
-				<div class="row mt-3">
-
-					<div class="col-md-3">
-						<div class="box-number">
-							<span class="number">1</span>
-							<p>Créez votre compte <br />CPF </p>
-						</div>
-					</div>
-
-					<div class="col-md-3">
-						<div class="box-number">
-							<span class="number">2</span>
-							<p>Montez votre dossier<br /> de formation.</p>
-						</div>
-					</div>
-
-					<div class="col-md-3">
-						<div class="box-number">
-							<span class="number">3</span>
-							<p>Obtenez l’accord de <br />financement en début de formation.</p>
-						</div>
-					</div>
-
-
-					<div class="col-md-3">
-						<div class="box-number">
-							<span class="number">4</span>
-							<p>Passez l’examen<br /> final </p>
-						</div>
-					</div>
-
-
-				</div>
-			</div>
-
-		</div>
-	</section>
-
-
-
-	<section class="pt-4 pb-4">
-		<div class="container-fluid ">
-			<div class="row align-items-center contact-content">
-				<div class="col-md-6">
-					<h5 class="text-blue fw-semibold">Financer ma formation avec le CPF</h5>
-					<h2 class=" my-3">Pour les demandeurs <br />d’emploi</h2>
-
-					<p>Pour les demandeurs d’emploi</p>
-					<p> Avec la réforme de la formation professionnelle et le remplacement du DIF par le CPF,
-						l’objectif pour est de faire rentrer le demandeur dans une dynamique de retour vers
-						l’emploi.</p>
-					<p> Les personnes sans emploi et/ou inscrites à Pôle Emploi ainsi que les jeunes sortis du
-						système scolaire en recherche d’emploi peuvent bénéficier d’actions de formation dans le
-						cadre de ce CPF.</p>
-					<p>Dès son inscription à Pôle Emploi, tout(e) demandeur d’emploi pourra mobiliser son CPF afin
-						de réaliser une formation.</p>
-					<p> Toutefois, si son solde CPF est insuffisant, il peut faire une demande de prise en charge du
-						« reste à payer » en ligne.</p>
-					<p>Pôle emploi étudie la demande et envoie une notification d’accord ou de refus directement sur
-						le Compte Personnel de Formation.</p>
-					<a href="#" class="btn btn-secondary">Tutoriels "Abondements"
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5"
-								stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-					</a>
-				</div>
-
-				<div class="col-md-5 offset-lg-1">
-					<div class="card-img-block">
-						<img src="/{{ directory }}/assets/images/formation-cp1.png">
-
-
-						<div class="box-image">
-							<a href="#">
-								<img src="/{{ directory }}/assets/images/cpf.png">
-							</a>
-
-
-						</div>
-
-					</div>
-				</div>
-
-
-			</div>
-		</div>
-	</section>
-
-
-
-	<section class="pt-4 pb-4">
-		<div class="container-fluid ">
-			<div class="row align-items-center">
-
-
-				<div class="col-md-6">
-
-					<h2 class=" mt-4 mb-3 font-55">Vous êtes salarié vous <br />souhaitez utiliser votre CPF</h2>
-					<p class="mb-5">Notre équipe administrative vous accompagne à la création de votre compte
-						CPF.<br />
-						Pour cela il faut un numéro de sécurité sociale et une adresse mail valide.
-						Vous <br />pouvez vous-même créer votre compte en téléchargeant l’application sur
-						votre<br /> Smartphone ou en cliquant sur le lien suivant :
+					<h2 class=" mt-4 mb-2 font-55">{{node.label}}</h2>
+					<p>
+						{{ content.field_financement_description }}
 					</p>
+					<img src="{{ file_url(content.field_financement_logo['#items'].entity.uri.value) }}" class="w-25">
 
-					<a href="#" class="btn btn-secondary-green">Tutoriels salarié
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5"
-								stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-					</a>
 				</div>
 
-				<div class="col-md-6">
-
-					<h2 class=" mt-4 mb-3 font-55">Votre formation peut être<br /> co-financer.</h2>
-					<p class="mb-3">Notre équipe administrative vous accompagne à la création de votre projet et
-						pour cela quelques documents sont nécessaires</p>
-
-					<ul class="mb-5">
-						<li>Pièce d’identité valide</li>
-						<li>Carte vitale</li>
-					</ul>
-
-					<a href="#" class="btn btn-secondary-green">Tutoriels financement complémentaires
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5"
-								stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
-					</a>
+				<div class="col-md-5 offset-lg-1">
+					<img src="{{ file_url(content.field_financement_header_image['#items'].entity.uri.value) }}" class="round-45">
 				</div>
 			</div>
+
+		</div>
+	</section>
+
+
+
+	<section class="pt-4 pb-4">
+		<div class="container-fluid ">
+			{{ content.field_financer_ma_formation }}
+		</div>
+	</section>
+
+
+
+	<section class="pt-4 pb-4">
+		<div class="container-fluid ">
+			{{ content.field_financer_cpf }}
+		</div>
+	</section>
+
+
+
+	<section class="pt-4 pb-4">
+		<div class="container-fluid ">
+			{{ content.field_pour_les_demandeurs }}
+
 		</div>
 
 	</section>
@@ -204,122 +58,30 @@
 
 	<section class="pt-4 pb-4">
 		<div class="container-fluid ">
-			<div class="row align-items-center contact-content">
-				<div class="col-md-5">
-					<h5 class="text-blue fw-semibold">Financement par l’OPCO</h5>
-					<h2 class=" my-3">Qu’est-ce qu’un OPCO ?</h2>
+		{{ content.field_vous_etes_salarie }}
 
-					<p>Employés, demandeurs d’emploi, agents publics ou encore dirigeants de sociétés non-salariés
-						peuvent bénéficier de formation financée par l’OPCO.
-					<p>OPCO veut dire opérateurs de compétences. Ces derniers sont agréés par l’État. Leur mission
-						est de financer l’apprentissage, soutenir les différentes branches professionnelles à
-						façonner leurs certifications professionnelles et aider les petites entreprises à déterminer
-						leurs besoins en formation.</p>
-					<p>Les OPCO sont des opérateurs dont la mission est le service des nouveaux besoins en
-						compétences pour la totalité des sociétés et des employés.</p>
-				</div>
-
-				<div class="col-md-6">
-
-
-					<img src="/{{ directory }}/assets/images/formatiocp-2.png" class="round-45">
-				</div>
-
-
-			</div>
 		</div>
 	</section>
 
 	<section class="pt-4 pb-4">
 		<div class="container-fluid ">
-			<div class="droit-dife">
-				<div class="row align-items-center">
-					<div class="col-md-4">
+		{{ content.field_financement_par_l_opco }}
 
-
-						<p class="strong blue-color">Pour les groupes de moins de 50 employés, les opérateurs de
-							compétences garantissent un service de proximité offrant la possibilité</p>
-					</div>
-
-					<div class="col-md-4 offset-lg-2">
-						<ul class="mb-0">
-							<li>D’optimiser l’information et l’accès des employés de ces sociétés à la formation
-								professionnelle ;</li>
-							<li>D’aider ces sociétés dans l’étude et la définition de leurs besoins par rapport à la
-								formation professionnelle, surtout au regard des changements économiques et
-								techniques de leur milieu d’activité</li>
-						</ul>
-					</div>
-
-				</div>
-			</div>
 		</div>
 	</section>
 
 	<section class="pt-4 pb-4">
 		<div class="container-fluid">
-			<div class="row contact-content">
-				<div class="col-md-6">
-				 <p class="strong">Pour se faire financer sa formation par les OPCO, il suffit<br/> de suivre les étapes suivantes :</p>
+		{{ content.field_pour_les_groupes }}
 
-				 <div class="box-text mb-3">
-					<div class="d-flex align-items-center gap-3">
-						<span class="small-number">1</span>
-						<strong>Identifier son OPCO</strong>
-					</div>
-					<p>Déterminez l'OPCO (Opérateur de Compétences) auquel votre secteur professionnel est rattaché pour gérer vos droits et faciliter le financement de votre formation.</p>
-				 </div>
-
-				 <div class="box-text mb-3">
-					<div class="d-flex align-items-center gap-3">
-						<span class="small-number">2</span>
-						<strong>Vérifier le budget formation disponible</strong>
-					</div>
-					<p>Consultez votre compte CPF pour vérifier le montant de vos droits disponibles et évaluer les possibilités de financement de votre projet.</p>
-				 </div>
-
-				 <div class="box-text mb-3">
-					<div class="d-flex align-items-center gap-3">
-						<span class="small-number">3</span>
-						<strong>Dépôt du dossier de demande de financement</strong>
-					</div>
-					<p>Rassemblez les documents nécessaires et soumettez votre demande de formation auprès de l’OPCO ou de votre employeur pour valider le financement.</p>
-				 </div>
-
-
-
-				</div>
-
-				<div class="col-md-6">
-					<img src="/{{ directory }}/assets/images/formation-cp3.png" class="round-45">
-				</div>
-			</div>
 		</div>
 	</section>
-
+	{% if node.field_pour_se_faire_financer.value %}	
 	<section id="start-parcours" class="my-5">
 		<div class="container-fluid mt-5">
-			<div class="parcours">
-				<div class="row align-items-center">
-					<div class="col-md-5">
-						<h2>Commencez votre parcours d'apprentissage dès aujourd'hui</h2>
-						<p>Libérez votre potentiel et embarquez pour un voyage d'apprentissage tout au long de la
-							vie</p>
-					</div>
-					<div class="col-md-2 offset-md-5">
-						<a href="#" class="btn btn-green-big">
-							Découvrir les cours
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5"
-									stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</a>
-					</div>
-				</div>
-			</div>
+		{{ content.field_pour_se_faire_financer }}
 		</div>
 	</section>
-
+	{% endif %}
 </main>
 <!-- main Content-->
