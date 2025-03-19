@@ -128,7 +128,7 @@
 						{% if node.field_en_savoir_plus is not empty %}
 							{% for item in node.field_en_savoir_plus %}
 
-								<a class="btn btn-secondary" href="{{ item.uri }}" {% if item.options.target %} target="{{ item.options.target }}" {% endif %}>
+								<a class="btn btn-secondary" href="{{ content.field_en_savoir_plus[0]['#url'] }}" {% if item.options.target %} target="{{ item.options.target }}" {% endif %}>
 									{{ item.title }}
 									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -216,7 +216,7 @@
 						{% if node.field_compenser_en_savoir_plus is not empty %}
 							{% for item in node.field_compenser_en_savoir_plus %}
 
-								<a class="btn btn-secondary" href="{{ item.uri }}" {% if item.options.target %} target="{{ item.options.target }}" {% endif %}>
+								<a class="btn btn-secondary" href="{{ content.field_compenser_en_savoir_plus[0]['#url'] }}" {% if item.options.target %} target="{{ item.options.target }}" {% endif %}>
 									{{ item.title }}
 									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
