@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.financement.field_financement_par_l_opco
     - field.field.node.financement.field_financer_cpf
     - field.field.node.financement.field_financer_ma_formation
+    - field.field.node.financement.field_formatted_title
     - field.field.node.financement.field_pour_les_demandeurs
     - field.field.node.financement.field_pour_les_groupes
     - field.field.node.financement.field_pour_se_faire_financer
@@ -34,6 +35,7 @@ hidden:
   field_financement_par_l_opco: true
   field_financer_cpf: true
   field_financer_ma_formation: true
+  field_formatted_title: true
   field_pour_les_demandeurs: true
   field_pour_les_groupes: true
   field_pour_se_faire_financer: true

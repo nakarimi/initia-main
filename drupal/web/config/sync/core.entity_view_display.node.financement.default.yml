@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.financement.field_financement_par_l_opco
     - field.field.node.financement.field_financer_cpf
     - field.field.node.financement.field_financer_ma_formation
+    - field.field.node.financement.field_formatted_title
     - field.field.node.financement.field_pour_les_demandeurs
     - field.field.node.financement.field_pour_les_groupes
     - field.field.node.financement.field_pour_se_faire_financer
@@ -72,6 +73,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 104
+    region: content
+  field_formatted_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 112
     region: content
   field_pour_les_demandeurs:
     type: text_default

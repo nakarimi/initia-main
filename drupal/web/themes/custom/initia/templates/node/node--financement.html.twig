@@ -13,10 +13,11 @@
 
 			<div class="row contact-content">
 				<div class="col-md-6">
-					<h2 class=" mt-4 mb-2 font-55">{{node.label}}</h2>
+					{{content.field_formatted_title}}
 					<p>
 						{{ content.field_financement_description }}
 					</p>
+					<br>
 					<img src="{{ file_url(content.field_financement_logo['#items'].entity.uri.value) }}" class="w-25">
 
 				</div>
