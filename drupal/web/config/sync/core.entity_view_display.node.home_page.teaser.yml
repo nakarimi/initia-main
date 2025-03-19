@@ -18,7 +18,9 @@ dependencies:
     - field.field.node.home_page.field_il_nous_font_confiance
     - field.field.node.home_page.field_il_nous_font_description
     - field.field.node.home_page.field_logo_company
+    - field.field.node.home_page.field_nos_diplomes_sub
     - field.field.node.home_page.field_nos_diplomes_temoignent
+    - field.field.node.home_page.field_nos_diplomes_title
     - field.field.node.home_page.field_notre_equipe
     - field.field.node.home_page.field_notre_equipe_description
     - field.field.node.home_page.field_notre_equipe_image
@@ -53,7 +55,9 @@ hidden:
   field_il_nous_font_confiance: true
   field_il_nous_font_description: true
   field_logo_company: true
+  field_nos_diplomes_sub: true
   field_nos_diplomes_temoignent: true
+  field_nos_diplomes_title: true
   field_notre_equipe: true
   field_notre_equipe_description: true
   field_notre_equipe_image: true

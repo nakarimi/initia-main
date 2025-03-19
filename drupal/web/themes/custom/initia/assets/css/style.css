@@ -766,7 +766,8 @@ h2 {
   padding: 20px;
 }
 
-.forma-step svg {
+.forma-step svg,
+.forma-step img {
   margin-bottom: 25px;
 }
 
@@ -1168,6 +1169,11 @@ h2 {
   margin-bottom: 20px;
 }
 
+.handicaphead .handicaphead-first{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 .comment-section {
   background-color: var(--color-10);
   border-radius: 32px;

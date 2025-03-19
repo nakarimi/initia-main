@@ -1,0 +1,19 @@
+uuid: 9a56273a-a5e8-4f7d-8d14-9a54b6245877
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_programme_de_formation_tit
+    - node.type.formation
+id: node.formation.field_programme_de_formation_tit
+field_name: field_programme_de_formation_tit
+entity_type: node
+bundle: formation
+label: 'Programme de formation Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

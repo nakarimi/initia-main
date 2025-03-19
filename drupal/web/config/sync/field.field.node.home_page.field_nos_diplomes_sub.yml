@@ -1,0 +1,24 @@
+uuid: 173b79bf-fd9c-4954-9cc1-d96405cb5eec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nos_diplomes_sub
+    - filter.format.full_html
+    - node.type.home_page
+  module:
+    - text
+id: node.home_page.field_nos_diplomes_sub
+field_name: field_nos_diplomes_sub
+entity_type: node
+bundle: home_page
+label: 'Nos diplômés Sub'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

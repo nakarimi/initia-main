@@ -1,0 +1,24 @@
+uuid: 8ca9b89a-6c7d-4827-91f3-663b78f5c4b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nos_diplomes_sub
+    - filter.format.full_html
+    - node.type.formation
+  module:
+    - text
+id: node.formation.field_nos_diplomes_sub
+field_name: field_nos_diplomes_sub
+entity_type: node
+bundle: formation
+label: 'Nos diplômés Sub'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -23,11 +23,17 @@ dependencies:
     - field.field.node.formation.field_image
     - field.field.node.formation.field_lieu_de_formation
     - field.field.node.formation.field_methodes_d_evaluation
+    - field.field.node.formation.field_nos_diplomes_sub
+    - field.field.node.formation.field_nos_diplomes_temoignent
+    - field.field.node.formation.field_nos_diplomes_title
     - field.field.node.formation.field_nos_experts
     - field.field.node.formation.field_objectifs_de_la_formation
     - field.field.node.formation.field_prix
     - field.field.node.formation.field_prochaines_sessions_dates
     - field.field.node.formation.field_programme_de_formation
+    - field.field.node.formation.field_programme_de_formation_sub
+    - field.field.node.formation.field_programme_de_formation_tit
+    - field.field.node.formation.field_programme_version
     - field.field.node.formation.field_ressources_techniques
     - field.field.node.formation.field_taux_de_satisfaction
     - field.field.node.formation.field_type_de_formation
@@ -221,6 +227,30 @@ content:
     third_party_settings: {  }
     weight: 105
     region: content
+  field_nos_diplomes_sub:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 133
+    region: content
+  field_nos_diplomes_temoignent:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_nos_diplomes_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 132
+    region: content
   field_nos_experts:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -264,6 +294,30 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 104
+    region: content
+  field_programme_de_formation_sub:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 130
+    region: content
+  field_programme_de_formation_tit:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 131
+    region: content
+  field_programme_version:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 129
     region: content
   field_ressources_techniques:
     type: entity_reference_revisions_entity_view

@@ -1,0 +1,24 @@
+uuid: a0fca840-65eb-4ee5-9272-fb474a8a839a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_programme_de_formation_sub
+    - filter.format.full_html
+    - node.type.formation
+  module:
+    - text
+id: node.formation.field_programme_de_formation_sub
+field_name: field_programme_de_formation_sub
+entity_type: node
+bundle: formation
+label: 'Programme de formation Sub Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

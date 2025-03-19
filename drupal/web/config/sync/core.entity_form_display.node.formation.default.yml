@@ -23,11 +23,17 @@ dependencies:
     - field.field.node.formation.field_image
     - field.field.node.formation.field_lieu_de_formation
     - field.field.node.formation.field_methodes_d_evaluation
+    - field.field.node.formation.field_nos_diplomes_sub
+    - field.field.node.formation.field_nos_diplomes_temoignent
+    - field.field.node.formation.field_nos_diplomes_title
     - field.field.node.formation.field_nos_experts
     - field.field.node.formation.field_objectifs_de_la_formation
     - field.field.node.formation.field_prix
     - field.field.node.formation.field_prochaines_sessions_dates
     - field.field.node.formation.field_programme_de_formation
+    - field.field.node.formation.field_programme_de_formation_sub
+    - field.field.node.formation.field_programme_de_formation_tit
+    - field.field.node.formation.field_programme_version
     - field.field.node.formation.field_ressources_techniques
     - field.field.node.formation.field_taux_de_satisfaction
     - field.field.node.formation.field_type_de_formation
@@ -96,6 +102,8 @@ third_party_settings:
         required_fields: true
     group_programme_de_formation:
       children:
+        - field_programme_de_formation_tit
+        - field_programme_de_formation_sub
         - field_programme_de_formation
       label: 'Programme de formation'
       region: content
@@ -408,6 +416,40 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
+  field_nos_diplomes_sub:
+    type: text_textarea
+    weight: 48
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_nos_diplomes_temoignent:
+    type: paragraphs
+    weight: 49
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_nos_diplomes_title:
+    type: string_textfield
+    weight: 47
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_nos_experts:
     type: paragraphs
     weight: 41
@@ -472,7 +514,7 @@ content:
     third_party_settings: {  }
   field_programme_de_formation:
     type: paragraphs
-    weight: 15
+    weight: 46
     region: content
     settings:
       title: Paragraph
@@ -487,6 +529,30 @@ content:
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
+    third_party_settings: {  }
+  field_programme_de_formation_sub:
+    type: text_textarea
+    weight: 45
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_programme_de_formation_tit:
+    type: string_textfield
+    weight: 44
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_programme_version:
+    type: string_textfield
+    weight: 42
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_ressources_techniques:
     type: paragraphs

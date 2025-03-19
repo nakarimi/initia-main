@@ -24,11 +24,17 @@ dependencies:
     - field.field.node.formation.field_image
     - field.field.node.formation.field_lieu_de_formation
     - field.field.node.formation.field_methodes_d_evaluation
+    - field.field.node.formation.field_nos_diplomes_sub
+    - field.field.node.formation.field_nos_diplomes_temoignent
+    - field.field.node.formation.field_nos_diplomes_title
     - field.field.node.formation.field_nos_experts
     - field.field.node.formation.field_objectifs_de_la_formation
     - field.field.node.formation.field_prix
     - field.field.node.formation.field_prochaines_sessions_dates
     - field.field.node.formation.field_programme_de_formation
+    - field.field.node.formation.field_programme_de_formation_sub
+    - field.field.node.formation.field_programme_de_formation_tit
+    - field.field.node.formation.field_programme_version
     - field.field.node.formation.field_ressources_techniques
     - field.field.node.formation.field_taux_de_satisfaction
     - field.field.node.formation.field_type_de_formation
@@ -61,11 +67,17 @@ hidden:
   field_image: true
   field_lieu_de_formation: true
   field_methodes_d_evaluation: true
+  field_nos_diplomes_sub: true
+  field_nos_diplomes_temoignent: true
+  field_nos_diplomes_title: true
   field_nos_experts: true
   field_objectifs_de_la_formation: true
   field_prix: true
   field_prochaines_sessions_dates: true
   field_programme_de_formation: true
+  field_programme_de_formation_sub: true
+  field_programme_de_formation_tit: true
+  field_programme_version: true
   field_ressources_techniques: true
   field_taux_de_satisfaction: true
   field_type_de_formation: true

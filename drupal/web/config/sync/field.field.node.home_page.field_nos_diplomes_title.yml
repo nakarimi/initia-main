@@ -1,0 +1,19 @@
+uuid: a0500856-e140-476b-b471-acad07a919f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nos_diplomes_title
+    - node.type.home_page
+id: node.home_page.field_nos_diplomes_title
+field_name: field_nos_diplomes_title
+entity_type: node
+bundle: home_page
+label: 'Nos diplômés Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

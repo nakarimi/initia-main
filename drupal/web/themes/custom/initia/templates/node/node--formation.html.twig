@@ -105,6 +105,11 @@
 						<div class="row">
 
 							{{ content.field_beneficiaires }}
+
+							<h4 class="text-blue" id="programme-de-formation">
+								{{ node.field_programme_de_formation_tit.value }}
+							</h4>
+							{{ content.field_programme_de_formation_sub }}
 							{{ content.field_programme_de_formation }}
 
 
@@ -203,7 +208,9 @@
 									Last update on {{ node.changed.value|date("m/d/Y") }}.
 									<br/>
 									{# TODO:: ADDING FIELD #}
-									Programme version: 2
+									{% if node.field_programme_version.value %}
+										Programme version: {{node.field_programme_version.value}}
+									{% endif %}
 								</p>
 
 							</div>
@@ -279,27 +286,25 @@
 			{# Nos diplômés Témoignent #}
 			<section id="nos-diplomes" class="my-5">
 				<div class="container-fluid">
-					<h2>Nos diplômés Témoignent</h2>
-					<p class="col-md-3">Chez INITIAL FORMATION, nous sommes fiers de la réussite de nos étudiants. Voici ce
-																																																																																																																																																																																																																																																																				que certains d'entre eux ont à dire</p>
-
+					<h2>{{ node.field_nos_diplomes_title.value }}</h2>
+					{{ content.field_nos_diplomes_sub }}
 
 					<div class="gray-carouselle">
-						{% if field_nos_diplomes_temoignent is not empty %}
-							{% for temoignage in field_nos_diplomes_temoignent %}
+						{% if node.field_nos_diplomes_temoignent is not empty %}
+							{% for temoignage in node.field_nos_diplomes_temoignent %}
 								<div class=" d-flex m-2">
-									{% if temoignage.field_photo_du_temoin.entity.uri.value %}
-										<img src="{{ file_url(temoignage.field_photo_du_temoin.entity.uri.value) }}" alt="{{ node.field_compenser_handicap_image.entity.alt }}"/>
+									{% if temoignage.entity.field_photo_du_temoin.entity.uri.value %}
+										<img src="{{ file_url(temoignage.entity.field_photo_du_temoin.entity.uri.value) }}" alt="{{ node.field_compenser_handicap_image.entity.alt }}"/>
 									{% endif %}
 									<div>
-										<h4>{{ temoignage.field_nom_et_prenom.value }}</h4>
-										<p>{{ temoignage.field_le_temoignage.value }}</p>
+										<h4>{{ temoignage.entity.field_nom_et_prenom.value }}</h4>
+										<p>{{ temoignage.entity.field_le_temoignage.value }}</p>
 										<hr>
 										<div>
 											<svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M6.6665 11.0062C8.35421 11.2676 10.2369 11.7021 11.9998 12.3838M6.6665 16.3395C7.51916 16.4716 8.42157 16.6478 9.33317 16.8778M15.9998 8.07116V27.07M5.32561 4.01503C8.28344 4.34926 12.2573 5.24843 15.0889 7.2326C15.6331 7.61394 16.3665 7.61394 16.9107 7.2326C19.7423 5.24843 23.7162 4.34926 26.6741 4.01503C28.1379 3.84961 29.3332 5.07203 29.3332 6.58024V21.5999C29.3332 23.1081 28.1379 24.331 26.6741 24.4964C23.7162 24.8307 19.7423 25.7298 16.9107 27.714C16.3665 28.0953 15.6331 28.0953 15.0889 27.714C12.2573 25.7298 8.28344 24.8307 5.32561 24.4964C3.86173 24.331 2.6665 23.1081 2.6665 21.5999V6.58024C2.6665 5.07203 3.86173 3.84961 5.32561 4.01503Z" stroke="#353942" stroke-width="2" stroke-linecap="round"/>
 											</svg>
-											<b>{{ temoignage.field_titre_de_la_formation.value }}</b>
+											<b>{{ temoignage.entity.field_titre_de_la_formation.value }}</b>
 
 										</div>
 									</div>
@@ -323,6 +328,64 @@
 						</button>
 					</div>
 				</section>
+
+
+				<section id="confiance" class="my-5">
+					<div class="container-fluid">
+						{% if node.field_il_nous_font_confiance.value %}
+							<h2>{{ node.field_il_nous_font_confiance.value }}</h2>
+						{% endif %}
+						{% if content.field_il_nous_font_description %}
+							<div class="row">
+								<div class="col-md-6">
+									<p>{{ content.field_il_nous_font_description }}</p>
+								</div>
+							</div>
+						{% endif %}
+						<div class="logos-block mb-5">
+							{% if node.field_logo_company is not empty %}
+								{% for logo in node.field_logo_company %}
+									{% if logo.entity is not empty and logo.entity.uri.value %}
+										<div>
+											<img src="{{ file_url(logo.entity.uri.value) }}" alt="{{ logo.entity.getFilename() }}">
+										</div>
+									{% endif %}
+								{% endfor %}
+							{% endif %}
+						</div>
+
+					</div>
+				</section>
+
+				{% if node.field_commencez_votre_parcours is not empty %}
+					{% set parcours_item = node.field_commencez_votre_parcours.entity %}
+					<section id="start-parcours" class="my-5">
+						<div class="container-fluid">
+							<div class="parcours">
+								<div class="row align-items-center">
+									<div class="col-md-5">
+										<h2>{{ parcours_item.title.value }}</h2>
+										{% if parcours_item.field_commence_description.value %}
+											<p>{{ parcours_item.field_commence_description.value|raw }}</p>
+										{% endif %}
+									</div>
+									{% if parcours_item.field_decouvrir_les_cours.uri %}
+
+										<div class="col-md-2 offset-md-5">
+											<a href="{{ parcours_item.field_decouvrir_les_cours.uri|render|escape }}" target="{{ parcours_item.field_decouvrir_les_cours.options.target }}" class="btn btn-green-big">
+												{{ parcours_item.field_decouvrir_les_cours.title }}
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</a>
+										</div>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					</section>
+
+				{% endif %}
 				{# END Nos diplômés Témoignent #}
 
 				{% if field_commencez_votre_parcours is not empty %}

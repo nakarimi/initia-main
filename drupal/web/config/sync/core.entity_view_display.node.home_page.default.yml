@@ -17,7 +17,9 @@ dependencies:
     - field.field.node.home_page.field_il_nous_font_confiance
     - field.field.node.home_page.field_il_nous_font_description
     - field.field.node.home_page.field_logo_company
+    - field.field.node.home_page.field_nos_diplomes_sub
     - field.field.node.home_page.field_nos_diplomes_temoignent
+    - field.field.node.home_page.field_nos_diplomes_title
     - field.field.node.home_page.field_notre_equipe
     - field.field.node.home_page.field_notre_equipe_description
     - field.field.node.home_page.field_notre_equipe_image
@@ -162,6 +164,13 @@ content:
     third_party_settings: {  }
     weight: 19
     region: content
+  field_nos_diplomes_sub:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 133
+    region: content
   field_nos_diplomes_temoignent:
     type: entity_reference_revisions_entity_view
     label: above
@@ -170,6 +179,14 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 16
+    region: content
+  field_nos_diplomes_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 132
     region: content
   field_notre_equipe:
     type: string

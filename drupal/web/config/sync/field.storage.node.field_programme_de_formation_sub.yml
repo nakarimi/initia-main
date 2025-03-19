@@ -1,0 +1,19 @@
+uuid: 9b0532eb-6714-44ca-b1e4-13736e9709f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_programme_de_formation_sub
+field_name: field_programme_de_formation_sub
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

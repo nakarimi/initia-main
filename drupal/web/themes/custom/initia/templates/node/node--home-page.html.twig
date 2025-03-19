@@ -249,10 +249,8 @@
 
 			<section id="nos-diplomes" class="my-5">
 				<div class="container-fluid">
-					<h2>Nos diplômés Témoignent</h2>
-					<p class="col-md-3">Chez INITIAL FORMATION, nous sommes fiers de la réussite de nos étudiants. Voici ce
-																																																																																																																																																																																																																																				                    que certains d'entre eux ont à dire</p>
-
+					<h2>{{ node.field_nos_diplomes_title.value }}</h2>
+					{{ content.field_nos_diplomes_sub }}
 
 					<div class="gray-carouselle">
 						{% if node.field_nos_diplomes_temoignent is not empty %}

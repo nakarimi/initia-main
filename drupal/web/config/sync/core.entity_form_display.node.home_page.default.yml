@@ -17,7 +17,9 @@ dependencies:
     - field.field.node.home_page.field_il_nous_font_confiance
     - field.field.node.home_page.field_il_nous_font_description
     - field.field.node.home_page.field_logo_company
+    - field.field.node.home_page.field_nos_diplomes_sub
     - field.field.node.home_page.field_nos_diplomes_temoignent
+    - field.field.node.home_page.field_nos_diplomes_title
     - field.field.node.home_page.field_notre_equipe
     - field.field.node.home_page.field_notre_equipe_description
     - field.field.node.home_page.field_notre_equipe_image
@@ -153,6 +155,8 @@ third_party_settings:
         required_fields: true
     group_nos_diplomes_temoignent:
       children:
+        - field_nos_diplomes_title
+        - field_nos_diplomes_sub
         - field_nos_diplomes_temoignent
       label: 'Nos diplômés témoignent'
       region: content
@@ -184,8 +188,7 @@ third_party_settings:
         description: ''
         required_fields: true
     group_commencez_votre_parcours:
-      children:
-        - field_commencez_votre_parcours
+      children: {  }
       label: 'Commencez votre parcours'
       region: content
       parent_name: ''
@@ -333,9 +336,17 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_nos_diplomes_sub:
+    type: text_textarea
+    weight: 48
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_nos_diplomes_temoignent:
     type: paragraphs
-    weight: 14
+    weight: 49
     region: content
     settings:
       title: Paragraph
@@ -350,6 +361,14 @@ content:
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
+    third_party_settings: {  }
+  field_nos_diplomes_title:
+    type: string_textfield
+    weight: 47
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_notre_equipe:
     type: string_textfield
