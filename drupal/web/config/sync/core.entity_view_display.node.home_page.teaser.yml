@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.home_page.field_chiffres_cles
+    - field.field.node.home_page.field_commencez_votre_parcours
     - field.field.node.home_page.field_compenser_description
     - field.field.node.home_page.field_compenser_en_savoir_plus
     - field.field.node.home_page.field_compenser_handicap_image
@@ -42,6 +43,7 @@ content:
     region: content
 hidden:
   field_chiffres_cles: true
+  field_commencez_votre_parcours: true
   field_compenser_description: true
   field_compenser_en_savoir_plus: true
   field_compenser_handicap_image: true

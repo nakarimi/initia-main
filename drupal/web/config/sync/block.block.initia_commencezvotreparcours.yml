@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "/formation-elus\r\n"
+    pages: "/formation-elus\r\n<front>\r\n"

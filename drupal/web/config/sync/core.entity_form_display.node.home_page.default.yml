@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.home_page.field_chiffres_cles
+    - field.field.node.home_page.field_commencez_votre_parcours
     - field.field.node.home_page.field_compenser_description
     - field.field.node.home_page.field_compenser_en_savoir_plus
     - field.field.node.home_page.field_compenser_handicap_image
@@ -188,7 +189,8 @@ third_party_settings:
         description: ''
         required_fields: true
     group_commencez_votre_parcours:
-      children: {  }
+      children:
+        - field_commencez_votre_parcours
       label: 'Commencez votre parcours'
       region: content
       parent_name: ''
@@ -218,6 +220,16 @@ content:
     region: content
     settings:
       rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_commencez_votre_parcours:
+    type: entity_reference_autocomplete
+    weight: 50
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_compenser_description:

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.home_page.field_chiffres_cles
+    - field.field.node.home_page.field_commencez_votre_parcours
     - field.field.node.home_page.field_compenser_description
     - field.field.node.home_page.field_compenser_en_savoir_plus
     - field.field.node.home_page.field_compenser_handicap_image
@@ -44,6 +45,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 15
+    region: content
+  field_commencez_votre_parcours:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 134
     region: content
   field_compenser_description:
     type: text_default

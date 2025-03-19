@@ -319,36 +319,7 @@
 
 					</div>
 				</section>
-
-				{% if node.field_commencez_votre_parcours is not empty %}
-					{% set parcours_item = node.field_commencez_votre_parcours.entity %}
-					<section id="start-parcours" class="my-5">
-						<div class="container-fluid">
-							<div class="parcours">
-								<div class="row align-items-center">
-									<div class="col-md-5">
-										<h2>{{ parcours_item.title.value }}</h2>
-										{% if parcours_item.field_commence_description.value %}
-											<p>{{ parcours_item.field_commence_description.value|raw }}</p>
-										{% endif %}
-									</div>
-									{% if parcours_item.field_decouvrir_les_cours.uri %}
-
-										<div class="col-md-2 offset-md-5">
-											<a href="{{ parcours_item.field_decouvrir_les_cours.uri|render|escape }}" target="{{ parcours_item.field_decouvrir_les_cours.options.target }}" class="btn btn-green-big">
-												{{ parcours_item.field_decouvrir_les_cours.title }}
-												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-												</svg>
-											</a>
-										</div>
-									{% endif %}
-								</div>
-							</div>
-						</div>
-					</section>
-
-				{% endif %}
+				{{content.field_commencez_votre_parcours}}
 			</div>
 		</div>
 	</section>
