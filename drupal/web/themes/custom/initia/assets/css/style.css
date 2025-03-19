@@ -514,6 +514,12 @@ ul.breadcrumb li+li:before {
   content: "/\00a0";
 }
 
+.slick-slider .slick-slide > div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
 /* Add a color to all links inside the list */
 ul.breadcrumb li a {
   color: var(--color-6);

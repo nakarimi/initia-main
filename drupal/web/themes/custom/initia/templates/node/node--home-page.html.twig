@@ -337,7 +337,7 @@
 									{% if parcours_item.field_decouvrir_les_cours.uri %}
 
 										<div class="col-md-2 offset-md-5">
-											<a href="{{ parcours_item.field_decouvrir_les_cours.uri }}" target="{{ parcours_item.field_decouvrir_les_cours.options.target }}" class="btn btn-green-big">
+											<a href="{{ parcours_item.field_decouvrir_les_cours.uri|render|escape }}" target="{{ parcours_item.field_decouvrir_les_cours.options.target }}" class="btn btn-green-big">
 												{{ parcours_item.field_decouvrir_les_cours.title }}
 												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

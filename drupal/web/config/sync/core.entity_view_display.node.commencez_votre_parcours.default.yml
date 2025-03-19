@@ -38,8 +38,8 @@ content:
     weight: 101
     region: content
   field_decouvrir_les_cours:
-    type: link
-    label: above
+    type: link_separate
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
