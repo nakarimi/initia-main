@@ -1,0 +1,60 @@
+uuid: 5b0c0482-7729-4561-9016-6cf23a3f41ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.full
+    - field.field.paragraph.droit_individuel_liste.field_droit_individuel_discripti
+    - field.field.paragraph.droit_individuel_liste.field_droit_individuel_logo
+    - field.field.paragraph.droit_individuel_liste.field_guide_d_utilisation
+    - field.field.paragraph.droit_individuel_liste.field_icon
+    - paragraphs.paragraphs_type.droit_individuel_liste
+  module:
+    - file
+    - image
+    - link
+    - text
+id: paragraph.droit_individuel_liste.full
+targetEntityType: paragraph
+bundle: droit_individuel_liste
+mode: full
+content:
+  field_droit_individuel_discripti:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_droit_individuel_logo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_guide_d_utilisation:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_icon:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden: {  }
