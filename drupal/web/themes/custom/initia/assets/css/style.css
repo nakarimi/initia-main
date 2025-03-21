@@ -695,6 +695,7 @@ h2 {
   background-color: var(--color-7);
   border-radius: 10px;
   padding: 21px;
+  height: 300px;
 }
 
 .gray-carouselle img {
@@ -771,8 +772,13 @@ h2 {
   margin-bottom: 25px;
 }
 
+.forma-step p {
+  height: 70px;
+}
+
 .forma-step h5 {
   margin-bottom: 15px;
+  height: 50px;
 }
 
 .nouveaute-block {
