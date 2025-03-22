@@ -295,7 +295,7 @@ a:hover,
 }
 
 .block-register .block-img {
-  height: 280px;
+  /*height: 280px;*/
 }
 
 .form-check-label{
@@ -317,9 +317,9 @@ a:hover,
   padding: 10px 11px;
   color: var(--color-black);
   background-color: var(--color-white);
-  margin-top: -80px;
-  position: relative;
-  top: -50px;
+  margin-top: 10px;
+  position: absolute;
+  top: 130px;
   left: 20px;
 }
 
@@ -336,19 +336,16 @@ a:hover,
   font-weight: 600;
   color: var(--bs-black);
   font-size: 18px;
-  display: block;
-  height: 100px;
+  
 }
 
 .block-register p {
   font-size: 14px;
-  height: 150px;
   overflow: hidden;
 }
 
 .block-register .block-time-access {
   color: var(--color-6);
-  height: 75px;
 }
 
 .block-register .block-detail {
@@ -359,10 +356,8 @@ a:hover,
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 
-  display:flex;
-  flex-direction: column;
-  height: 400px;
-  justify-content: center;
+  display:grid;
+  min-height: 270px
 }
 
 .w-100 {
