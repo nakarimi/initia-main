@@ -192,6 +192,9 @@ a:hover,
   padding: 12px 25px;
   border: 0;
   border-radius: 10px;
+  display:block;
+  height: 45px;
+  margin-top: 10px !important;
 }
 
 .btn-secondary-green {
@@ -357,7 +360,9 @@ a:hover,
   border-bottom-left-radius: 20px;
 
   display:grid;
-  min-height: 270px
+  min-height: 360px;
+  align-items: end;
+
 }
 
 .w-100 {
@@ -520,9 +525,9 @@ ul.breadcrumb li+li:before {
 }
 
 .slick-slider .slick-slide > div {
-  display: flex;
+/*  display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 /* Add a color to all links inside the list */
