@@ -63,6 +63,7 @@ hidden:
   field_notre_equipe: true
   field_notre_equipe_description: true
   field_notre_equipe_image: true
+  field_qualiopi_certification: true
   field_votre_reussite: true
   field_votre_reussite_description: true
   field_votre_reussite_logos: true

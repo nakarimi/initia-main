@@ -1,0 +1,27 @@
+uuid: e57688a3-bd4d-4483-aca9-f2d1ad153800
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_guide_de_la_cdc
+    - node.type.formations_pour_elus
+  module:
+    - file
+id: node.formations_pour_elus.field_guide_de_la_cdc
+field_name: field_guide_de_la_cdc
+entity_type: node
+bundle: formations_pour_elus
+label: 'Guide de la CDC'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

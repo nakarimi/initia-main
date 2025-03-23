@@ -43,6 +43,8 @@ hidden:
   field_droit_individuel_titre: true
   field_formation_elus_image: true
   field_formations_aux_elus: true
+  field_guide_de_la_cdc: true
+  field_guide_des_elus: true
   field_liste_des_droit_individuel: true
   field_liste_nouveautes_et_condit: true
   field_notre_catalogue: true

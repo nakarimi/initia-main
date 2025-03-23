@@ -26,6 +26,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_commencez_parcours: true
   field_comment_garantir: true
   field_comment_proceder: true
   field_handicap_description: true

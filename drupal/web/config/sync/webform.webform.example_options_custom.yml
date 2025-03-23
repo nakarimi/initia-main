@@ -1,91 +1,36 @@
-uuid: 28046e6f-8434-4a39-a2ee-637b86311f75
+uuid: 0f4b6b7a-227f-4139-8645-d5b2d5ef9ecb
 langcode: en
-status: closed
+status: open
 dependencies:
   enforced:
     module:
-      - webform_templates
+      - webform_options_custom
 _core:
-  default_config_hash: yzJOVLvOeL_KkoFw5l2Yo44SdvU0T4A97EoDIcZZsq0
+  default_config_hash: 93UQCwjpmOEaaeDq1_9i24eczJ3d4SdqoBG-rgCFB7Y
 weight: 0
 open: null
 close: null
 uid: null
-template: true
+template: false
 archive: false
-id: template_job_seeker_profile
-title: 'Job Seeker Profile'
-description: 'A job seeker profile webform template.'
-categories: {  }
+id: example_options_custom
+title: 'Example: Custom Options'
+description: 'Example of a custom options element.'
+categories:
+  - Example
 elements: |
-  introduction:
-    '#markup': |
-      <p>Creating a job seeker profile will help companies find you:</p>
-      <ul>
-      <li>Upload a resume</li>
-      <li>Providing more information gives a better picture to employers</li>
-      <li>Salary requirements, location preferences and skill level are all important factors in the hiring decision</li>
-      </ul>
-      
-  information:
-    '#title': 'Job Seeker Information'
-    '#type': webform_section
-    first_name:
-      '#title': 'First Name'
-      '#type': textfield
-      '#required': true
-    last_name:
-      '#title': 'Last Name'
-      '#type': textfield
-      '#required': true
-    address:
-      '#type': webform_address
-      '#required': true
-    current_title:
-      '#type': textfield
-      '#title': 'Current Job Title'
-    current_organization:
-      '#type': textfield
-      '#title': 'Current Place of Occupation'
-    positions:
-      '#type': textfield
-      '#title': 'Position you are looking for'
-    relocation:
-      '#type': checkbox
-      '#title': 'Willing to relocate'
-    salary:
-      '#title': 'Salary Minimum'
-      '#type': textfield
-      '#description': 'Add currency sign/currency code if desired. e.g. 500,000 USD, 500,000 CAD, ¥ 100,000'
-    skill:
-      '#title': 'Skill Level'
-      '#type': radios
-      '#options_display': two_columns
-      '#options':
-        Novice/Beginner: Novice/Beginner
-        Intermediate/Proficient: Intermediate/Proficient
-        Expert/Advanced: Expert/Advanced
-    categories:
-      '#title': 'Job Categories'
-      '#type': checkboxes
-      '#options_display': two_columns
-      '#options':
-        'Account Manager': 'Account Manager'
-        Back-End: Back-End
-        Designer: Designer
-        DevOps: DevOps
-        Front-End: Front-End
-        'Project Manager': 'Project Manager'
-        Sales: Sales
-        'Site Builder': 'Site Builder'
-        Themer: Themer
-    resume:
-      '#type': managed_file
-      '#title': Resume
-    url:
-      '#type': url
-      '#title': Website
-      '#description': 'Enter your existing profile/resume/portfolio link.'
+  states:
+    '#type': 'webform_options_custom:us_states'
+    '#title': 'U.S. States'
+    '#required': true
+  button:
+    '#type': 'webform_options_custom:buttons'
+    '#title': 'Buttons'
+    '#required': true
+    '#options':
+      one: One -- This is the number 1.
+      two: Two -- This is the number 2.
+      three:  Three -- This is the number 3.
 css: ''
 javascript: ''
 settings:
@@ -175,7 +120,7 @@ settings:
   wizard_toggle_hide_label: ''
   wizard_page_type: container
   wizard_page_title_tag: h2
-  preview: 0
+  preview: 1
   preview_label: ''
   preview_title: ''
   preview_message: ''
@@ -190,10 +135,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
+  confirmation_type: message
   confirmation_url: ''
   confirmation_title: ''
-  confirmation_message: 'Thank you for applying.'
+  confirmation_message: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -269,42 +214,5 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers:
-  email_notification:
-    id: email
-    handler_id: email_notification
-    label: 'Email Notification'
-    notes: ''
-    status: true
-    conditions: {  }
-    weight: 1
-    settings:
-      states:
-        - completed
-      to_mail: _default
-      to_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
-      from_options: {  }
-      from_name: '[webform_submission:values:first_name] [webform_submission:values:last_name]'
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      subject: _default
-      body: _default
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      parameters: {  }
-      debug: false
+handlers: {  }
 variants: {  }

@@ -114,4 +114,5 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_commencez_votre_parcours_f: true

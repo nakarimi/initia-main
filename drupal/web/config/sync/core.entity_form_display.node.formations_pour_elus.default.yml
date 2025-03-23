@@ -388,4 +388,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_guide_de_la_cdc: true
+  field_guide_des_elus: true

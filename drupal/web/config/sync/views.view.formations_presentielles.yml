@@ -629,7 +629,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Eligible CPF (field_eligible_cpf)'
+            label: 'Eligible CPF'
             description: ''
             use_operator: false
             operator: field_eligible_cpf_value_op

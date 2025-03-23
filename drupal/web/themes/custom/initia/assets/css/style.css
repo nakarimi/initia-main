@@ -197,6 +197,19 @@ a:hover,
   margin-top: 10px !important;
 }
 
+.btn-secondary,
+.btn-secondary-green {
+  color: var(--color-white);
+  background-color: var(--color-2);
+  font-size: 15px;
+  padding: 12px 25px;
+  border: 0;
+  border-radius: 10px;
+ 
+}
+
+.block-register a {display: block; height:45px; margin-top: 10px !important;}
+
 .btn-secondary-green {
   background-color: var(--color-1);
 }
@@ -360,8 +373,9 @@ a:hover,
   border-bottom-left-radius: 20px;
 
   display:grid;
-  min-height: 360px;
+  min-height: 300px;
   align-items: end;
+  padding-top:0;
 
 }
 

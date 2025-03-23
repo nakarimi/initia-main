@@ -1,0 +1,21 @@
+uuid: de75f305-66a4-44e7-88c9-a05fa05f1a0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.parcours
+    - field.field.block_content.parcours.field_commencez_votre_parcours
+id: block_content.parcours.default
+targetEntityType: block_content
+bundle: parcours
+mode: default
+content:
+  field_commencez_votre_parcours:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
