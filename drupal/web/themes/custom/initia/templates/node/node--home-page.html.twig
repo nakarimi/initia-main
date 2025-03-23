@@ -40,7 +40,7 @@
 												{% set image_url_entity = beneficiaries.field_image.entity %}
 											{% endif %}
 										{% endif %}
-										<img src="{{ file_url(image_url_entity.uri.value) }}" alt="{{ image_url_entity.alt }}"/>
+										<img src="{{ file_url(image_url_entity.uri.value|image_style('formation_card')) }}" alt="{{ image_url_entity.alt }}"/>
 										<span class="cpf rounded-pill">
 											{{ formation.entity.field_eligible_cpf.value == 1 ? 'CPF' : '' }}
 											<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

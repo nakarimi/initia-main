@@ -3,14 +3,14 @@
 		{% set image_url_entity = "" %}
 		{% if node.field_image.entity.uri.value %}
 			{% set image_url_entity = node.field_image.entity %}
-			
+			{% set large_bgimg = file_url(node.field_image.entity.uri.value|image_style('large')) %}
 		{% elseif node.field_beneficiaires.entity %}
 			{% set beneficiaries = node.field_beneficiaires.entity %}
 			{% if beneficiaries.field_image.entity.uri.value %}
 				{% set image_url_entity = beneficiaries.field_image.entity %}
 			{% endif %}
 		{% endif %}
-		<img src="{{ file_url(image_url_entity.uri.value) }}" alt="{{ image_url_entity.alt }}"/>
+		<img src="{{ file_url(image_url_entity.uri.value|image_style('formation_card')) }}" alt="{{ image_url_entity.alt }}"/>
 
 		<span class="cpf rounded-pill">{{ node.field_eligible_cpf.value == 1 ? 'CPF' : '' }}
 			<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

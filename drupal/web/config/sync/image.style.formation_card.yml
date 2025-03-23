@@ -1,0 +1,15 @@
+uuid: 0e5af70a-13b0-4dd2-bded-4b03256104e4
+langcode: en
+status: true
+dependencies: {  }
+name: formation_card
+label: 'Formation Card 333x216'
+effects:
+  fe41adbf-4735-4b0f-8b7d-c76a82b1f9c1:
+    uuid: fe41adbf-4735-4b0f-8b7d-c76a82b1f9c1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 333
+      height: 216
+      anchor: center-center

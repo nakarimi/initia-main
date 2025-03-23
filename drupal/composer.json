@@ -35,6 +35,7 @@
         "drupal/search_api": "^1.37",
         "drupal/starrating": "^4.1@alpha",
         "drupal/token_filter": "^2.2",
+        "drupal/twig_tweak": "^3.4",
         "drupal/webform": "^6.3@beta"
     },
     "conflict": {
