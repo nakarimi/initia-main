@@ -13,11 +13,14 @@ RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     libjpeg-dev \
     libpng-dev \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    libwebp-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
     && docker-php-ext-install gd \
+    && docker-php-ext-install pdo_mysql \
     && rm -rf /var/lib/apt/lists/*
 
-RUN docker-php-ext-install pdo_mysql
+RUN apt-get update && apt-get install -y imagemagick
+
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
