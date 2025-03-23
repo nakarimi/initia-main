@@ -6,8 +6,6 @@ dependencies:
     - core.entity_view_mode.node.card
     - node.type.formation
     - taxonomy.vocabulary.type_de_formation
-  content:
-    - 'node:commencez_votre_parcours:3a3e9255-6e8f-4087-9d75-3eff0deb3f2a'
   module:
     - better_exposed_filters
     - node
@@ -393,6 +391,7 @@ display:
           admin_label: 'field_type_de_formation: Taxonomy term'
           plugin_id: standard
           required: false
+      use_ajax: true
       header: {  }
       footer:
         entity_node:

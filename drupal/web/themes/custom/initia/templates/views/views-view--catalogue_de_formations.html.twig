@@ -272,4 +272,14 @@ function setCheckboxesFromQuery(filterContainer) {
     });
   });
 }
+document.addEventListener("DOMContentLoaded", function () {
+    var toggler = document.querySelector(".navbar-toggler");
+    var menu = document.querySelector("#navbarSupportedContent");
+
+    toggler.addEventListener("click", function () {
+        if (menu.classList.contains("collapse")) {
+            menu.classList.toggle("show");
+        }
+    });
+});
 </script>

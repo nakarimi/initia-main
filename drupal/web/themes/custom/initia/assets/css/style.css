@@ -2242,6 +2242,10 @@ hr {
 }
 
 @media (max-width: 500px) {
+  body.path-catalogue-de-formations .views-view-responsive-grid{
+    --views-responsive-grid--column-count: 1 !important;
+  }
+
   .img-bglinear {
     position: relative;
     width: 100%;
@@ -2288,6 +2292,8 @@ ul li.nav-item a{
 .block.block-menu.navigation.menu--main{
   padding-top: 8px;
 }
+
+
 li.menu-item{
   list-style: none;
 }

@@ -3,7 +3,6 @@ $(document).ready(function () {
     $("#search-block-form").submit();
   });
 
-  console.log('Hello, world!');
   $(".field--type-address br").replaceWith(" - ");
 
   $(".toggleSearch").click(function (e) {
