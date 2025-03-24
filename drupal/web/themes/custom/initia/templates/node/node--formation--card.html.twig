@@ -28,7 +28,7 @@
 	<div class="block-detail px-3">
 
 		<h3>
-			{{ node.label }}
+			{{ node.label|striptags|length > 50 ? node.label|striptags|slice(0, 50) ~ '...' : node.label }}
 			{# {% if node.field_beneficiaires.entity.field_titre.value %}
 									                {{ node.field_beneficiaires.entity.field_titre.value }}
 									            {% endif %} #}
@@ -38,7 +38,7 @@
 		</h3>
 		<p>
 			{% if node.field_formation_description %}
-				{{ node.field_formation_description.value|striptags|length > 130 ? node.field_formation_description.value|striptags|slice(0, 130) ~ '...' : node.field_formation_description.value }}
+				{{ node.field_formation_description.value|striptags|length > 200 ? node.field_formation_description.value|striptags|slice(0, 200) ~ '...' : node.field_formation_description.value }}
 			{% endif %}
 		</p>
 		<div class="d-flex justify-content-between block-time-access">
