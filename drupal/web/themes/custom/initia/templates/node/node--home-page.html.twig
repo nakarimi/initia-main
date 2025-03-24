@@ -68,7 +68,7 @@
 										</h3>
 										<p>
 											{% if formation.entity.field_formation_description %}
-												{{ formation.entity.field_formation_description.value }}
+												{{ formation.entity.field_formation_description.value|striptags|length > 130 ? formation.entity.field_formation_description.value|striptags|slice(0, 130) ~ '...' : formation.entity.field_formation_description.value }}
 											{% endif %}
 										</p>
 										<div class="d-flex justify-content-between block-time-access">

@@ -330,14 +330,12 @@ a:hover,
 }
 
 .block-register span.presential {
-  padding: 10px 11px;
+  padding: 5px 10px;
   color: var(--color-black);
   background-color: var(--color-white);
-  margin-top: 10px;
   position: absolute;
-  /* top: 130px; */
-  bottom: 20px;
-  left: 20px;
+  top: 65%;
+  left: 5%;
 }
 
 .block-register span.cpf {
@@ -374,7 +372,7 @@ a:hover,
   border-bottom-left-radius: 20px;
 
   display:grid;
-  min-height: 300px;
+  min-height: 350px;
   align-items: end;
   padding-top:0;
 
@@ -2242,10 +2240,6 @@ hr {
 }
 
 @media (max-width: 500px) {
-  body.path-catalogue-de-formations .views-view-responsive-grid{
-    --views-responsive-grid--column-count: 1 !important;
-  }
-
   .img-bglinear {
     position: relative;
     width: 100%;
@@ -2292,8 +2286,6 @@ ul li.nav-item a{
 .block.block-menu.navigation.menu--main{
   padding-top: 8px;
 }
-
-
 li.menu-item{
   list-style: none;
 }
