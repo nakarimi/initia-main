@@ -192,8 +192,6 @@ a:hover,
   padding: 12px 25px;
   border: 0;
   border-radius: 10px;
-  display:block;
-  height: 45px;
   margin-top: 10px !important;
 }
 
@@ -281,6 +279,16 @@ a:hover,
 .one-block-elements .block-register .block-img {
   width: 100%;
 }
+/* kashif */
+.one-block-elements .block-register .block-img.w-50  span.presential{
+  top: 81%;
+  
+  }
+  .one-block-elements .block-register .block-detail.w-50{
+    min-height: 330px;
+    justify-content: end;
+  }
+  /*kashif*/ 
 
 .one-block-elements .block-register .block-img img {
   border-top-right-radius: 0;
@@ -334,7 +342,7 @@ a:hover,
   color: var(--color-black);
   background-color: var(--color-white);
   position: absolute;
-  top: 65%;
+  top: 79%;
   left: 5%;
 }
 
@@ -1043,7 +1051,7 @@ h2 {
   padding: 10px 11px;
   color: var(--color-white);
   position: absolute;
-  top: 40%;
+  top: 13%;
   left: 40px;
 }
 
@@ -1055,7 +1063,7 @@ h2 {
   /* position: relative;
   top: -50px;
   left: 20px; */
-  top: 40%;
+  top: 13%;
   left: 120px;
 }
 
