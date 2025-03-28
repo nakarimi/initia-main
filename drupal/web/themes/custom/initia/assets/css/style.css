@@ -279,6 +279,8 @@ a:hover,
 .one-block-elements .block-register .block-img {
   width: 100%;
 }
+
+
 /* kashif */
 .one-block-elements .block-register .block-img.w-50  span.presential{
   top: 81%;
@@ -2248,6 +2250,23 @@ hr {
 }
 
 @media (max-width: 500px) {
+  .w-50{
+    width: 100% !important;
+  }
+  .slick-list.draggable{
+    padding: 0px !important;
+  }
+  .views-view-responsive-grid--horizontal{
+    display: block;
+  }
+
+  button.navbar-toggler{
+    margin-bottom: 0px !important;
+  }
+  .form-item.form-item{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
   .img-bglinear {
     position: relative;
     width: 100%;

@@ -32,7 +32,7 @@
 			{{ node.label|striptags|length > 50 ? node.label|striptags|slice(0, 50) ~ '...' : node.label }}
 		</h3>
 		<p>{% if node.field_formation_description %}
-			{{ node.field_formation_description.value|striptags|length > 200 ? node.field_formation_description.value|striptags|slice(0, 200) ~ '...' : node.field_formation_description.value }}
+			{{ node.field_formation_description.value|striptags|length > 150 ? node.field_formation_description.value|striptags|slice(0, 150) ~ '...' : node.field_formation_description.value }}
 		{% endif %}</p>
 		<div class="d-flex justify-content-between block-time-access">
 			<div>
