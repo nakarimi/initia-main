@@ -1,5 +1,5 @@
 <div class="block-register">
-	<div class="block-img w-50">
+	<div class="block-img ">
 		{% set image_url_entity = "" %}
 		{% if node.field_image.entity.uri.value %}
 			{% set image_url_entity = node.field_image.entity %}
@@ -26,7 +26,7 @@
 		</span>
 	</div>
 
-	<div class="block-detail px-3 w-50">
+	<div class="block-detail px-3 ">
 
 		<h3>
 			{{ node.label|striptags|length > 50 ? node.label|striptags|slice(0, 50) ~ '...' : node.label }}
