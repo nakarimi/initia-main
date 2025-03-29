@@ -391,6 +391,10 @@ a:hover,
 
 }
 
+.no-arrows + .btn-wrap{
+  display: none;
+}
+
 .w-100 {
   width: 100%;
 }

@@ -290,7 +290,7 @@
 					{{ content.field_nos_diplomes_sub }}
 
 					{% if node.field_nos_diplomes_temoignent is not empty %}
-					<div class="gray-carouselle">
+					<div class="gray-carouselle {{node.field_nos_diplomes_temoignent|length > 3 ? 'with-arrows' : 'no-arrows'}}">
 							{% for temoignage in node.field_nos_diplomes_temoignent %}
 								<div class=" d-flex m-2">
 									{% if temoignage.entity.field_photo_du_temoin.entity.uri.value %}
