@@ -34,7 +34,7 @@
 		<p>{% if node.field_formation_description %}
 			{{ node.field_formation_description.value|striptags|length > 150 ? node.field_formation_description.value|striptags|slice(0, 150) ~ '...' : node.field_formation_description.value }}
 		{% endif %}</p>
-		<div class="d-flex-elus justify-content-between block-time-access">
+		<div class="d-flex d-flex-elus justify-content-between block-time-access">
 			<div>
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 					xmlns="http://www.w3.org/2000/svg">
