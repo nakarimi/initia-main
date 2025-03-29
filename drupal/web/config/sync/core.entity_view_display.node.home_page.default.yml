@@ -24,6 +24,7 @@ dependencies:
     - field.field.node.home_page.field_notre_equipe
     - field.field.node.home_page.field_notre_equipe_description
     - field.field.node.home_page.field_notre_equipe_image
+    - field.field.node.home_page.field_qualiopi_certification
     - field.field.node.home_page.field_votre_reussite
     - field.field.node.home_page.field_votre_reussite_description
     - field.field.node.home_page.field_votre_reussite_logos
@@ -115,10 +116,11 @@ content:
     weight: 5
     region: content
   field_formations_populaires:
-    type: entity_reference_label
-    label: above
+    type: entity_reference_entity_view
+    label: hidden
     settings:
-      link: true
+      view_mode: card
+      link: false
     third_party_settings: {  }
     weight: 3
     region: content

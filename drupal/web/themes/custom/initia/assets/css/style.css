@@ -404,6 +404,7 @@ a:hover,
   padding-right: 100px;
 }
 
+.block-register.slick-slide,
 .slick-slide .block-register {
   margin: 10px;
 }
