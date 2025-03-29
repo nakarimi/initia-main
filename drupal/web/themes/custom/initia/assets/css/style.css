@@ -288,19 +288,9 @@ a:hover,
   
   }
   .one-block-elements .block-register .block-detail.w-50{
-    min-height: 300px;
-    justify-content: start;
-    align-items: normal;
-    padding-top: 12px
+    min-height: 330px;
+    justify-content: end;
   }
-  .block-register .d-flux-catalog{
-    position: absolute;
-    left: 0;
-    bottom: 12%;
-    white-space: nowrap;
-    font-size: 11px;
-    padding: 0 5px;
-}
   /*kashif*/ 
 
 .one-block-elements .block-register .block-img img {
@@ -1064,7 +1054,7 @@ h2 {
   padding: 10px 11px;
   color: var(--color-white);
   position: absolute;
-  top: 7.5%;
+  top: 13%;
   left: 40px;
 }
 
