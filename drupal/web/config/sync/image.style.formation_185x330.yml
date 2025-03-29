@@ -1,0 +1,15 @@
+uuid: fe4c4b85-a7cd-4509-b701-1aae80b86379
+langcode: en
+status: true
+dependencies: {  }
+name: formation_185x330
+label: 'Formation 185X330'
+effects:
+  d9496136-5413-4f21-aa81-d0b5a07523db:
+    uuid: d9496136-5413-4f21-aa81-d0b5a07523db
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 185
+      height: 330
+      anchor: center-center
