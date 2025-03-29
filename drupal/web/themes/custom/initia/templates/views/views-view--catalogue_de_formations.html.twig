@@ -62,97 +62,97 @@
 				</div>
 			{% endif %}
 
-			{% if rows %}
-				<div class="c-listing__items">
-					<section id="filter-content">
-						<div class="container-fluid my-5">
-							<div class="row">
-								<div class="top-content d-flex justify-content-between justify-content-lg-end">
-									<button class=" btn btn-white navbar-toggler d-block d-lg-none mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22" aria-expanded="false" aria-label="Toggle navigation">
-										<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M3 5H10M10 5C10 6.10457 10.8954 7 12 7C13.1046 7 14 6.10457 14 5M10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5M3 12H12M19 12H21M19 12C19 13.1046 18.1046 14 17 14C15.8954 14 15 13.1046 15 12C15 10.8954 15.8954 10 17 10C18.1046 10 19 10.8954 19 12ZM14 5H21M12 19H21M3 19H5M5 19C5 20.1046 5.89543 21 7 21C8.10457 21 9 20.1046 9 19C9 17.8954 8.10457 17 7 17C5.89543 17 5 17.8954 5 19Z" stroke="#28303F" stroke-width="1.5" stroke-linecap="round"></path>
-										</svg>
-										Affinez votre recherche
-									</button>
-									<div class="d-flex flex-row align-items-center  fix-select-area">
-										<span class="d-none d-lg-block">Trier par</span>
-										<div class="c-listing__filters js-filters">
-											{{ exposed }}
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-2 collapse d-lg-block" id="navbarSupportedContent22">
-									<h5 class="fw-semibold">Affinez votre recherche</h5>
-									{% if sidebar_type_de_formation is defined and sidebar_type_de_formation|length %}
-										{% for term in sidebar_type_de_formation %}
-											<div class="form-check">
-												<input class="form-check-input" name="field_type_de_formation_target_id[]" type="checkbox" value="{{term.tid}}" id="{{term.tid}}">
-												<label class="form-check-label" for="flexCheckChecked1">
-													{{term.name}}
-												</label>
-											</div>
-										{% endfor %}
-									{% endif %}
-
-									<h6 class="my-3">Sujet:</h6>
-									{% if sidebar_categories_formation is defined and sidebar_categories_formation|length %}
-										{% for term in sidebar_categories_formation %}
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="{{term.url}}" id="{{term.id}}">
-												<label class="form-check-label" for="flexCheckChecked1">
-													{{term.name}}
-												</label>
-											</div>
-										{% endfor %}
-									{% endif %}
-									{# <h6 class="my-3">Type de formation :</h6> #}
-									{# {% if sidebar_type_de_formation is defined and sidebar_type_de_formation|length %}
-										{% for term in sidebar_type_de_formation %}
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="{{term.url}}" id="{{term.id}}">
-												<label class="form-check-label" for="flexCheckChecked1">
-													{{term.name}}
-												</label>
-											</div>
-										{% endfor %}
-									{% endif %} #}
-									<h6 class="my-3">Formation diplômante :</h6>
-									<div class="form-check">
-										<input name="field_formation_diplomante_value" class="form-check-input" type="checkbox" value="1" id="field_formation_diplomante_value">
-										<label class="form-check-label" for="field_formation_diplomante_value">
-											Oui
-										</label>
-									</div>
-									<div class="form-check">
-										<input name="field_formation_diplomante_value" class="form-check-input" type="checkbox" value="0" id="field_formation_diplomante_value">
-										<label class="form-check-label" for="field_formation_diplomante_value">
-											Non
-										</label>
-									</div>
-									<h6 class="my-3">Compte personnel de formation éligible (CPF) :</h6>
-									<div class="form-check">
-										<input name="field_accessible_value" class="form-check-input" type="checkbox" value="1" id="field_accessible_value">
-										<label class="form-check-label" for="field_accessible_value">
-											Oui
-										</label>
-									</div>
-									<div class="form-check">
-										<input name="field_accessible_value" class="form-check-input" type="checkbox" value="0" id="field_accessible_value">
-										<label class="form-check-label" for="field_accessible_value">
-											Non
-										</label>
-									</div>
-								</div>
-								<div class="col-lg-10 pt-4">
-									<div class="row">
-										{{ rows }}
-
+			<div class="c-listing__items">
+				<section id="filter-content">
+					<div class="container-fluid my-5">
+						<div class="row">
+							<div class="top-content d-flex justify-content-between justify-content-lg-end">
+								<button class=" btn btn-white navbar-toggler d-block d-lg-none mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22" aria-expanded="false" aria-label="Toggle navigation">
+									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M3 5H10M10 5C10 6.10457 10.8954 7 12 7C13.1046 7 14 6.10457 14 5M10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5M3 12H12M19 12H21M19 12C19 13.1046 18.1046 14 17 14C15.8954 14 15 13.1046 15 12C15 10.8954 15.8954 10 17 10C18.1046 10 19 10.8954 19 12ZM14 5H21M12 19H21M3 19H5M5 19C5 20.1046 5.89543 21 7 21C8.10457 21 9 20.1046 9 19C9 17.8954 8.10457 17 7 17C5.89543 17 5 17.8954 5 19Z" stroke="#28303F" stroke-width="1.5" stroke-linecap="round"></path>
+									</svg>
+									Affinez votre recherche
+								</button>
+								<div class="d-flex flex-row align-items-center  fix-select-area">
+									<span class="d-none d-lg-block">Trier par</span>
+									<div class="c-listing__filters js-filters">
+										{{ exposed }}
 									</div>
 								</div>
 							</div>
+							<div class="col-lg-2 collapse d-lg-block" id="navbarSupportedContent22">
+								<h5 class="fw-semibold">Affinez votre recherche</h5>
+								{% if sidebar_type_de_formation is defined and sidebar_type_de_formation|length %}
+									{% for term in sidebar_type_de_formation %}
+										<div class="form-check">
+											<input class="form-check-input" name="field_type_de_formation_target_id[]" type="checkbox" value="{{term.tid}}" id="{{term.tid}}">
+											<label class="form-check-label" for="flexCheckChecked1">
+												{{term.name}}
+											</label>
+										</div>
+									{% endfor %}
+								{% endif %}
+
+								<h6 class="my-3">Sujet:</h6>
+								{% if sidebar_categories_formation is defined and sidebar_categories_formation|length %}
+									{% for term in sidebar_categories_formation %}
+										<div class="form-check">
+											<input class="form-check-input" name="field_categorie_formation_target_id[]" type="checkbox" value="{{term.tid}}" id="{{term.tid}}">
+											<label class="form-check-label" for="flexCheckChecked1">
+												{{term.name}}
+											</label>
+										</div>
+									{% endfor %}
+								{% endif %}
+								{# <h6 class="my-3">Type de formation :</h6> #}
+								{# {% if sidebar_type_de_formation is defined and sidebar_type_de_formation|length %}
+									{% for term in sidebar_type_de_formation %}
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="{{term.url}}" id="{{term.id}}">
+											<label class="form-check-label" for="flexCheckChecked1">
+												{{term.name}}
+											</label>
+										</div>
+									{% endfor %}
+								{% endif %} #}
+								<h6 class="my-3">Formation diplômante :</h6>
+								<div class="form-check">
+									<input name="field_formation_diplomante_value" class="form-check-input" type="checkbox" value="1" id="field_formation_diplomante_value">
+									<label class="form-check-label" for="field_formation_diplomante_value">
+										Oui
+									</label>
+								</div>
+								<div class="form-check">
+									<input name="field_formation_diplomante_value" class="form-check-input" type="checkbox" value="0" id="field_formation_diplomante_value">
+									<label class="form-check-label" for="field_formation_diplomante_value">
+										Non
+									</label>
+								</div>
+								<h6 class="my-3">Compte personnel de formation éligible (CPF) :</h6>
+								<div class="form-check">
+									<input name="field_accessible_value" class="form-check-input" type="checkbox" value="1" id="field_accessible_value">
+									<label class="form-check-label" for="field_accessible_value">
+										Oui
+									</label>
+								</div>
+								<div class="form-check">
+									<input name="field_accessible_value" class="form-check-input" type="checkbox" value="0" id="field_accessible_value">
+									<label class="form-check-label" for="field_accessible_value">
+										Non
+									</label>
+								</div>
+							</div>
+							<div class="col-lg-10 pt-4">
+								<div class="row">
+									{{ rows }}
+
+								</div>
+							</div>
 						</div>
-					</section>
-				</div>
+					</div>
+				</section>
+			</div>
+			{% if rows %}
 				{% if pager %}
 					{{ pager }}
 				{% endif %}
@@ -228,7 +228,7 @@ function handleInputChange() {
   let selectedFilters = {};
 
   selectedFilters['field_type_de_formation_target_id'] = Array.from(filterContainer.querySelectorAll('input[name="field_type_de_formation_target_id[]"]:checked')).map(cb => cb.value);
-  selectedFilters['field_sujet_target_id'] = Array.from(filterContainer.querySelectorAll('input[name="field_sujet_target_id[]"]:checked')).map(cb => cb.value);
+  selectedFilters['field_categorie_formation_target_id'] = Array.from(filterContainer.querySelectorAll('input[name="field_categorie_formation_target_id[]"]:checked')).map(cb => cb.value);
     selectedFilters['field_type_de_formation_target_id_2'] = Array.from(filterContainer.querySelectorAll('input[name="field_type_de_formation_target_id_2[]"]:checked')).map(cb => cb.value);
 
   const formationDiplomante = filterContainer.querySelector('input[name="field_formation_diplomante_value"]:checked');
