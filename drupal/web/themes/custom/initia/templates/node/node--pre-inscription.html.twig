@@ -15,6 +15,12 @@
 				</div>
 			</div> #}
 		<div class="row contact-content">
+			{% if formation_card %}
+				{# <div class="col-md-5 offset-lg-1"> #}
+				<div class="col-md-6">
+					{{ formation_card }}
+				</div>
+			{% endif %}
 			<div class="col-md-6">
 
 				<h2 class="mb-2 font-55">{{ node.label }}</h2>
@@ -44,13 +50,6 @@
 
 				</div>
 			</div>
-			{% if formation_card %}
-				{# <div class="col-md-5 offset-lg-1"> #}
-				<div class="col-md-6">
-					{{ formation_card }}
-				</div>
-			{% endif %}
-
 		</div>
 
 
